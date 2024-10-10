@@ -46,8 +46,10 @@ class PlasmaState:
     z2bar: float
     n_e: float
     gamma_e_fac: float
+    C_ps: float
+    y0: float
 
-    def __init__(self, temp, dens, Ys, Zs):
+    def __init__(self, temp: float, dens: float, Ys: np.ndarray, Zs: np.ndarray) -> None:
         """
         :param temp: temperature in K
         :param dens: density in g/cm^3
@@ -94,6 +96,15 @@ class PlasmaState:
         # temperature-independent part of Gamma_e, from Chugunov 2009 eq. 6
         self.gamma_e_fac = constants.q_e ** 2 / constants.k * np.cbrt(4 * np.pi / 3) * np.cbrt(self.n_e)
 
+        # target intercept for whether Chugunov 2009 can be skipped
+        C0 = -10.132085464080653
+        # z2bar contribution
+        C1 = 1.03*np.log10(self.z2bar)
+        # abar contribution
+        C2 = 10.41502026*(self.abar**(-0.02076143) - self.abar**0.02076143)
+        self.C_ps = C0 + C1 + C2
+        # actual intercept
+        self.y0 = 3*np.log10(self.temp) - np.log10(self.dens)
 
 @jitclass()
 class NseState:
@@ -113,7 +124,7 @@ class NseState:
     ye: float
     gamma_e_fac: float
 
-    def __init__(self, temp, dens, ye):
+    def __init__(self, temp: float, dens: float, ye: float) -> None:
 
         """
         :param temp:        temperature in K
@@ -133,7 +144,7 @@ class NseState:
         self.gamma_e_fac = constants.q_e ** 2 / constants.k * np.cbrt(4.0 * np.pi / 3.0)
 
 
-def make_plasma_state(temp, dens, molar_fractions):
+def make_plasma_state(temp: float, dens: float, molar_fractions: dict[Nucleus: float]) -> PlasmaState:
     """
     Construct a PlasmaState object from simulation data.
 
@@ -176,7 +187,7 @@ class ScreenFactors:
     aznut: float
     ztilde: float
 
-    def __init__(self, z1, a1, z2, a2):
+    def __init__(self, z1: int, a1: int, z2: int, a2: int) -> None:
         self.z1 = z1
         self.z2 = z2
         self.a1 = a1
@@ -187,9 +198,10 @@ class ScreenFactors:
         self.lzav = (5/3) * np.log(z1 * z2 / (z1 + z2))
         self.aznut = np.cbrt(z1 ** 2 * z2 ** 2 * a1 * a2 / (a1 + a2))
         self.ztilde = 0.5 * (np.cbrt(z1) + np.cbrt(z2))
+        self.C_sf = 7.73078747*(z1**0.02600378 + z2**0.02600378)**2
 
 
-def make_screen_factors(n1, n2):
+def make_screen_factors(n1: Nucleus, n2: Nucleus) -> ScreenFactors:
     """
     Construct a ScreenFactors object from a pair of nuclei.
 
@@ -202,7 +214,7 @@ def make_screen_factors(n1, n2):
 
 
 @njit
-def screen5(state: PlasmaState, scn_fac):
+def screen5(state: PlasmaState, scn_fac: ScreenFactors) -> float:
     """Calculates screening factors following the appendix of :cite:t:`Wallace:1982`.
 
     Based on :cite:t:`graboske:1973` for weak screening. Based on
@@ -335,7 +347,7 @@ def screen5(state: PlasmaState, scn_fac):
 
 
 @njit
-def smooth_clip(x, limit, start):
+def smooth_clip(x: float, limit: float, start: float) -> float:
     """Smoothly transition between y=limit and y=x with a half-cosine.
 
     Clips smaller values if limit < start and larger values if start < limit.
@@ -364,7 +376,7 @@ def smooth_clip(x, limit, start):
 
 
 @njit
-def chugunov_2007(state, scn_fac):
+def chugunov_2007(state: PlasmaState, scn_fac: ScreenFactors) -> float:
     """Calculates screening factors based on :cite:t:`chugunov:2007`.
 
     Follows the approach in :cite:t:`yakovlev:2006` to extend to a
@@ -462,7 +474,7 @@ def chugunov_2007(state, scn_fac):
 
 
 @njit
-def f0(gamma):
+def f0(gamma: float) -> float:
     r"""Calculate the free energy per ion in a OCP from :cite:t:`chugunov:2009` eq. 24
 
     :param gamma: Coulomb coupling parameter
@@ -492,7 +504,7 @@ def f0(gamma):
 
 
 @njit
-def chugunov_2009(state, scn_fac):
+def chugunov_2009(state: PlasmaState, scn_fac: ScreenFactors) -> float:
     """Calculates screening factors based on :cite:t:`chugunov:2009`.
 
     :param PlasmaState state:     the precomputed plasma state factors
@@ -557,7 +569,11 @@ def chugunov_2009(state, scn_fac):
 
 
 @njit
-def potekhin_1998(state, scn_fac):
+def skip_chugunov_2009(state: PlasmaState, scn_fac: ScreenFactors) -> bool:
+    return state.C_ps + scn_fac.C_sf < state.y0
+
+@njit
+def potekhin_1998(state: PlasmaState, scn_fac: ScreenFactors) -> float:
     """Calculates screening factors based on :cite:t:`chabrier_potekhin:1998`.
 
     :param PlasmaState state:     the precomputed plasma state factors
