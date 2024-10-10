@@ -27,7 +27,7 @@ from pynucastro.rates import (ApproximateRate, DerivedRate, Library, Rate,
                               find_duplicate_rates, is_allowed_dupe, load_rate)
 from pynucastro.rates.library import _rate_name_to_nuc, capitalize_rid
 from pynucastro.screening import (get_screening_map, make_plasma_state,
-                                  make_screen_factors)
+                                  make_screen_factors, skip_chugunov_2009)
 
 mpl.rcParams['figure.dpi'] = 100
 
@@ -1072,7 +1072,10 @@ class RateCollection:
         for i, scr in enumerate(screening_map):
             if not (scr.n1.dummy or scr.n2.dummy):
                 scn_fac = make_screen_factors(scr.n1, scr.n2)
-                scor = screen_func(plasma_state, scn_fac)
+                if screen_func.__name__ == "chugunov_2009" and skip_chugunov_2009(plasma_state, scn_fac):
+                    scor = 1
+                else:
+                    scor = screen_func(plasma_state, scn_fac)
             if scr.name == "He4_He4_He4":
                 # we don't need to do anything here, but we want to avoid
                 # immediately applying the screening
