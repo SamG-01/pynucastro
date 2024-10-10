@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>hot-CNO and breakout &#8212; pynucastro 2.2.0.post68+g6cdac7c1 documentation</title>
+    <title>hot-CNO and breakout &#8212; pynucastro 2.2.0.post73+g678fb290 documentation</title>
   
   
   
@@ -39,8 +39,8 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=df636313"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/documentation_options.js?v=c0c9ce18"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=f281be69"></script>
@@ -507,7 +507,7 @@ document.write(`
 </div>
 </div>
 <p>This collection of rates has the main CNO rates plus a breakout rate into the hot CNO cycle(s)</p>
-<div class="nbinput docutils container">
+<div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
@@ -515,37 +515,8 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">RateFileError</span>                             Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[2], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> rl <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">pyna</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">ReacLibLibrary</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span>
-
-File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/library.py:698</span>, in <span class="ansi-cyan-fg">ReacLibLibrary.__init__</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-intense-fg ansi-bold">    696</span> <span class="ansi-bold" style="color: rgb(0,135,0)">def</span> <span style="color: rgb(0,0,255)">__init__</span>(<span style="color: rgb(0,135,0)">self</span>):
-<span class="ansi-green-intense-fg ansi-bold">    697</span>     libfile <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">reaclib_default2_20220329</span><span style="color: rgb(175,0,0)">&#39;</span>
-<span class="ansi-green-fg">--&gt; 698</span>     <span class="ansi-yellow-bg">Library</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg" style="color: rgb(0,0,255)">__init__</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">libfile</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">libfile</span><span class="ansi-yellow-bg">)</span>
-
-File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/library.py:141</span>, in <span class="ansi-cyan-fg">Library.__init__</span><span class="ansi-blue-fg">(self, libfile, rates)</span>
-<span class="ansi-green-intense-fg ansi-bold">    138</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_library_source_lines <span style="color: rgb(98,98,98)">=</span> collections<span style="color: rgb(98,98,98)">.</span>deque()
-<span class="ansi-green-intense-fg ansi-bold">    140</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_library_file:
-<span class="ansi-green-fg">--&gt; 141</span>     <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_library_file <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">_find_rate_file</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">_library_file</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    142</span>     <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_read_library_file()
-
-File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/rate.py:100</span>, in <span class="ansi-cyan-fg">_find_rate_file</span><span class="ansi-blue-fg">(ratename)</span>
-<span class="ansi-green-intense-fg ansi-bold">     97</span>         <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> x<span style="color: rgb(98,98,98)">.</span>resolve()
-<span class="ansi-green-intense-fg ansi-bold">     99</span> <span style="color: rgb(95,135,135)"># notify user we can&#39;t find the file</span>
-<span class="ansi-green-fg">--&gt; 100</span> <span class="ansi-bold" style="color: rgb(0,135,0)">raise</span> RateFileError(<span style="color: rgb(175,0,0)">f</span><span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">File </span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>ratename<span class="ansi-bold" style="color: rgb(175,95,135)">!r}</span><span style="color: rgb(175,0,0)"> not found in the working directory, </span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>_pynucastro_rates_dir<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)">, or </span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>_pynucastro_tabular_dir<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)">&#39;</span>)
-
-<span class="ansi-red-fg">RateFileError</span>: File &#39;reaclib_default2_20220329&#39; not found in the working directory, /opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/library, or /opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/tabular
-</pre></div></div>
-</div>
 <p>We’ll get all the rates linking the core nuclei in CNO and the various hot-CNO cycles, but we’ll explicitly remove <span class="math notranslate nohighlight">\(3\)</span>-<span class="math notranslate nohighlight">\(\alpha\)</span>, since it is not strong at the temperatures where CNO operates.</p>
-<div class="nbinput docutils container">
+<div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
@@ -559,45 +530,13 @@ File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/pyt
 </pre></div>
 </div>
 </div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[3], line 5</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> linking_nuclei <span style="color: rgb(98,98,98)">=</span> [<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">p</span><span style="color: rgb(175,0,0)">&#34;</span>, <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">he4</span><span style="color: rgb(175,0,0)">&#34;</span>,
-<span class="ansi-green-intense-fg ansi-bold">      2</span>                   <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">c12</span><span style="color: rgb(175,0,0)">&#34;</span>, <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">c13</span><span style="color: rgb(175,0,0)">&#34;</span>,
-<span class="ansi-green-intense-fg ansi-bold">      3</span>                   <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">n13</span><span style="color: rgb(175,0,0)">&#34;</span>, <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">n14</span><span style="color: rgb(175,0,0)">&#34;</span>, <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">n15</span><span style="color: rgb(175,0,0)">&#34;</span>,
-<span class="ansi-green-intense-fg ansi-bold">      4</span>                   <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">o14</span><span style="color: rgb(175,0,0)">&#34;</span>, <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">o15</span><span style="color: rgb(175,0,0)">&#34;</span>,]
-<span class="ansi-green-fg">----&gt; 5</span> lib <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">rl</span><span style="color: rgb(98,98,98)">.</span>linking_nuclei(linking_nuclei, with_reverse<span style="color: rgb(98,98,98)">=</span><span class="ansi-bold" style="color: rgb(0,135,0)">False</span>)
-<span class="ansi-green-intense-fg ansi-bold">      6</span> r3a <span style="color: rgb(98,98,98)">=</span> lib<span style="color: rgb(98,98,98)">.</span>get_rate_by_name(<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">he4(aa,g)c12</span><span style="color: rgb(175,0,0)">&#34;</span>)
-<span class="ansi-green-intense-fg ansi-bold">      7</span> lib<span style="color: rgb(98,98,98)">.</span>remove_rate(r3a)
-
-<span class="ansi-red-fg">NameError</span>: name &#39;rl&#39; is not defined
-</pre></div></div>
-</div>
-<div class="nbinput docutils container">
+<div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rc</span> <span class="o">=</span> <span class="n">pyna</span><span class="o">.</span><span class="n">RateCollection</span><span class="p">(</span><span class="n">libraries</span><span class="o">=</span><span class="n">lib</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[4], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> rc <span style="color: rgb(98,98,98)">=</span> pyna<span style="color: rgb(98,98,98)">.</span>RateCollection(libraries<span style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">lib</span>)
-
-<span class="ansi-red-fg">NameError</span>: name &#39;lib&#39; is not defined
-</pre></div></div>
 </div>
 <p>To evaluate the rates, we need a composition. This is defined using a list of <code class="docutils literal notranslate"><span class="pre">Nucleus</span></code> objects. Here we set H and He to approximate their solar values and distribute the remaining mass evenly across the other nuclei.</p>
 <div class="nbinput docutils container">
@@ -614,16 +553,8 @@ Cell <span class="ansi-green-fg">In[4], line 1</span>
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[5], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> comp <span style="color: rgb(98,98,98)">=</span> pyna<span style="color: rgb(98,98,98)">.</span>Composition(<span class="ansi-yellow-bg">rc</span><span style="color: rgb(98,98,98)">.</span>get_nuclei())
-<span class="ansi-green-intense-fg ansi-bold">      2</span> comp<span style="color: rgb(98,98,98)">.</span>set_solar_like()
-<span class="ansi-green-intense-fg ansi-bold">      3</span> fig <span style="color: rgb(98,98,98)">=</span> comp<span style="color: rgb(98,98,98)">.</span>plot()
-
-<span class="ansi-red-fg">NameError</span>: name &#39;rc&#39; is not defined
-</pre></div></div>
+<img alt="../_images/examples_hot-CNO-breakout-example_9_0.png" src="../_images/examples_hot-CNO-breakout-example_9_0.png" />
+</div>
 </div>
 <section id="Transition-from-CNO-to-hot-CNO">
 <h2>Transition from CNO to hot-CNO<a class="headerlink" href="#Transition-from-CNO-to-hot-CNO" title="Link to this heading">#</a></h2>
@@ -649,14 +580,8 @@ Cell <span class="ansi-green-fg">In[5], line 1</span>
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[7], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> fig <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">rc</span><span style="color: rgb(98,98,98)">.</span>plot(rho<span style="color: rgb(98,98,98)">=</span>rho, T<span style="color: rgb(98,98,98)">=</span>T, comp<span style="color: rgb(98,98,98)">=</span>comp, ydot_cutoff_value<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(98,98,98)">1.e-20</span>)
-
-<span class="ansi-red-fg">NameError</span>: name &#39;rc&#39; is not defined
-</pre></div></div>
+<img alt="../_images/examples_hot-CNO-breakout-example_13_0.png" src="../_images/examples_hot-CNO-breakout-example_13_0.png" />
+</div>
 </div>
 <p>Starting at <span class="math notranslate nohighlight">\({}^{12}\mathrm{C}\)</span>, we see the following sequence dominate:</p>
 <ul class="simple">
@@ -681,15 +606,8 @@ Cell <span class="ansi-green-fg">In[7], line 1</span>
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[8], line 2</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> T <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(98,98,98)">3.e8</span>
-<span class="ansi-green-fg">----&gt; 2</span> fig <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">rc</span><span style="color: rgb(98,98,98)">.</span>plot(rho<span style="color: rgb(98,98,98)">=</span>rho, T<span style="color: rgb(98,98,98)">=</span>T, comp<span style="color: rgb(98,98,98)">=</span>comp, ydot_cutoff_value<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(98,98,98)">1.e-20</span>)
-
-<span class="ansi-red-fg">NameError</span>: name &#39;rc&#39; is not defined
-</pre></div></div>
+<img alt="../_images/examples_hot-CNO-breakout-example_16_0.png" src="../_images/examples_hot-CNO-breakout-example_16_0.png" />
+</div>
 </div>
 <p>Now we see that the proton capture on <span class="math notranslate nohighlight">\({}^{13}\mathrm{N}\)</span> is faster than the beta-decay, and we make <span class="math notranslate nohighlight">\({}^{14}\mathrm{O}\)</span>. Then the cycle continues as before.</p>
 <p>As we increase the temperature and density further, we see that the beta decays become the rate-limiting steps.</p>
@@ -707,23 +625,15 @@ Cell <span class="ansi-green-fg">In[8], line 2</span>
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[9], line 3</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> T <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(98,98,98)">5.e8</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> rho <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(98,98,98)">1.e4</span>
-<span class="ansi-green-fg">----&gt; 3</span> fig <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">rc</span><span style="color: rgb(98,98,98)">.</span>plot(rho<span style="color: rgb(98,98,98)">=</span>rho, T<span style="color: rgb(98,98,98)">=</span>T, comp<span style="color: rgb(98,98,98)">=</span>comp, ydot_cutoff_value<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(98,98,98)">1.e-20</span>)
-
-<span class="ansi-red-fg">NameError</span>: name &#39;rc&#39; is not defined
-</pre></div></div>
+<img alt="../_images/examples_hot-CNO-breakout-example_19_0.png" src="../_images/examples_hot-CNO-breakout-example_19_0.png" />
+</div>
 </div>
 <p>Since the beta-decays are temperature independent (you just have to wait for the nucleus to decay), the overall hot-CNO rate becomes insensitive to temperature.</p>
 </section>
 <section id="When-does-hot-CNO-set-in?">
 <h2>When does hot-CNO set in?<a class="headerlink" href="#When-does-hot-CNO-set-in?" title="Link to this heading">#</a></h2>
 <p>We can look at the temperature where we cross from CNO to hot-CNO by looking at the rates involving <span class="math notranslate nohighlight">\({}^{13}\mathrm{N}\)</span></p>
-<div class="nbinput docutils container">
+<div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
 </div>
@@ -731,20 +641,6 @@ Cell <span class="ansi-green-fg">In[9], line 3</span>
 <span class="n">r2</span> <span class="o">=</span> <span class="n">rl</span><span class="o">.</span><span class="n">get_rate_by_name</span><span class="p">(</span><span class="s2">&quot;n13(,)c13&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[10], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> r1 <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">rl</span><span style="color: rgb(98,98,98)">.</span>get_rate_by_name(<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">n13(p,g)o14</span><span style="color: rgb(175,0,0)">&#34;</span>)
-<span class="ansi-green-intense-fg ansi-bold">      2</span> r2 <span style="color: rgb(98,98,98)">=</span> rl<span style="color: rgb(98,98,98)">.</span>get_rate_by_name(<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">n13(,)c13</span><span style="color: rgb(175,0,0)">&#34;</span>)
-
-<span class="ansi-red-fg">NameError</span>: name &#39;rl&#39; is not defined
-</pre></div></div>
 </div>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
@@ -756,7 +652,7 @@ Cell <span class="ansi-green-fg">In[10], line 1</span>
 </div>
 </div>
 <p>Sample the rates at a range of temperatures</p>
-<div class="nbinput docutils container">
+<div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
@@ -766,26 +662,6 @@ Cell <span class="ansi-green-fg">In[10], line 1</span>
 <span class="n">rate_beta_decay</span> <span class="o">=</span> <span class="p">[</span><span class="n">r2</span><span class="o">.</span><span class="n">eval</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span> <span class="k">for</span> <span class="n">temp</span> <span class="ow">in</span> <span class="n">T</span><span class="p">]</span>
 </pre></div>
 </div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[12], line 3</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> T <span style="color: rgb(98,98,98)">=</span> np<span style="color: rgb(98,98,98)">.</span>logspace(<span style="color: rgb(98,98,98)">7.5</span>, <span style="color: rgb(98,98,98)">8.5</span>, <span style="color: rgb(98,98,98)">100</span>)
-<span class="ansi-green-fg">----&gt; 3</span> rate_p_capture <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">[</span><span class="ansi-yellow-bg">r1</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">eval</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">temp</span><span class="ansi-yellow-bg">)</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg ansi-bold" style="color: rgb(0,135,0)">for</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">temp</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg ansi-bold" style="color: rgb(175,0,255)">in</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">T</span><span class="ansi-yellow-bg">]</span>
-<span class="ansi-green-intense-fg ansi-bold">      4</span> rate_beta_decay <span style="color: rgb(98,98,98)">=</span> [r2<span style="color: rgb(98,98,98)">.</span>eval(temp) <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> temp <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> T]
-
-Cell <span class="ansi-green-fg">In[12], line 3</span>, in <span class="ansi-cyan-fg">&lt;listcomp&gt;</span><span class="ansi-blue-fg">(.0)</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> T <span style="color: rgb(98,98,98)">=</span> np<span style="color: rgb(98,98,98)">.</span>logspace(<span style="color: rgb(98,98,98)">7.5</span>, <span style="color: rgb(98,98,98)">8.5</span>, <span style="color: rgb(98,98,98)">100</span>)
-<span class="ansi-green-fg">----&gt; 3</span> rate_p_capture <span style="color: rgb(98,98,98)">=</span> [<span class="ansi-yellow-bg">r1</span><span style="color: rgb(98,98,98)">.</span>eval(temp) <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> temp <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> T]
-<span class="ansi-green-intense-fg ansi-bold">      4</span> rate_beta_decay <span style="color: rgb(98,98,98)">=</span> [r2<span style="color: rgb(98,98,98)">.</span>eval(temp) <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> temp <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> T]
-
-<span class="ansi-red-fg">NameError</span>: name &#39;r1&#39; is not defined
-</pre></div></div>
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
@@ -801,19 +677,12 @@ Cell <span class="ansi-green-fg">In[12], line 3</span>, in <span class="ansi-cya
 </div>
 </div>
 <div class="nboutput docutils container">
-<div class="prompt empty docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[13], line 2</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> fig, ax <span style="color: rgb(98,98,98)">=</span> plt<span style="color: rgb(98,98,98)">.</span>subplots()
-<span class="ansi-green-fg">----&gt; 2</span> ax<span style="color: rgb(98,98,98)">.</span>loglog(T, <span class="ansi-yellow-bg">rate_p_capture</span>, label<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(175,0,0)">f</span><span style="color: rgb(175,0,0)">&#34;</span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>r1<span style="color: rgb(98,98,98)">.</span>pretty_string<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)">&#34;</span>)
-<span class="ansi-green-intense-fg ansi-bold">      3</span> ax<span style="color: rgb(98,98,98)">.</span>loglog(T, rate_beta_decay, label<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(175,0,0)">f</span><span style="color: rgb(175,0,0)">&#34;</span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>r2<span style="color: rgb(98,98,98)">.</span>pretty_string<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)">&#34;</span>)
-<span class="ansi-green-intense-fg ansi-bold">      4</span> ax<span style="color: rgb(98,98,98)">.</span>legend()
-
-<span class="ansi-red-fg">NameError</span>: name &#39;rate_p_capture&#39; is not defined
+Text(0, 0.5, &#39;$N_A \\langle\\sigma v\\rangle$&#39;)
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">

@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Combining ReacLib Rates with Electron Capture Tables &#8212; pynucastro 2.2.0.post68+g6cdac7c1 documentation</title>
+    <title>Combining ReacLib Rates with Electron Capture Tables &#8212; pynucastro 2.2.0.post73+g678fb290 documentation</title>
   
   
   
@@ -39,8 +39,8 @@
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="_static/documentation_options.js?v=df636313"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/documentation_options.js?v=c0c9ce18"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
@@ -497,7 +497,7 @@ document.write(`
 </div>
 </div>
 <p>First create a library from ReacLib using a set of nuclei.</p>
-<div class="nbinput docutils container">
+<div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
@@ -510,40 +510,6 @@ document.write(`
 <span class="n">ecsn_library</span> <span class="o">=</span> <span class="n">reaclib_library</span><span class="o">.</span><span class="n">linking_nuclei</span><span class="p">(</span><span class="n">all_nuclei</span><span class="p">,</span><span class="n">with_reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">RateFileError</span>                             Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[2], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> reaclib_library <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">pyna</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">ReacLibLibrary</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span> all_nuclei <span style="color: rgb(98,98,98)">=</span> [<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">p</span><span style="color: rgb(175,0,0)">&#34;</span>, <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">he4</span><span style="color: rgb(175,0,0)">&#34;</span>,
-<span class="ansi-green-intense-fg ansi-bold">      4</span>               <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">ne20</span><span style="color: rgb(175,0,0)">&#34;</span>, <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">o20</span><span style="color: rgb(175,0,0)">&#34;</span>, <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">f20</span><span style="color: rgb(175,0,0)">&#34;</span>,
-<span class="ansi-green-intense-fg ansi-bold">      5</span>               <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">mg24</span><span style="color: rgb(175,0,0)">&#34;</span>, <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">al27</span><span style="color: rgb(175,0,0)">&#34;</span>, <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">o16</span><span style="color: rgb(175,0,0)">&#34;</span>,
-<span class="ansi-green-intense-fg ansi-bold">      6</span>               <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">si28</span><span style="color: rgb(175,0,0)">&#34;</span>, <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">s32</span><span style="color: rgb(175,0,0)">&#34;</span>, <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">p31</span><span style="color: rgb(175,0,0)">&#34;</span>]
-<span class="ansi-green-intense-fg ansi-bold">      7</span> ecsn_library <span style="color: rgb(98,98,98)">=</span> reaclib_library<span style="color: rgb(98,98,98)">.</span>linking_nuclei(all_nuclei,with_reverse<span style="color: rgb(98,98,98)">=</span><span class="ansi-bold" style="color: rgb(0,135,0)">True</span>)
-
-File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/library.py:698</span>, in <span class="ansi-cyan-fg">ReacLibLibrary.__init__</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-intense-fg ansi-bold">    696</span> <span class="ansi-bold" style="color: rgb(0,135,0)">def</span> <span style="color: rgb(0,0,255)">__init__</span>(<span style="color: rgb(0,135,0)">self</span>):
-<span class="ansi-green-intense-fg ansi-bold">    697</span>     libfile <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">reaclib_default2_20220329</span><span style="color: rgb(175,0,0)">&#39;</span>
-<span class="ansi-green-fg">--&gt; 698</span>     <span class="ansi-yellow-bg">Library</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg" style="color: rgb(0,0,255)">__init__</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">libfile</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">libfile</span><span class="ansi-yellow-bg">)</span>
-
-File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/library.py:141</span>, in <span class="ansi-cyan-fg">Library.__init__</span><span class="ansi-blue-fg">(self, libfile, rates)</span>
-<span class="ansi-green-intense-fg ansi-bold">    138</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_library_source_lines <span style="color: rgb(98,98,98)">=</span> collections<span style="color: rgb(98,98,98)">.</span>deque()
-<span class="ansi-green-intense-fg ansi-bold">    140</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_library_file:
-<span class="ansi-green-fg">--&gt; 141</span>     <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_library_file <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">_find_rate_file</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">_library_file</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    142</span>     <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_read_library_file()
-
-File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/rate.py:100</span>, in <span class="ansi-cyan-fg">_find_rate_file</span><span class="ansi-blue-fg">(ratename)</span>
-<span class="ansi-green-intense-fg ansi-bold">     97</span>         <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> x<span style="color: rgb(98,98,98)">.</span>resolve()
-<span class="ansi-green-intense-fg ansi-bold">     99</span> <span style="color: rgb(95,135,135)"># notify user we can&#39;t find the file</span>
-<span class="ansi-green-fg">--&gt; 100</span> <span class="ansi-bold" style="color: rgb(0,135,0)">raise</span> RateFileError(<span style="color: rgb(175,0,0)">f</span><span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">File </span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>ratename<span class="ansi-bold" style="color: rgb(175,95,135)">!r}</span><span style="color: rgb(175,0,0)"> not found in the working directory, </span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>_pynucastro_rates_dir<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)">, or </span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>_pynucastro_tabular_dir<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)">&#39;</span>)
-
-<span class="ansi-red-fg">RateFileError</span>: File &#39;reaclib_default2_20220329&#39; not found in the working directory, /opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/library, or /opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/tabular
-</pre></div></div>
 </div>
 <p>Here are the rates it chose</p>
 <div class="nbinput docutils container">
@@ -559,12 +525,30 @@ File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/pyt
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[3], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> <span style="color: rgb(0,135,0)">print</span>(<span class="ansi-yellow-bg">ecsn_library</span>)
-
-<span class="ansi-red-fg">NameError</span>: name &#39;ecsn_library&#39; is not defined
+O16 + He4 ⟶ Ne20 + 𝛾           [Q =   4.73 MeV] (O16 + He4 --&gt; Ne20 &lt;co10_reaclib__&gt;)
+O16 + O16 ⟶ He4 + Si28         [Q =   9.59 MeV] (O16 + O16 --&gt; He4 + Si28 &lt;cf88_reaclib__&gt;)
+O16 + O16 ⟶ p + P31            [Q =   7.68 MeV] (O16 + O16 --&gt; p + P31 &lt;cf88_reaclib__&gt;)
+O20 ⟶ F20 + e⁻ + 𝜈             [Q =   3.81 MeV] (O20 --&gt; F20 &lt;wc12_reaclib_weak_&gt;)
+F20 ⟶ Ne20 + e⁻ + 𝜈            [Q =   7.02 MeV] (F20 --&gt; Ne20 &lt;wc12_reaclib_weak_&gt;)
+Ne20 + He4 ⟶ Mg24 + 𝛾          [Q =   9.32 MeV] (Ne20 + He4 --&gt; Mg24 &lt;il10_reaclib__&gt;)
+Mg24 + He4 ⟶ Si28 + 𝛾          [Q =   9.98 MeV] (Mg24 + He4 --&gt; Si28 &lt;st08_reaclib__&gt;)
+Al27 + p ⟶ He4 + Mg24          [Q =   1.60 MeV] (Al27 + p --&gt; He4 + Mg24 &lt;il10_reaclib__&gt;)
+Al27 + p ⟶ Si28 + 𝛾            [Q =  11.59 MeV] (Al27 + p --&gt; Si28 &lt;il10_reaclib__&gt;)
+Al27 + He4 ⟶ P31 + 𝛾           [Q =   9.67 MeV] (Al27 + He4 --&gt; P31 &lt;ths8_reaclib__&gt;)
+Si28 + He4 ⟶ S32 + 𝛾           [Q =   6.95 MeV] (Si28 + He4 --&gt; S32 &lt;ths8_reaclib__&gt;)
+P31 + p ⟶ He4 + Si28           [Q =   1.92 MeV] (P31 + p --&gt; He4 + Si28 &lt;il10_reaclib__&gt;)
+P31 + p ⟶ S32 + 𝛾              [Q =   8.86 MeV] (P31 + p --&gt; S32 &lt;il10_reaclib__&gt;)
+Ne20 ⟶ He4 + O16               [Q =  -4.73 MeV] (Ne20 --&gt; He4 + O16 &lt;co10_reaclib__reverse&gt;)
+Mg24 + He4 ⟶ p + Al27          [Q =  -1.60 MeV] (Mg24 + He4 --&gt; p + Al27 &lt;il10_reaclib__reverse&gt;)
+Mg24 ⟶ He4 + Ne20              [Q =  -9.32 MeV] (Mg24 --&gt; He4 + Ne20 &lt;il10_reaclib__reverse&gt;)
+Si28 + He4 ⟶ O16 + O16         [Q =  -9.59 MeV] (Si28 + He4 --&gt; O16 + O16 &lt;cf88_reaclib__reverse&gt;)
+Si28 + He4 ⟶ p + P31           [Q =  -1.92 MeV] (Si28 + He4 --&gt; p + P31 &lt;il10_reaclib__reverse&gt;)
+Si28 ⟶ He4 + Mg24              [Q =  -9.98 MeV] (Si28 --&gt; He4 + Mg24 &lt;st08_reaclib__reverse&gt;)
+Si28 ⟶ p + Al27                [Q = -11.59 MeV] (Si28 --&gt; p + Al27 &lt;il10_reaclib__reverse&gt;)
+P31 + p ⟶ O16 + O16            [Q =  -7.68 MeV] (P31 + p --&gt; O16 + O16 &lt;cf88_reaclib__reverse&gt;)
+P31 ⟶ He4 + Al27               [Q =  -9.67 MeV] (P31 --&gt; He4 + Al27 &lt;ths8_reaclib__reverse&gt;)
+S32 ⟶ He4 + Si28               [Q =  -6.95 MeV] (S32 --&gt; He4 + Si28 &lt;ths8_reaclib__reverse&gt;)
+S32 ⟶ p + P31                  [Q =  -8.86 MeV] (S32 --&gt; p + P31 &lt;il10_reaclib__reverse&gt;)
 </pre></div></div>
 </div>
 <p>Now let’s specify the weak rates we want from <span id="id2">Suzuki <em>et al.</em> [<a class="reference internal" href="zreferences.html#id10" title="Toshio Suzuki, Hiroshi Toki, and Ken’ichi Nomoto. Electron-capture and β-decay rates for sd-shell nuclei in stellar environments relevant to high-density o–ne–mg cores. The Astrophysical Journal, 817(2):163, January 2016. doi:10.3847/0004-637X/817/2/163.">2016</a>]</span> – these tables are included with pynucastro:</p>
@@ -582,20 +566,54 @@ Cell <span class="ansi-green-fg">In[3], line 1</span>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">AttributeError</span>                            Traceback (most recent call last)
+<span class="ansi-red-fg">RateFileError</span>                             Traceback (most recent call last)
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/rate.py:80</span>, in <span class="ansi-cyan-fg">load_rate</span><span class="ansi-blue-fg">(rfile)</span>
+<span class="ansi-green-intense-fg ansi-bold">     79</span> <span class="ansi-bold" style="color: rgb(0,135,0)">try</span>:
+<span class="ansi-green-fg">---&gt; 80</span>     rate <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">TabularRate</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">rfile</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">rfile</span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     81</span> <span class="ansi-bold" style="color: rgb(0,135,0)">except</span> (RateFileError, UnsupportedNucleus):
+
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/rate.py:1407</span>, in <span class="ansi-cyan-fg">TabularRate.__init__</span><span class="ansi-blue-fg">(self, rfile)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1406</span> rfile <span style="color: rgb(98,98,98)">=</span> Path(rfile)
+<span class="ansi-green-fg">-&gt; 1407</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>rfile_path <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">_find_rate_file</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">rfile</span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1408</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>rfile <span style="color: rgb(98,98,98)">=</span> rfile<span style="color: rgb(98,98,98)">.</span>name
+
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/rate.py:100</span>, in <span class="ansi-cyan-fg">_find_rate_file</span><span class="ansi-blue-fg">(ratename)</span>
+<span class="ansi-green-intense-fg ansi-bold">     99</span> <span style="color: rgb(95,135,135)"># notify user we can&#39;t find the file</span>
+<span class="ansi-green-fg">--&gt; 100</span> <span class="ansi-bold" style="color: rgb(0,135,0)">raise</span> RateFileError(<span style="color: rgb(175,0,0)">f</span><span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">File </span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>ratename<span class="ansi-bold" style="color: rgb(175,95,135)">!r}</span><span style="color: rgb(175,0,0)"> not found in the working directory, </span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>_pynucastro_rates_dir<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)">, or </span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>_pynucastro_tabular_dir<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)">&#39;</span>)
+
+<span class="ansi-red-fg">RateFileError</span>: File PosixPath(&#39;ca45--sc45-toki&#39;) not found in the working directory, /opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/library, or /opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/tabular
+
+During handling of the above exception, another exception occurred:
+
+<span class="ansi-red-fg">RateFileError</span>                             Traceback (most recent call last)
 Cell <span class="ansi-green-fg">In[4], line 1</span>
 <span class="ansi-green-fg">----&gt; 1</span> tabular_lib <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">pyna</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">TabularLibrary</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span>
 
-File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/library.py:712</span>, in <span class="ansi-cyan-fg">TabularLibrary.__init__</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-intense-fg ansi-bold">    706</span> <span class="ansi-bold" style="color: rgb(0,135,0)">def</span> <span style="color: rgb(0,0,255)">__init__</span>(<span style="color: rgb(0,135,0)">self</span>):
-<span class="ansi-green-intense-fg ansi-bold">    707</span>     <span style="color: rgb(95,135,135)"># find all of the tabular rates that pynucastro knows about</span>
-<span class="ansi-green-intense-fg ansi-bold">    708</span>     <span style="color: rgb(95,135,135)"># we&#39;ll assume that these are of the form *-toki</span>
-<span class="ansi-green-intense-fg ansi-bold">    710</span>     trates <span style="color: rgb(98,98,98)">=</span> []
-<span class="ansi-green-fg">--&gt; 712</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> _, _, filenames <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> <span style="color: rgb(0,135,0)">sorted</span>(<span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">lib_path</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">walk</span>()):
-<span class="ansi-green-intense-fg ansi-bold">    713</span>         <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> f <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> <span style="color: rgb(0,135,0)">sorted</span>(filenames):
-<span class="ansi-green-intense-fg ansi-bold">    714</span>             <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> f<span style="color: rgb(98,98,98)">.</span>endswith(<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">-toki</span><span style="color: rgb(175,0,0)">&#34;</span>):
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/library.py:716</span>, in <span class="ansi-cyan-fg">TabularLibrary.__init__</span><span class="ansi-blue-fg">(self)</span>
+<span class="ansi-green-intense-fg ansi-bold">    714</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> f <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> <span style="color: rgb(0,135,0)">sorted</span>(filenames):
+<span class="ansi-green-intense-fg ansi-bold">    715</span>         <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> f<span style="color: rgb(98,98,98)">.</span>endswith(<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">-toki</span><span style="color: rgb(175,0,0)">&#34;</span>):
+<span class="ansi-green-fg">--&gt; 716</span>             trates<span style="color: rgb(98,98,98)">.</span>append(<span class="ansi-yellow-bg">load_rate</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">f</span><span class="ansi-yellow-bg">)</span>)
+<span class="ansi-green-intense-fg ansi-bold">    718</span> Library<span style="color: rgb(98,98,98)">.</span><span style="color: rgb(0,0,255)">__init__</span>(<span style="color: rgb(0,135,0)">self</span>, rates<span style="color: rgb(98,98,98)">=</span>trates)
 
-<span class="ansi-red-fg">AttributeError</span>: &#39;PosixPath&#39; object has no attribute &#39;walk&#39;
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/rate.py:82</span>, in <span class="ansi-cyan-fg">load_rate</span><span class="ansi-blue-fg">(rfile)</span>
+<span class="ansi-green-intense-fg ansi-bold">     80</span>     rate <span style="color: rgb(98,98,98)">=</span> TabularRate(rfile<span style="color: rgb(98,98,98)">=</span>rfile)
+<span class="ansi-green-intense-fg ansi-bold">     81</span> <span class="ansi-bold" style="color: rgb(0,135,0)">except</span> (RateFileError, UnsupportedNucleus):
+<span class="ansi-green-fg">---&gt; 82</span>     rate <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">ReacLibRate</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">rfile</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">rfile</span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     84</span> <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> rate
+
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/rate.py:783</span>, in <span class="ansi-cyan-fg">ReacLibRate.__init__</span><span class="ansi-blue-fg">(self, rfile, chapter, original_source, reactants, products, sets, labelprops, Q)</span>
+<span class="ansi-green-intense-fg ansi-bold">    781</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> <span style="color: rgb(0,135,0)">isinstance</span>(rfile, (<span style="color: rgb(0,135,0)">str</span>, Path)):
+<span class="ansi-green-intense-fg ansi-bold">    782</span>     rfile <span style="color: rgb(98,98,98)">=</span> Path(rfile)
+<span class="ansi-green-fg">--&gt; 783</span>     <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>rfile_path <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">_find_rate_file</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">rfile</span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    784</span>     <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>rfile <span style="color: rgb(98,98,98)">=</span> rfile<span style="color: rgb(98,98,98)">.</span>name
+<span class="ansi-green-intense-fg ansi-bold">    786</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>chapter <span style="color: rgb(98,98,98)">=</span> chapter    <span style="color: rgb(95,135,135)"># the Reaclib chapter for this reaction</span>
+
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/rate.py:100</span>, in <span class="ansi-cyan-fg">_find_rate_file</span><span class="ansi-blue-fg">(ratename)</span>
+<span class="ansi-green-intense-fg ansi-bold">     97</span>         <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> x<span style="color: rgb(98,98,98)">.</span>resolve()
+<span class="ansi-green-intense-fg ansi-bold">     99</span> <span style="color: rgb(95,135,135)"># notify user we can&#39;t find the file</span>
+<span class="ansi-green-fg">--&gt; 100</span> <span class="ansi-bold" style="color: rgb(0,135,0)">raise</span> RateFileError(<span style="color: rgb(175,0,0)">f</span><span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">File </span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>ratename<span class="ansi-bold" style="color: rgb(175,95,135)">!r}</span><span style="color: rgb(175,0,0)"> not found in the working directory, </span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>_pynucastro_rates_dir<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)">, or </span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>_pynucastro_tabular_dir<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)">&#39;</span>)
+
+<span class="ansi-red-fg">RateFileError</span>: File PosixPath(&#39;ca45--sc45-toki&#39;) not found in the working directory, /opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/library, or /opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/tabular
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -668,7 +686,7 @@ Cell <span class="ansi-green-fg">In[7], line 1</span>
 </pre></div></div>
 </div>
 <p>Let’s create a rate collection from just the ReacLib rates and look to see which are actually important</p>
-<div class="nbinput docutils container">
+<div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
@@ -676,21 +694,8 @@ Cell <span class="ansi-green-fg">In[7], line 1</span>
 </pre></div>
 </div>
 </div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[8], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> rc <span style="color: rgb(98,98,98)">=</span> pyna<span style="color: rgb(98,98,98)">.</span>RateCollection(libraries<span style="color: rgb(98,98,98)">=</span>[<span class="ansi-yellow-bg">ecsn_library</span>])
-
-<span class="ansi-red-fg">NameError</span>: name &#39;ecsn_library&#39; is not defined
-</pre></div></div>
-</div>
 <p>Here we’ll pick thermodynamic conditions appropriate to the oxygen burning shell in a white dwarf</p>
-<div class="nbinput docutils container">
+<div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
@@ -710,21 +715,6 @@ Cell <span class="ansi-green-fg">In[8], line 1</span>
 </pre></div>
 </div>
 </div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[9], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> comp <span style="color: rgb(98,98,98)">=</span> pyna<span style="color: rgb(98,98,98)">.</span>Composition(<span class="ansi-yellow-bg">rc</span><span style="color: rgb(98,98,98)">.</span>get_nuclei())
-<span class="ansi-green-intense-fg ansi-bold">      2</span> comp<span style="color: rgb(98,98,98)">.</span>set_nuc(<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">o16</span><span style="color: rgb(175,0,0)">&#34;</span>, <span style="color: rgb(98,98,98)">0.5</span>)
-<span class="ansi-green-intense-fg ansi-bold">      3</span> comp<span style="color: rgb(98,98,98)">.</span>set_nuc(<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">ne20</span><span style="color: rgb(175,0,0)">&#34;</span>, <span style="color: rgb(98,98,98)">0.3</span>)
-
-<span class="ansi-red-fg">NameError</span>: name &#39;rc&#39; is not defined
-</pre></div></div>
-</div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
@@ -737,18 +727,12 @@ Cell <span class="ansi-green-fg">In[9], line 1</span>
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[10], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> fig <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">rc</span><span style="color: rgb(98,98,98)">.</span>plot(rho<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(98,98,98)">7.e9</span>, T<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(98,98,98)">1.e9</span>, comp<span style="color: rgb(98,98,98)">=</span>comp, ydot_cutoff_value<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(98,98,98)">1.e-20</span>)
-
-<span class="ansi-red-fg">NameError</span>: name &#39;rc&#39; is not defined
-</pre></div></div>
+<img alt="_images/electron-captures_18_0.png" src="_images/electron-captures_18_0.png" />
+</div>
 </div>
 <p>Note, this rate collection already includes some weak rates from ReacLib – we want to remove those.</p>
 <p>We’ll also take the opportunity to remove any rates that are not important, by looking for a <span class="math notranslate nohighlight">\(|\dot{Y}| &gt; 10^{-20}~s^{-1}\)</span>.</p>
-<div class="nbinput docutils container">
+<div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
 </div>
@@ -759,22 +743,6 @@ Cell <span class="ansi-green-fg">In[10], line 1</span>
         <span class="n">new_rate_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rate</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[11], line 2</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> new_rate_list <span style="color: rgb(98,98,98)">=</span> []
-<span class="ansi-green-fg">----&gt; 2</span> ydots <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">rc</span><span style="color: rgb(98,98,98)">.</span>evaluate_rates(rho<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(98,98,98)">7.e9</span>, T<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(98,98,98)">1.e9</span>, composition<span style="color: rgb(98,98,98)">=</span>comp)
-<span class="ansi-green-intense-fg ansi-bold">      3</span> <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> rate <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> rc<span style="color: rgb(98,98,98)">.</span>rates:
-<span class="ansi-green-intense-fg ansi-bold">      4</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> <span style="color: rgb(0,135,0)">abs</span>(ydots[rate]) <span style="color: rgb(98,98,98)">&gt;</span><span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(98,98,98)">1.e-20</span> <span class="ansi-bold" style="color: rgb(175,0,255)">and</span> <span class="ansi-bold" style="color: rgb(175,0,255)">not</span> rate<span style="color: rgb(98,98,98)">.</span>weak:
-
-<span class="ansi-red-fg">NameError</span>: name &#39;rc&#39; is not defined
-</pre></div></div>
 </div>
 <p>Now let’s add the tabular rates to this pruned down rate list</p>
 <div class="nbinput docutils container">
@@ -819,14 +787,8 @@ Cell <span class="ansi-green-fg">In[12], line 1</span>
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[14], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> fig <span style="color: rgb(98,98,98)">=</span> rc_new<span style="color: rgb(98,98,98)">.</span>plot(rho<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(98,98,98)">7.e9</span>, T<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(98,98,98)">1.e9</span>, comp<span style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">comp</span>, curved_edges<span style="color: rgb(98,98,98)">=</span><span class="ansi-bold" style="color: rgb(0,135,0)">True</span>, rotated<span style="color: rgb(98,98,98)">=</span><span class="ansi-bold" style="color: rgb(0,135,0)">True</span>)
-
-<span class="ansi-red-fg">NameError</span>: name &#39;comp&#39; is not defined
-</pre></div></div>
+<img alt="_images/electron-captures_25_0.png" src="_images/electron-captures_25_0.png" />
+</div>
 </div>
 <p>We can see the values of the rates at our thermodynamic conditions easily:</p>
 <div class="nbinput docutils container">
@@ -838,16 +800,25 @@ Cell <span class="ansi-green-fg">In[14], line 1</span>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+</pre></div>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[15], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> rc_new<span style="color: rgb(98,98,98)">.</span>evaluate_rates(rho<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(98,98,98)">7.e9</span>, T<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(98,98,98)">1.e9</span>, composition<span style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">comp</span>)
-
-<span class="ansi-red-fg">NameError</span>: name &#39;comp&#39; is not defined
+{Ne20 ⟶ He4 + O16: 4.6316695198155e-18,
+ O16 + He4 ⟶ Ne20 + 𝛾: 2163.4896055892,
+ Ne20 + He4 ⟶ Mg24 + 𝛾: 470.46571662959457,
+ Mg24 + He4 ⟶ Si28 + 𝛾: 65.33425925449085,
+ Al27 + p ⟶ Si28 + 𝛾: 3786.588954080847,
+ Al27 + He4 ⟶ P31 + 𝛾: 0.05763581125914332,
+ Si28 + He4 ⟶ S32 + 𝛾: 0.08322738610569612,
+ P31 + p ⟶ S32 + 𝛾: 2375.1304964039123,
+ O16 + O16 ⟶ p + P31: 7.15493989546395e-17,
+ O16 + O16 ⟶ He4 + Si28: 2.5949312230335824e-17,
+ Mg24 + He4 ⟶ p + Al27: 0.2543862399303773,
+ Al27 + p ⟶ He4 + Mg24: 5920.818449985259,
+ Si28 + He4 ⟶ p + P31: 0.00019528201299493384,
+ P31 + p ⟶ He4 + Si28: 5491.960442675607}
 </pre></div></div>
 </div>
 <p>Additionally, we can see the specific energy generation rate for these conditions</p>
@@ -860,16 +831,12 @@ Cell <span class="ansi-green-fg">In[15], line 1</span>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+</pre></div>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[16], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> rc_new<span style="color: rgb(98,98,98)">.</span>evaluate_energy_generation(rho<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(98,98,98)">7.e9</span>, T<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(98,98,98)">1.e9</span>, composition<span style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">comp</span>)
-
-<span class="ansi-red-fg">NameError</span>: name &#39;comp&#39; is not defined
+9.66702558867013e+22
 </pre></div></div>
 </div>
 </section>
