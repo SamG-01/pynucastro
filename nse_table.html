@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Creating an NSE table &#8212; pynucastro 2.2.0.post61+g239735d5 documentation</title>
+    <title>Creating an NSE table &#8212; pynucastro 2.2.0.post62+gb2313390 documentation</title>
   
   
   
@@ -39,7 +39,7 @@
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="_static/documentation_options.js?v=6366dfec"></script>
+    <script src="_static/documentation_options.js?v=9f9c2631"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
@@ -563,14 +563,14 @@ File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/pyt
 <span class="ansi-green-intense-fg ansi-bold">     18</span>     <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>filename <span style="color: rgb(98,98,98)">=</span> nucdata_dir<span style="color: rgb(98,98,98)">/</span><span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">AtomicMassEvaluation</span><span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(98,98,98)">/</span>datafile_name
 <span class="ansi-green-fg">---&gt; 20</span> <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">_read_table</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span>
 
-File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/nucdata/halflife_table.py:33</span>, in <span class="ansi-cyan-fg">HalfLifeTable._read_table</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-intense-fg ansi-bold">     29</span>         f<span style="color: rgb(98,98,98)">.</span>readline()
-<span class="ansi-green-intense-fg ansi-bold">     31</span> <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> line <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> file:
-<span class="ansi-green-fg">---&gt; 33</span>     A, Z, tau <span style="color: rgb(98,98,98)">=</span> line<span style="color: rgb(98,98,98)">.</span>strip()<span style="color: rgb(98,98,98)">.</span>split()
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/nucdata/halflife_table.py:37</span>, in <span class="ansi-cyan-fg">HalfLifeTable._read_table</span><span class="ansi-blue-fg">(self)</span>
 <span class="ansi-green-intense-fg ansi-bold">     34</span>     <span style="color: rgb(95,135,135)">#print(data_list)</span>
 <span class="ansi-green-intense-fg ansi-bold">     36</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> tau <span style="color: rgb(98,98,98)">!=</span> <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">stable</span><span style="color: rgb(175,0,0)">&#34;</span>:
+<span class="ansi-green-fg">---&gt; 37</span>         tau <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">float</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">tau</span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     39</span>     <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>halflife[<span style="color: rgb(0,135,0)">int</span>(A), <span style="color: rgb(0,135,0)">int</span>(Z)] <span style="color: rgb(98,98,98)">=</span> tau
+<span class="ansi-green-intense-fg ansi-bold">     41</span> file<span style="color: rgb(98,98,98)">.</span>close()
 
-<span class="ansi-red-fg">ValueError</span>: too many values to unpack (expected 3)
+<span class="ansi-red-fg">ValueError</span>: could not convert string to float: &#39;evaluation&#39;
 </pre></div></div>
 </div>
 <p>First we’ll create a simple NSE network with a few nuclei. We’ll include tabulated weak rates so we can compute the change in the state due to electron/positron captures and decays.</p>
