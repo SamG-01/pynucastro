@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Tabulated Weak Rate Example &#8212; pynucastro 2.2.0.post58+g3a4cf8be documentation</title>
+    <title>Tabulated Weak Rate Example &#8212; pynucastro 2.2.0.post61+g239735d5 documentation</title>
   
   
   
@@ -39,7 +39,7 @@
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="_static/documentation_options.js?v=69fcbf72"></script>
+    <script src="_static/documentation_options.js?v=6366dfec"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
@@ -495,13 +495,81 @@ document.write(`
 <p>where <span class="math notranslate nohighlight">\(Y_\mathrm{Ni}\)</span> and <span class="math notranslate nohighlight">\(Y_\mathrm{Co}\)</span> are the molar fractions of the nuclei.</p>
 <p>Let’s create a network with these rates.</p>
 <p>pynucastro will use the tabulated rates from <span id="id1">Langanke and Martínez-Pinedo [<a class="reference internal" href="zreferences.html#id9" title="K. Langanke and G. Martínez-Pinedo. Rate tables for the weak processes of pf-shell nuclei in stellar environments. Atomic Data and Nuclear Data Tables, 79(1):1-46, 2001. doi:10.1006/adnd.2001.0865.">2001</a>]</span>.</p>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pynucastro</span> <span class="k">as</span> <span class="nn">pyna</span>
 </pre></div>
 </div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[1], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span> <span class="ansi-bold" style="color: rgb(0,135,0)">as</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pyna</span>
+
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/__init__.py:131</span>
+<span class="ansi-green-intense-fg ansi-bold">    126</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">_version</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> version
+<span class="ansi-green-intense-fg ansi-bold">    128</span> __version__ <span style="color: rgb(98,98,98)">=</span> version
+<span class="ansi-green-fg">--&gt; 131</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">screening</span>
+<span class="ansi-green-intense-fg ansi-bold">    132</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">networks</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> (AmrexAstroCxxNetwork, BaseCxxNetwork,
+<span class="ansi-green-intense-fg ansi-bold">    133</span>                                  Composition, Explorer, NSENetwork,
+<span class="ansi-green-intense-fg ansi-bold">    134</span>                                  NumpyNetwork, PythonNetwork, RateCollection,
+<span class="ansi-green-intense-fg ansi-bold">    135</span>                                  SimpleCxxNetwork, StarKillerCxxNetwork,
+<span class="ansi-green-intense-fg ansi-bold">    136</span>                                  SympyRates)
+<span class="ansi-green-intense-fg ansi-bold">    137</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">nucdata</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> Nucleus, get_all_nuclei, get_nuclei_in_range
+
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/screening/__init__.py:5</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> <span style="color: rgb(175,0,0)">&#34;&#34;&#34;Screening routines&#34;&#34;&#34;</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span> __all__ <span style="color: rgb(98,98,98)">=</span> [<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">screen</span><span style="color: rgb(175,0,0)">&#34;</span>, <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">screening_util</span><span style="color: rgb(175,0,0)">&#34;</span>]
+<span class="ansi-green-fg">----&gt; 5</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">screen</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> (NseState, PlasmaState, ScreenFactors, chugunov_2007,
+<span class="ansi-green-intense-fg ansi-bold">      6</span>                      chugunov_2009, make_plasma_state, make_screen_factors,
+<span class="ansi-green-intense-fg ansi-bold">      7</span>                      potekhin_1998, screen5)
+<span class="ansi-green-intense-fg ansi-bold">      8</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">screening_util</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> ScreeningPair, get_screening_map
+
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/screening/screen.py:7</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> <span class="ansi-bold" style="color: rgb(0,0,255)">numpy</span> <span class="ansi-bold" style="color: rgb(0,135,0)">as</span> <span class="ansi-bold" style="color: rgb(0,0,255)">np</span>
+<span class="ansi-green-intense-fg ansi-bold">      6</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">constants</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> constants
+<span class="ansi-green-fg">----&gt; 7</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">nucdata</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> Nucleus
+<span class="ansi-green-intense-fg ansi-bold">      8</span> <span style="color: rgb(95,135,135)"># use the jitclass placeholder from rate.py</span>
+<span class="ansi-green-intense-fg ansi-bold">      9</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">rates</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">rate</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> jitclass, numba
+
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/nucdata/__init__.py:10</span>
+<span class="ansi-green-intense-fg ansi-bold">      8</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">elements</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> Element, PeriodicTable, UnidentifiedElement
+<span class="ansi-green-intense-fg ansi-bold">      9</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">mass_table</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> MassTable
+<span class="ansi-green-fg">---&gt; 10</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">nucleus</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> (Nucleus, UnsupportedNucleus, get_all_nuclei,
+<span class="ansi-green-intense-fg ansi-bold">     11</span>                       get_nuclei_in_range)
+<span class="ansi-green-intense-fg ansi-bold">     12</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">partition_function</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> (PartitionFunction,
+<span class="ansi-green-intense-fg ansi-bold">     13</span>                                  PartitionFunctionCollection,
+<span class="ansi-green-intense-fg ansi-bold">     14</span>                                  PartitionFunctionTable)
+<span class="ansi-green-intense-fg ansi-bold">     15</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">spin_table</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> SpinTable
+
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/nucdata/nucleus.py:21</span>
+<span class="ansi-green-intense-fg ansi-bold">     19</span> <span style="color: rgb(95,135,135)"># read the various tables with nuclear properties at the module-level</span>
+<span class="ansi-green-intense-fg ansi-bold">     20</span> _mass_table <span style="color: rgb(98,98,98)">=</span> MassTable()
+<span class="ansi-green-fg">---&gt; 21</span> _halflife_table <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">HalfLifeTable</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     22</span> _spin_table <span style="color: rgb(98,98,98)">=</span> SpinTable(reliable<span style="color: rgb(98,98,98)">=</span><span class="ansi-bold" style="color: rgb(0,135,0)">True</span>)
+<span class="ansi-green-intense-fg ansi-bold">     24</span> <span style="color: rgb(95,135,135)"># read the partition function table once and store it at the module-level</span>
+
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/nucdata/halflife_table.py:20</span>, in <span class="ansi-cyan-fg">HalfLifeTable.__init__</span><span class="ansi-blue-fg">(self, filename)</span>
+<span class="ansi-green-intense-fg ansi-bold">     17</span>     datafile_name <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">halflife2020.txt</span><span style="color: rgb(175,0,0)">&#39;</span>
+<span class="ansi-green-intense-fg ansi-bold">     18</span>     <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>filename <span style="color: rgb(98,98,98)">=</span> nucdata_dir<span style="color: rgb(98,98,98)">/</span><span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">AtomicMassEvaluation</span><span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(98,98,98)">/</span>datafile_name
+<span class="ansi-green-fg">---&gt; 20</span> <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">_read_table</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span>
+
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/nucdata/halflife_table.py:33</span>, in <span class="ansi-cyan-fg">HalfLifeTable._read_table</span><span class="ansi-blue-fg">(self)</span>
+<span class="ansi-green-intense-fg ansi-bold">     29</span>         f<span style="color: rgb(98,98,98)">.</span>readline()
+<span class="ansi-green-intense-fg ansi-bold">     31</span> <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> line <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> file:
+<span class="ansi-green-fg">---&gt; 33</span>     A, Z, tau <span style="color: rgb(98,98,98)">=</span> line<span style="color: rgb(98,98,98)">.</span>strip()<span style="color: rgb(98,98,98)">.</span>split()
+<span class="ansi-green-intense-fg ansi-bold">     34</span>     <span style="color: rgb(95,135,135)">#print(data_list)</span>
+<span class="ansi-green-intense-fg ansi-bold">     36</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> tau <span style="color: rgb(98,98,98)">!=</span> <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">stable</span><span style="color: rgb(175,0,0)">&#34;</span>:
+
+<span class="ansi-red-fg">ValueError</span>: too many values to unpack (expected 3)
+</pre></div></div>
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
@@ -514,13 +582,18 @@ document.write(`
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
-</pre></div>
+<div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Ni56 + e⁻ ⟶ Co56 + 𝜈           [Q =   2.13 MeV] (Ni56 --&gt; Co56 &lt;tabular_tabular&gt;)
-Co56 ⟶ Ni56 + e⁻ + 𝜈           [Q =  -2.13 MeV] (Co56 --&gt; Ni56 &lt;tabular_tabular&gt;)
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[2], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> tl <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">pyna</span><span style="color: rgb(98,98,98)">.</span>TabularLibrary()
+<span class="ansi-green-intense-fg ansi-bold">      2</span> lib <span style="color: rgb(98,98,98)">=</span> tl<span style="color: rgb(98,98,98)">.</span>linking_nuclei([<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">ni56</span><span style="color: rgb(175,0,0)">&#34;</span>, <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">co56</span><span style="color: rgb(175,0,0)">&#34;</span>])
+<span class="ansi-green-intense-fg ansi-bold">      3</span> lib
+
+<span class="ansi-red-fg">NameError</span>: name &#39;pyna&#39; is not defined
 </pre></div></div>
 </div>
 <p>We’ll create a <code class="docutils literal notranslate"><span class="pre">RateCollection</span></code> so we can evaluate the rates easily</p>
@@ -537,11 +610,18 @@ Co56 ⟶ Ni56 + e⁻ + 𝜈           [Q =  -2.13 MeV] (Co56 --&gt; Ni56 &lt;tab
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/electron-capture-example_5_0.png" src="_images/electron-capture-example_5_0.png" />
-</div>
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[3], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> rc <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">pyna</span><span style="color: rgb(98,98,98)">.</span>RateCollection(libraries<span style="color: rgb(98,98,98)">=</span>[lib])
+<span class="ansi-green-intense-fg ansi-bold">      2</span> fig <span style="color: rgb(98,98,98)">=</span> rc<span style="color: rgb(98,98,98)">.</span>plot(curved_edges<span style="color: rgb(98,98,98)">=</span><span class="ansi-bold" style="color: rgb(0,135,0)">True</span>)
+
+<span class="ansi-red-fg">NameError</span>: name &#39;pyna&#39; is not defined
+</pre></div></div>
 </div>
 <p>Let’s create a composition – we’ll make equal amounts of Ni and Co</p>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
@@ -549,6 +629,20 @@ Co56 ⟶ Ni56 + e⁻ + 𝜈           [Q =  -2.13 MeV] (Co56 --&gt; Ni56 &lt;tab
 <span class="n">comp</span><span class="o">.</span><span class="n">set_equal</span><span class="p">()</span>
 </pre></div>
 </div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[4], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> comp <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">pyna</span><span style="color: rgb(98,98,98)">.</span>Composition(rc<span style="color: rgb(98,98,98)">.</span>unique_nuclei)
+<span class="ansi-green-intense-fg ansi-bold">      2</span> comp<span style="color: rgb(98,98,98)">.</span>set_equal()
+
+<span class="ansi-red-fg">NameError</span>: name &#39;pyna&#39; is not defined
+</pre></div></div>
 </div>
 <p>We can see from the electron fraction that we are a little neutron-rich</p>
 <div class="nbinput docutils container">
@@ -561,16 +655,21 @@ Co56 ⟶ Ni56 + e⁻ + 𝜈           [Q =  -2.13 MeV] (Co56 --&gt; Ni56 &lt;tab
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
-</pre></div>
+<div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-0.4910714285714286
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[5], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> Ye <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">comp</span><span style="color: rgb(98,98,98)">.</span>eval_ye()
+<span class="ansi-green-intense-fg ansi-bold">      2</span> Ye
+
+<span class="ansi-red-fg">NameError</span>: name &#39;comp&#39; is not defined
 </pre></div></div>
 </div>
 <p>Now let’s compute the rates. We’ll pick a density (actually <span class="math notranslate nohighlight">\(\rho Y_e\)</span>) and temperature right on one of the points tabulated in the original source so we can directly compare to what is in the table.</p>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
@@ -578,6 +677,20 @@ Co56 ⟶ Ni56 + e⁻ + 𝜈           [Q =  -2.13 MeV] (Co56 --&gt; Ni56 &lt;tab
 <span class="n">T</span> <span class="o">=</span> <span class="mf">1.e9</span>
 </pre></div>
 </div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[6], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> rho <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(98,98,98)">1.e7</span> <span style="color: rgb(98,98,98)">/</span> <span class="ansi-yellow-bg">Ye</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> T <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(98,98,98)">1.e9</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;Ye&#39; is not defined
+</pre></div></div>
 </div>
 <p>The rates are proportional to the molar fractions, so we can get those too:</p>
 <div class="nbinput docutils container">
@@ -590,12 +703,17 @@ Co56 ⟶ Ni56 + e⁻ + 𝜈           [Q =  -2.13 MeV] (Co56 --&gt; Ni56 &lt;tab
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
-</pre></div>
+<div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-{Co56: 0.008928571428571428, Ni56: 0.008928571428571428}
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[7], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> Y <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">comp</span><span style="color: rgb(98,98,98)">.</span>get_molar()
+<span class="ansi-green-intense-fg ansi-bold">      2</span> Y
+
+<span class="ansi-red-fg">NameError</span>: name &#39;comp&#39; is not defined
 </pre></div></div>
 </div>
 <p>Now we can evaluate the rates</p>
@@ -608,13 +726,16 @@ Co56 ⟶ Ni56 + e⁻ + 𝜈           [Q =  -2.13 MeV] (Co56 --&gt; Ni56 &lt;tab
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
-</pre></div>
+<div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-{Co56 ⟶ Ni56 + e⁻ + 𝜈: 2.6914293082016787e-23,
- Ni56 + e⁻ ⟶ Co56 + 𝜈: 7.240723730837853e-06}
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[8], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> <span class="ansi-yellow-bg">rc</span><span style="color: rgb(98,98,98)">.</span>evaluate_rates(rho, T, comp)
+
+<span class="ansi-red-fg">NameError</span>: name &#39;rc&#39; is not defined
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -627,12 +748,17 @@ Co56 ⟶ Ni56 + e⁻ + 𝜈           [Q =  -2.13 MeV] (Co56 --&gt; Ni56 &lt;tab
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
-</pre></div>
+<div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-{Co56: 7.240723730837853e-06, Ni56: -7.240723730837853e-06}
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[9], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> ydots <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">rc</span><span style="color: rgb(98,98,98)">.</span>evaluate_ydots(rho, T, comp)
+<span class="ansi-green-intense-fg ansi-bold">      2</span> ydots
+
+<span class="ansi-red-fg">NameError</span>: name &#39;rc&#39; is not defined
 </pre></div></div>
 </div>
 <p>If we look at the original tables from <span id="id2">Langanke and Martínez-Pinedo [<a class="reference internal" href="zreferences.html#id9" title="K. Langanke and G. Martínez-Pinedo. Rate tables for the weak processes of pf-shell nuclei in stellar environments. Atomic Data and Nuclear Data Tables, 79(1):1-46, 2001. doi:10.1006/adnd.2001.0865.">2001</a>]</span>, they tabulate (for the conditions we selected above):</p>
@@ -658,12 +784,18 @@ Co56 ⟶ Ni56 + e⁻ + 𝜈           [Q =  -2.13 MeV] (Co56 --&gt; Ni56 &lt;tab
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
-</pre></div>
+<div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-7.240723730837861e-06
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[10], line 2</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> lambda_ec <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(98,98,98)">10.0</span><span style="color: rgb(98,98,98)">*</span><span style="color: rgb(98,98,98)">*</span><span style="color: rgb(98,98,98)">-</span><span style="color: rgb(98,98,98)">3.091</span>
+<span class="ansi-green-fg">----&gt; 2</span> r <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">Y</span>[pyna<span style="color: rgb(98,98,98)">.</span>Nucleus(<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">ni56</span><span style="color: rgb(175,0,0)">&#34;</span>)] <span style="color: rgb(98,98,98)">*</span> lambda_ec
+<span class="ansi-green-intense-fg ansi-bold">      3</span> r
+
+<span class="ansi-red-fg">NameError</span>: name &#39;Y&#39; is not defined
 </pre></div></div>
 </div>
 <p>We get the same result as <code class="docutils literal notranslate"><span class="pre">evaluate_rates()</span></code>!</p>
@@ -680,12 +812,17 @@ Co56 ⟶ Ni56 + e⁻ + 𝜈           [Q =  -2.13 MeV] (Co56 --&gt; Ni56 &lt;tab
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
-</pre></div>
+<div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
--7.240723730837865e-06
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[11], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> dyedt <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(0,135,0)">sum</span>(q<span style="color: rgb(98,98,98)">.</span>Z <span style="color: rgb(98,98,98)">*</span> ydots[q] <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> q <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> <span class="ansi-yellow-bg">rc</span><span style="color: rgb(98,98,98)">.</span>unique_nuclei)
+<span class="ansi-green-intense-fg ansi-bold">      2</span> dyedt
+
+<span class="ansi-red-fg">NameError</span>: name &#39;rc&#39; is not defined
 </pre></div></div>
 </div>
 </section>

@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Selecting Rates from a Library &#8212; pynucastro 2.2.0.post58+g3a4cf8be documentation</title>
+    <title>Selecting Rates from a Library &#8212; pynucastro 2.2.0.post61+g239735d5 documentation</title>
   
   
   
@@ -39,7 +39,7 @@
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="_static/documentation_options.js?v=69fcbf72"></script>
+    <script src="_static/documentation_options.js?v=6366dfec"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
@@ -511,7 +511,7 @@ document.write(`
 <h2>Reading a rate snapshot<a class="headerlink" href="#Reading-a-rate-snapshot" title="Link to this heading">#</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">Library</span></code> class will look for the library file in the working directory or in the <code class="docutils literal notranslate"><span class="pre">pynucastro/library</span></code> subdirectory of the <code class="docutils literal notranslate"><span class="pre">pynucastro</span></code> package.</p>
 <p>When the constructor is supplied a file name, <code class="docutils literal notranslate"><span class="pre">pynucastro</span></code> will read the contents of this file and interpret them as Reaclib rates in either the Reaclib 1 or 2 formats. The <code class="docutils literal notranslate"><span class="pre">Library</span></code> then stores the rates from the file as <code class="docutils literal notranslate"><span class="pre">Rate</span></code> objects.</p>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
@@ -519,13 +519,94 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="nbinput nblast docutils container">
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[1], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span> <span class="ansi-bold" style="color: rgb(0,135,0)">as</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pyna</span>
+
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/__init__.py:131</span>
+<span class="ansi-green-intense-fg ansi-bold">    126</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">_version</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> version
+<span class="ansi-green-intense-fg ansi-bold">    128</span> __version__ <span style="color: rgb(98,98,98)">=</span> version
+<span class="ansi-green-fg">--&gt; 131</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">screening</span>
+<span class="ansi-green-intense-fg ansi-bold">    132</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">networks</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> (AmrexAstroCxxNetwork, BaseCxxNetwork,
+<span class="ansi-green-intense-fg ansi-bold">    133</span>                                  Composition, Explorer, NSENetwork,
+<span class="ansi-green-intense-fg ansi-bold">    134</span>                                  NumpyNetwork, PythonNetwork, RateCollection,
+<span class="ansi-green-intense-fg ansi-bold">    135</span>                                  SimpleCxxNetwork, StarKillerCxxNetwork,
+<span class="ansi-green-intense-fg ansi-bold">    136</span>                                  SympyRates)
+<span class="ansi-green-intense-fg ansi-bold">    137</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">nucdata</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> Nucleus, get_all_nuclei, get_nuclei_in_range
+
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/screening/__init__.py:5</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> <span style="color: rgb(175,0,0)">&#34;&#34;&#34;Screening routines&#34;&#34;&#34;</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span> __all__ <span style="color: rgb(98,98,98)">=</span> [<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">screen</span><span style="color: rgb(175,0,0)">&#34;</span>, <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">screening_util</span><span style="color: rgb(175,0,0)">&#34;</span>]
+<span class="ansi-green-fg">----&gt; 5</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">screen</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> (NseState, PlasmaState, ScreenFactors, chugunov_2007,
+<span class="ansi-green-intense-fg ansi-bold">      6</span>                      chugunov_2009, make_plasma_state, make_screen_factors,
+<span class="ansi-green-intense-fg ansi-bold">      7</span>                      potekhin_1998, screen5)
+<span class="ansi-green-intense-fg ansi-bold">      8</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">screening_util</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> ScreeningPair, get_screening_map
+
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/screening/screen.py:7</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> <span class="ansi-bold" style="color: rgb(0,0,255)">numpy</span> <span class="ansi-bold" style="color: rgb(0,135,0)">as</span> <span class="ansi-bold" style="color: rgb(0,0,255)">np</span>
+<span class="ansi-green-intense-fg ansi-bold">      6</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">constants</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> constants
+<span class="ansi-green-fg">----&gt; 7</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">nucdata</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> Nucleus
+<span class="ansi-green-intense-fg ansi-bold">      8</span> <span style="color: rgb(95,135,135)"># use the jitclass placeholder from rate.py</span>
+<span class="ansi-green-intense-fg ansi-bold">      9</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">rates</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">rate</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> jitclass, numba
+
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/nucdata/__init__.py:10</span>
+<span class="ansi-green-intense-fg ansi-bold">      8</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">elements</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> Element, PeriodicTable, UnidentifiedElement
+<span class="ansi-green-intense-fg ansi-bold">      9</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">mass_table</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> MassTable
+<span class="ansi-green-fg">---&gt; 10</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">nucleus</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> (Nucleus, UnsupportedNucleus, get_all_nuclei,
+<span class="ansi-green-intense-fg ansi-bold">     11</span>                       get_nuclei_in_range)
+<span class="ansi-green-intense-fg ansi-bold">     12</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">partition_function</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> (PartitionFunction,
+<span class="ansi-green-intense-fg ansi-bold">     13</span>                                  PartitionFunctionCollection,
+<span class="ansi-green-intense-fg ansi-bold">     14</span>                                  PartitionFunctionTable)
+<span class="ansi-green-intense-fg ansi-bold">     15</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">spin_table</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> SpinTable
+
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/nucdata/nucleus.py:21</span>
+<span class="ansi-green-intense-fg ansi-bold">     19</span> <span style="color: rgb(95,135,135)"># read the various tables with nuclear properties at the module-level</span>
+<span class="ansi-green-intense-fg ansi-bold">     20</span> _mass_table <span style="color: rgb(98,98,98)">=</span> MassTable()
+<span class="ansi-green-fg">---&gt; 21</span> _halflife_table <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">HalfLifeTable</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     22</span> _spin_table <span style="color: rgb(98,98,98)">=</span> SpinTable(reliable<span style="color: rgb(98,98,98)">=</span><span class="ansi-bold" style="color: rgb(0,135,0)">True</span>)
+<span class="ansi-green-intense-fg ansi-bold">     24</span> <span style="color: rgb(95,135,135)"># read the partition function table once and store it at the module-level</span>
+
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/nucdata/halflife_table.py:20</span>, in <span class="ansi-cyan-fg">HalfLifeTable.__init__</span><span class="ansi-blue-fg">(self, filename)</span>
+<span class="ansi-green-intense-fg ansi-bold">     17</span>     datafile_name <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">halflife2020.txt</span><span style="color: rgb(175,0,0)">&#39;</span>
+<span class="ansi-green-intense-fg ansi-bold">     18</span>     <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>filename <span style="color: rgb(98,98,98)">=</span> nucdata_dir<span style="color: rgb(98,98,98)">/</span><span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">AtomicMassEvaluation</span><span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(98,98,98)">/</span>datafile_name
+<span class="ansi-green-fg">---&gt; 20</span> <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">_read_table</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span>
+
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/nucdata/halflife_table.py:33</span>, in <span class="ansi-cyan-fg">HalfLifeTable._read_table</span><span class="ansi-blue-fg">(self)</span>
+<span class="ansi-green-intense-fg ansi-bold">     29</span>         f<span style="color: rgb(98,98,98)">.</span>readline()
+<span class="ansi-green-intense-fg ansi-bold">     31</span> <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> line <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> file:
+<span class="ansi-green-fg">---&gt; 33</span>     A, Z, tau <span style="color: rgb(98,98,98)">=</span> line<span style="color: rgb(98,98,98)">.</span>strip()<span style="color: rgb(98,98,98)">.</span>split()
+<span class="ansi-green-intense-fg ansi-bold">     34</span>     <span style="color: rgb(95,135,135)">#print(data_list)</span>
+<span class="ansi-green-intense-fg ansi-bold">     36</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> tau <span style="color: rgb(98,98,98)">!=</span> <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">stable</span><span style="color: rgb(175,0,0)">&#34;</span>:
+
+<span class="ansi-red-fg">ValueError</span>: too many values to unpack (expected 3)
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mylibrary</span> <span class="o">=</span> <span class="n">pyna</span><span class="o">.</span><span class="n">ReacLibLibrary</span><span class="p">()</span>
 </pre></div>
 </div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[2], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> mylibrary <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">pyna</span><span style="color: rgb(98,98,98)">.</span>ReacLibLibrary()
+
+<span class="ansi-red-fg">NameError</span>: name &#39;pyna&#39; is not defined
+</pre></div></div>
 </div>
 </section>
 <section id="Specifying-Desired-Nuclei">
@@ -543,7 +624,7 @@ document.write(`
 </div>
 <p>Now we use the <code class="docutils literal notranslate"><span class="pre">Library.linking_nuclei()</span></code> function to return a smaller <code class="docutils literal notranslate"><span class="pre">Library</span></code> object containing only the rates that link these nuclei.</p>
 <p>We can pass <code class="docutils literal notranslate"><span class="pre">with_reverse=False</span></code> to restrict <code class="docutils literal notranslate"><span class="pre">linking_nuclei</span></code> to only include forward rates from the Reaclib library, as pynucastro does not yet implement partition functions for reverse rates.</p>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
@@ -551,14 +632,40 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[4], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> cno_library <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">mylibrary</span><span style="color: rgb(98,98,98)">.</span>linking_nuclei(all_nuclei, with_reverse<span style="color: rgb(98,98,98)">=</span><span class="ansi-bold" style="color: rgb(0,135,0)">False</span>)
+
+<span class="ansi-red-fg">NameError</span>: name &#39;mylibrary&#39; is not defined
+</pre></div></div>
+</div>
 <p>Now we can create a network (<code class="docutils literal notranslate"><span class="pre">PythonNetwork</span></code> or <code class="docutils literal notranslate"><span class="pre">StarKillerNetwork</span></code>) as:</p>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cno_network</span> <span class="o">=</span> <span class="n">pyna</span><span class="o">.</span><span class="n">networks</span><span class="o">.</span><span class="n">PythonNetwork</span><span class="p">(</span><span class="n">libraries</span><span class="o">=</span><span class="n">cno_library</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[5], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> cno_network <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">pyna</span><span style="color: rgb(98,98,98)">.</span>networks<span style="color: rgb(98,98,98)">.</span>PythonNetwork(libraries<span style="color: rgb(98,98,98)">=</span>cno_library)
+
+<span class="ansi-red-fg">NameError</span>: name &#39;pyna&#39; is not defined
+</pre></div></div>
 </div>
 <p>In the above, we construct a network from a <code class="docutils literal notranslate"><span class="pre">Library</span></code> object by passing the <code class="docutils literal notranslate"><span class="pre">Library</span></code> object to the <code class="docutils literal notranslate"><span class="pre">libraries</span></code> argument of the network constructor. To construct a network from multiple libraries, the <code class="docutils literal notranslate"><span class="pre">libraries</span></code> argument can also take a list of <code class="docutils literal notranslate"><span class="pre">Library</span></code> objects.</p>
 <p>We can show the structure of the network by plotting a network diagram.</p>
@@ -574,18 +681,37 @@ document.write(`
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/library-examples_12_0.png" src="_images/library-examples_12_0.png" />
-</div>
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[6], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> fig <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">cno_network</span><span style="color: rgb(98,98,98)">.</span>plot()
+
+<span class="ansi-red-fg">NameError</span>: name &#39;cno_network&#39; is not defined
+</pre></div></div>
 </div>
 <p>Note that the above network also includes the triple-alpha rate from Reaclib.</p>
 <p>If we wanted to generate the python code to calculate the right-hand side we could next do:</p>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cno_network</span><span class="o">.</span><span class="n">write_network</span><span class="p">(</span><span class="s1">&#39;network_module.py&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[7], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> <span class="ansi-yellow-bg">cno_network</span><span style="color: rgb(98,98,98)">.</span>write_network(<span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">network_module.py</span><span style="color: rgb(175,0,0)">&#39;</span>)
+
+<span class="ansi-red-fg">NameError</span>: name &#39;cno_network&#39; is not defined
+</pre></div></div>
 </div>
 <p>And we could run this together with the burn driver program in <code class="docutils literal notranslate"><span class="pre">examples/burn.py</span></code></p>
 </section>
@@ -595,13 +721,26 @@ document.write(`
 <section id="Inexact-Filtering">
 <h3>Inexact Filtering<a class="headerlink" href="#Inexact-Filtering" title="Link to this heading">#</a></h3>
 <p>Inexact filtering is like using wildcards: in the following example, the rate filter we define will match any rates in which <span class="math notranslate nohighlight">\(\mathrm{^{12}C}\)</span> is a reactant.</p>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c12_inexact_filter</span> <span class="o">=</span> <span class="n">pyna</span><span class="o">.</span><span class="n">RateFilter</span><span class="p">(</span><span class="n">reactants</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;c12&#39;</span><span class="p">],</span> <span class="n">exact</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[8], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> c12_inexact_filter <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">pyna</span><span style="color: rgb(98,98,98)">.</span>RateFilter(reactants<span style="color: rgb(98,98,98)">=</span>[<span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">c12</span><span style="color: rgb(175,0,0)">&#39;</span>], exact<span style="color: rgb(98,98,98)">=</span><span class="ansi-bold" style="color: rgb(0,135,0)">False</span>)
+
+<span class="ansi-red-fg">NameError</span>: name &#39;pyna&#39; is not defined
+</pre></div></div>
 </div>
 <p>Once we construct a <code class="docutils literal notranslate"><span class="pre">RateFilter</span></code> object, we can apply it to our <code class="docutils literal notranslate"><span class="pre">Library</span></code> by passing it to the <code class="docutils literal notranslate"><span class="pre">Library.filter</span></code> function.</p>
 <p><code class="docutils literal notranslate"><span class="pre">Library.filter</span></code> returns a new <code class="docutils literal notranslate"><span class="pre">Library</span></code> object containing the rates that match our <code class="docutils literal notranslate"><span class="pre">RateFilter</span></code>.</p>
@@ -620,35 +759,36 @@ document.write(`
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-C12 + n ⟶ C13 + 𝛾              [Q =   4.95 MeV] (C12 + n --&gt; C13 &lt;ks03_reaclib__&gt;)
-C12 + p ⟶ N13 + 𝛾              [Q =   1.94 MeV] (C12 + p --&gt; N13 &lt;ls09_reaclib__&gt;)
-C12 + He4 ⟶ O16 + 𝛾            [Q =   7.16 MeV] (C12 + He4 --&gt; O16 &lt;nac2_reaclib__&gt;)
-C12 + C12 ⟶ He4 + Ne20         [Q =   4.62 MeV] (C12 + C12 --&gt; He4 + Ne20 &lt;cf88_reaclib__&gt;)
-C12 + C12 ⟶ p + Na23           [Q =   2.24 MeV] (C12 + C12 --&gt; p + Na23 &lt;cf88_reaclib__&gt;)
-O16 + C12 ⟶ He4 + Mg24         [Q =   6.77 MeV] (O16 + C12 --&gt; He4 + Mg24 &lt;cf88_reaclib__&gt;)
-O16 + C12 ⟶ p + Al27           [Q =   5.17 MeV] (O16 + C12 --&gt; p + Al27 &lt;cf88_reaclib__&gt;)
-Ne20 + C12 ⟶ He4 + Si28        [Q =  12.02 MeV] (Ne20 + C12 --&gt; He4 + Si28 &lt;rolf_reaclib__&gt;)
-Ne20 + C12 ⟶ p + P31           [Q =  10.10 MeV] (Ne20 + C12 --&gt; p + P31 &lt;rolf_reaclib__&gt;)
-Ne20 + C12 ⟶ n + S31           [Q =   3.93 MeV] (Ne20 + C12 --&gt; n + S31 &lt;rolf_reaclib__&gt;)
-C12 + n ⟶ He4 + Be9            [Q =  -5.70 MeV] (C12 + n --&gt; He4 + Be9 &lt;cf88_reaclib__reverse&gt;)
-C12 + n ⟶ p + B12              [Q = -12.59 MeV] (C12 + n --&gt; p + B12 &lt;wag_reaclib__reverse&gt;)
-C12 + He4 ⟶ p + N15            [Q =  -4.97 MeV] (C12 + He4 --&gt; p + N15 &lt;nacr_reaclib__reverse&gt;)
-C12 + He4 ⟶ n + O15            [Q =  -8.50 MeV] (C12 + He4 --&gt; n + O15 &lt;cf88_reaclib__reverse&gt;)
-C12 + C12 ⟶ n + Mg23           [Q =  -2.60 MeV] (C12 + C12 --&gt; n + Mg23 &lt;cf88_reaclib__reverse&gt;)
-C12 ⟶ He4 + He4 + He4          [Q =  -7.28 MeV] (C12 --&gt; He4 + He4 + He4 &lt;fy05_reaclib__reverse&gt;)
-C12 ⟶ p + B11                  [Q = -15.96 MeV] (C12 --&gt; p + B11 &lt;nw00_reaclib__reverse&gt;)
-C12 ⟶ n + C11                  [Q = -18.72 MeV] (C12 --&gt; n + C11 &lt;bb92_reaclib__reverse&gt;)
-O16 + C12 ⟶ n + Si27           [Q =  -0.42 MeV] (O16 + C12 --&gt; n + Si27 &lt;cf88_reaclib__reverse&gt;)
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[9], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> c12_inexact_library <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">mylibrary</span><span style="color: rgb(98,98,98)">.</span>filter(c12_inexact_filter)
+<span class="ansi-green-intense-fg ansi-bold">      2</span> <span style="color: rgb(0,135,0)">print</span>(c12_inexact_library)
+
+<span class="ansi-red-fg">NameError</span>: name &#39;mylibrary&#39; is not defined
 </pre></div></div>
 </div>
 <p>The rate identifiers above can be used to access individual <code class="docutils literal notranslate"><span class="pre">Rate</span></code> objects within a <code class="docutils literal notranslate"><span class="pre">Library</span></code> as follows:</p>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cago</span> <span class="o">=</span> <span class="n">c12_inexact_library</span><span class="o">.</span><span class="n">get_rate</span><span class="p">(</span><span class="s1">&#39;c12 + he4 --&gt; o16 &lt;nac2_reaclib__&gt;&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[10], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> cago <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">c12_inexact_library</span><span style="color: rgb(98,98,98)">.</span>get_rate(<span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">c12 + he4 --&gt; o16 &lt;nac2_reaclib__&gt;</span><span style="color: rgb(175,0,0)">&#39;</span>)
+
+<span class="ansi-red-fg">NameError</span>: name &#39;c12_inexact_library&#39; is not defined
+</pre></div></div>
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
@@ -662,8 +802,14 @@ O16 + C12 ⟶ n + Si27           [Q =  -0.42 MeV] (O16 + C12 --&gt; n + Si27 &lt
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/library-examples_23_0.png" src="_images/library-examples_23_0.png" />
-</div>
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[11], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> fig <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">cago</span><span style="color: rgb(98,98,98)">.</span>plot()
+
+<span class="ansi-red-fg">NameError</span>: name &#39;cago&#39; is not defined
+</pre></div></div>
 </div>
 </section>
 <section id="Exact-Filtering">
@@ -686,9 +832,14 @@ O16 + C12 ⟶ n + Si27           [Q =  -0.42 MeV] (O16 + C12 --&gt; n + Si27 &lt
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-C12 + C12 ⟶ He4 + Ne20         [Q =   4.62 MeV] (C12 + C12 --&gt; He4 + Ne20 &lt;cf88_reaclib__&gt;)
-C12 + C12 ⟶ p + Na23           [Q =   2.24 MeV] (C12 + C12 --&gt; p + Na23 &lt;cf88_reaclib__&gt;)
-C12 + C12 ⟶ n + Mg23           [Q =  -2.60 MeV] (C12 + C12 --&gt; n + Mg23 &lt;cf88_reaclib__reverse&gt;)
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[12], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> c12_exact_filter <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">pyna</span><span style="color: rgb(98,98,98)">.</span>rates<span style="color: rgb(98,98,98)">.</span>RateFilter(reactants<span style="color: rgb(98,98,98)">=</span>[<span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">c12</span><span style="color: rgb(175,0,0)">&#39;</span>, <span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">c12</span><span style="color: rgb(175,0,0)">&#39;</span>])
+<span class="ansi-green-intense-fg ansi-bold">      2</span> c12_exact_library <span style="color: rgb(98,98,98)">=</span> mylibrary<span style="color: rgb(98,98,98)">.</span>filter(c12_exact_filter)
+<span class="ansi-green-intense-fg ansi-bold">      3</span> <span style="color: rgb(0,135,0)">print</span>(c12_exact_library)
+
+<span class="ansi-red-fg">NameError</span>: name &#39;pyna&#39; is not defined
 </pre></div></div>
 </div>
 </section>
@@ -739,17 +890,14 @@ C12 + C12 ⟶ n + Mg23           [Q =  -2.60 MeV] (C12 + C12 --&gt; n + Mg23 &lt
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-O16
-Ne20
-Mg24
-Si28
-S32
-Ar36
-Ca40
-Ti44
-Cr48
-Fe52
-Ni56
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[13], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> alpha_library <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">pyna</span><span style="color: rgb(98,98,98)">.</span>Library()
+<span class="ansi-green-intense-fg ansi-bold">      3</span> capture <span style="color: rgb(98,98,98)">=</span> pyna<span style="color: rgb(98,98,98)">.</span>Nucleus(<span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">he4</span><span style="color: rgb(175,0,0)">&#39;</span>)
+<span class="ansi-green-intense-fg ansi-bold">      4</span> seed <span style="color: rgb(98,98,98)">=</span> pyna<span style="color: rgb(98,98,98)">.</span>Nucleus(<span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">c12</span><span style="color: rgb(175,0,0)">&#39;</span>)
+
+<span class="ansi-red-fg">NameError</span>: name &#39;pyna&#39; is not defined
 </pre></div></div>
 </div>
 <p>We will next print out the library we constructed, seeing that we have both forward and reverse rates for the alpha chain.</p>
@@ -767,38 +915,35 @@ Ni56
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-C12 + He4 ⟶ O16 + 𝛾            [Q =   7.16 MeV] (C12 + He4 --&gt; O16 &lt;nac2_reaclib__&gt;)
-O16 + He4 ⟶ Ne20 + 𝛾           [Q =   4.73 MeV] (O16 + He4 --&gt; Ne20 &lt;co10_reaclib__&gt;)
-Ne20 + He4 ⟶ Mg24 + 𝛾          [Q =   9.32 MeV] (Ne20 + He4 --&gt; Mg24 &lt;il10_reaclib__&gt;)
-Mg24 + He4 ⟶ Si28 + 𝛾          [Q =   9.98 MeV] (Mg24 + He4 --&gt; Si28 &lt;st08_reaclib__&gt;)
-Si28 + He4 ⟶ S32 + 𝛾           [Q =   6.95 MeV] (Si28 + He4 --&gt; S32 &lt;ths8_reaclib__&gt;)
-S32 + He4 ⟶ Ar36 + 𝛾           [Q =   6.64 MeV] (S32 + He4 --&gt; Ar36 &lt;ths8_reaclib__&gt;)
-Ar36 + He4 ⟶ Ca40 + 𝛾          [Q =   7.04 MeV] (Ar36 + He4 --&gt; Ca40 &lt;ths8_reaclib__&gt;)
-Ca40 + He4 ⟶ Ti44 + 𝛾          [Q =   5.13 MeV] (Ca40 + He4 --&gt; Ti44 &lt;chw0_reaclib__&gt;)
-Ti44 + He4 ⟶ Cr48 + 𝛾          [Q =   7.70 MeV] (Ti44 + He4 --&gt; Cr48 &lt;ths8_reaclib__&gt;)
-Cr48 + He4 ⟶ Fe52 + 𝛾          [Q =   7.94 MeV] (Cr48 + He4 --&gt; Fe52 &lt;ths8_reaclib__&gt;)
-Fe52 + He4 ⟶ Ni56 + 𝛾          [Q =   8.00 MeV] (Fe52 + He4 --&gt; Ni56 &lt;ths8_reaclib__&gt;)
-O16 ⟶ He4 + C12                [Q =  -7.16 MeV] (O16 --&gt; He4 + C12 &lt;nac2_reaclib__reverse&gt;)
-Ne20 ⟶ He4 + O16               [Q =  -4.73 MeV] (Ne20 --&gt; He4 + O16 &lt;co10_reaclib__reverse&gt;)
-Mg24 ⟶ He4 + Ne20              [Q =  -9.32 MeV] (Mg24 --&gt; He4 + Ne20 &lt;il10_reaclib__reverse&gt;)
-Si28 ⟶ He4 + Mg24              [Q =  -9.98 MeV] (Si28 --&gt; He4 + Mg24 &lt;st08_reaclib__reverse&gt;)
-S32 ⟶ He4 + Si28               [Q =  -6.95 MeV] (S32 --&gt; He4 + Si28 &lt;ths8_reaclib__reverse&gt;)
-Ar36 ⟶ He4 + S32               [Q =  -6.64 MeV] (Ar36 --&gt; He4 + S32 &lt;ths8_reaclib__reverse&gt;)
-Ca40 ⟶ He4 + Ar36              [Q =  -7.04 MeV] (Ca40 --&gt; He4 + Ar36 &lt;ths8_reaclib__reverse&gt;)
-Ti44 ⟶ He4 + Ca40              [Q =  -5.13 MeV] (Ti44 --&gt; He4 + Ca40 &lt;chw0_reaclib__reverse&gt;)
-Cr48 ⟶ He4 + Ti44              [Q =  -7.70 MeV] (Cr48 --&gt; He4 + Ti44 &lt;ths8_reaclib__reverse&gt;)
-Fe52 ⟶ He4 + Cr48              [Q =  -7.94 MeV] (Fe52 --&gt; He4 + Cr48 &lt;ths8_reaclib__reverse&gt;)
-Ni56 ⟶ He4 + Fe52              [Q =  -8.00 MeV] (Ni56 --&gt; He4 + Fe52 &lt;ths8_reaclib__reverse&gt;)
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[14], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> <span style="color: rgb(0,135,0)">print</span>(<span class="ansi-yellow-bg">alpha_library</span>)
+
+<span class="ansi-red-fg">NameError</span>: name &#39;alpha_library&#39; is not defined
 </pre></div></div>
 </div>
 <p>Next we can create a reaction network from our filtered alpha capture library by passing our library to a network constructor using the <code class="docutils literal notranslate"><span class="pre">libraries</span></code> keyword.</p>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alpha_network</span> <span class="o">=</span> <span class="n">pyna</span><span class="o">.</span><span class="n">PythonNetwork</span><span class="p">(</span><span class="n">libraries</span><span class="o">=</span><span class="n">alpha_library</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[15], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> alpha_network <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">pyna</span><span style="color: rgb(98,98,98)">.</span>PythonNetwork(libraries<span style="color: rgb(98,98,98)">=</span>alpha_library)
+
+<span class="ansi-red-fg">NameError</span>: name &#39;pyna&#39; is not defined
+</pre></div></div>
 </div>
 <p>And finally we can make Z-N plot of the nuclei linked via the reactions we selected.</p>
 <div class="nbinput docutils container">
@@ -813,8 +958,14 @@ Ni56 ⟶ He4 + Fe52              [Q =  -8.00 MeV] (Ni56 --&gt; He4 + Fe52 &lt;th
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/library-examples_33_0.png" src="_images/library-examples_33_0.png" />
-</div>
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[16], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> fig <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">alpha_network</span><span style="color: rgb(98,98,98)">.</span>plot()
+
+<span class="ansi-red-fg">NameError</span>: name &#39;alpha_network&#39; is not defined
+</pre></div></div>
 </div>
 </section>
 </section>

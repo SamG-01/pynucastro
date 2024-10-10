@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Solving for nuclear statistical equilibrium &#8212; pynucastro 2.2.0.post58+g3a4cf8be documentation</title>
+    <title>Solving for nuclear statistical equilibrium &#8212; pynucastro 2.2.0.post61+g239735d5 documentation</title>
   
   
   
@@ -39,7 +39,7 @@
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="_static/documentation_options.js?v=69fcbf72"></script>
+    <script src="_static/documentation_options.js?v=6366dfec"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
@@ -489,7 +489,7 @@ document.write(`
 <p>pynucastro is able to calculate the abundances at nuclear statistical equilibrium of a given reaction network.</p>
 <p>The constrained equations are setup following <span id="id1">Calder <em>et al.</em> [<a class="reference internal" href="zreferences.html#id7" title="A. C. Calder, D. M. Townsley, I. R. Seitenzahl, F. Peng, O. E. B. Messer, N. Vladimirova, E. F. Brown, J. W. Truran, and D. Q. Lamb. Capturing the fire: flame energetics and neutronization for type ia supernova simulations. The Astrophysical Journal, 656(1):313–332, February 2007. doi:10.1086/510709.">2007</a>]</span> and <span id="id2">Seitenzahl <em>et al.</em> [<a class="reference internal" href="zreferences.html#id11" title="Ivo R. Seitenzahl, Dean M. Townsley, Fang Peng, and James W. Truran. Nuclear statistical equilibrium for type ia supernova simulations. Atomic Data and Nuclear Data Tables, 95(1):96-114, 2009. doi:10.1016/j.adt.2008.08.001.">2009</a>]</span> and solved using <code class="docutils literal notranslate"><span class="pre">scipy.optimize.fsolve()</span></code>.</p>
 <p>Here we show how to find the NSE state of a set of nuclei.</p>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
@@ -499,9 +499,79 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[1], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span> <span class="ansi-bold" style="color: rgb(0,135,0)">as</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pyna</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> <span class="ansi-bold" style="color: rgb(0,0,255)">numpy</span> <span class="ansi-bold" style="color: rgb(0,135,0)">as</span> <span class="ansi-bold" style="color: rgb(0,0,255)">np</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> <span class="ansi-bold" style="color: rgb(0,0,255)">matplotlib</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">pyplot</span> <span class="ansi-bold" style="color: rgb(0,135,0)">as</span> <span class="ansi-bold" style="color: rgb(0,0,255)">plt</span>
+
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/__init__.py:131</span>
+<span class="ansi-green-intense-fg ansi-bold">    126</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">_version</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> version
+<span class="ansi-green-intense-fg ansi-bold">    128</span> __version__ <span style="color: rgb(98,98,98)">=</span> version
+<span class="ansi-green-fg">--&gt; 131</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">screening</span>
+<span class="ansi-green-intense-fg ansi-bold">    132</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">networks</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> (AmrexAstroCxxNetwork, BaseCxxNetwork,
+<span class="ansi-green-intense-fg ansi-bold">    133</span>                                  Composition, Explorer, NSENetwork,
+<span class="ansi-green-intense-fg ansi-bold">    134</span>                                  NumpyNetwork, PythonNetwork, RateCollection,
+<span class="ansi-green-intense-fg ansi-bold">    135</span>                                  SimpleCxxNetwork, StarKillerCxxNetwork,
+<span class="ansi-green-intense-fg ansi-bold">    136</span>                                  SympyRates)
+<span class="ansi-green-intense-fg ansi-bold">    137</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">nucdata</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> Nucleus, get_all_nuclei, get_nuclei_in_range
+
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/screening/__init__.py:5</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> <span style="color: rgb(175,0,0)">&#34;&#34;&#34;Screening routines&#34;&#34;&#34;</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span> __all__ <span style="color: rgb(98,98,98)">=</span> [<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">screen</span><span style="color: rgb(175,0,0)">&#34;</span>, <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">screening_util</span><span style="color: rgb(175,0,0)">&#34;</span>]
+<span class="ansi-green-fg">----&gt; 5</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">screen</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> (NseState, PlasmaState, ScreenFactors, chugunov_2007,
+<span class="ansi-green-intense-fg ansi-bold">      6</span>                      chugunov_2009, make_plasma_state, make_screen_factors,
+<span class="ansi-green-intense-fg ansi-bold">      7</span>                      potekhin_1998, screen5)
+<span class="ansi-green-intense-fg ansi-bold">      8</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">screening_util</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> ScreeningPair, get_screening_map
+
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/screening/screen.py:7</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> <span class="ansi-bold" style="color: rgb(0,0,255)">numpy</span> <span class="ansi-bold" style="color: rgb(0,135,0)">as</span> <span class="ansi-bold" style="color: rgb(0,0,255)">np</span>
+<span class="ansi-green-intense-fg ansi-bold">      6</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">constants</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> constants
+<span class="ansi-green-fg">----&gt; 7</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">nucdata</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> Nucleus
+<span class="ansi-green-intense-fg ansi-bold">      8</span> <span style="color: rgb(95,135,135)"># use the jitclass placeholder from rate.py</span>
+<span class="ansi-green-intense-fg ansi-bold">      9</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">rates</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">rate</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> jitclass, numba
+
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/nucdata/__init__.py:10</span>
+<span class="ansi-green-intense-fg ansi-bold">      8</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">elements</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> Element, PeriodicTable, UnidentifiedElement
+<span class="ansi-green-intense-fg ansi-bold">      9</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">mass_table</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> MassTable
+<span class="ansi-green-fg">---&gt; 10</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">nucleus</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> (Nucleus, UnsupportedNucleus, get_all_nuclei,
+<span class="ansi-green-intense-fg ansi-bold">     11</span>                       get_nuclei_in_range)
+<span class="ansi-green-intense-fg ansi-bold">     12</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">partition_function</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> (PartitionFunction,
+<span class="ansi-green-intense-fg ansi-bold">     13</span>                                  PartitionFunctionCollection,
+<span class="ansi-green-intense-fg ansi-bold">     14</span>                                  PartitionFunctionTable)
+<span class="ansi-green-intense-fg ansi-bold">     15</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">spin_table</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> SpinTable
+
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/nucdata/nucleus.py:21</span>
+<span class="ansi-green-intense-fg ansi-bold">     19</span> <span style="color: rgb(95,135,135)"># read the various tables with nuclear properties at the module-level</span>
+<span class="ansi-green-intense-fg ansi-bold">     20</span> _mass_table <span style="color: rgb(98,98,98)">=</span> MassTable()
+<span class="ansi-green-fg">---&gt; 21</span> _halflife_table <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">HalfLifeTable</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     22</span> _spin_table <span style="color: rgb(98,98,98)">=</span> SpinTable(reliable<span style="color: rgb(98,98,98)">=</span><span class="ansi-bold" style="color: rgb(0,135,0)">True</span>)
+<span class="ansi-green-intense-fg ansi-bold">     24</span> <span style="color: rgb(95,135,135)"># read the partition function table once and store it at the module-level</span>
+
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/nucdata/halflife_table.py:20</span>, in <span class="ansi-cyan-fg">HalfLifeTable.__init__</span><span class="ansi-blue-fg">(self, filename)</span>
+<span class="ansi-green-intense-fg ansi-bold">     17</span>     datafile_name <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">halflife2020.txt</span><span style="color: rgb(175,0,0)">&#39;</span>
+<span class="ansi-green-intense-fg ansi-bold">     18</span>     <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>filename <span style="color: rgb(98,98,98)">=</span> nucdata_dir<span style="color: rgb(98,98,98)">/</span><span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">AtomicMassEvaluation</span><span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(98,98,98)">/</span>datafile_name
+<span class="ansi-green-fg">---&gt; 20</span> <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">_read_table</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span>
+
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/nucdata/halflife_table.py:33</span>, in <span class="ansi-cyan-fg">HalfLifeTable._read_table</span><span class="ansi-blue-fg">(self)</span>
+<span class="ansi-green-intense-fg ansi-bold">     29</span>         f<span style="color: rgb(98,98,98)">.</span>readline()
+<span class="ansi-green-intense-fg ansi-bold">     31</span> <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> line <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> file:
+<span class="ansi-green-fg">---&gt; 33</span>     A, Z, tau <span style="color: rgb(98,98,98)">=</span> line<span style="color: rgb(98,98,98)">.</span>strip()<span style="color: rgb(98,98,98)">.</span>split()
+<span class="ansi-green-intense-fg ansi-bold">     34</span>     <span style="color: rgb(95,135,135)">#print(data_list)</span>
+<span class="ansi-green-intense-fg ansi-bold">     36</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> tau <span style="color: rgb(98,98,98)">!=</span> <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">stable</span><span style="color: rgb(175,0,0)">&#34;</span>:
+
+<span class="ansi-red-fg">ValueError</span>: too many values to unpack (expected 3)
+</pre></div></div>
+</div>
 <p>We start by creating a <code class="docutils literal notranslate"><span class="pre">Library</span></code> object that reads all the ReacLib rates and link different nuclei of choice.</p>
 <p>Then initialize <code class="docutils literal notranslate"><span class="pre">NSENetwork</span></code> by using the the rates created by the <code class="docutils literal notranslate"><span class="pre">Library</span></code> object.</p>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
@@ -522,6 +592,26 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[2], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> library <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">pyna</span><span style="color: rgb(98,98,98)">.</span>ReacLibLibrary()
+<span class="ansi-green-intense-fg ansi-bold">      3</span> subch_full <span style="color: rgb(98,98,98)">=</span> library<span style="color: rgb(98,98,98)">.</span>linking_nuclei([<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">p</span><span style="color: rgb(175,0,0)">&#34;</span>, <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">he4</span><span style="color: rgb(175,0,0)">&#34;</span>,
+<span class="ansi-green-intense-fg ansi-bold">      4</span>                                      <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">c12</span><span style="color: rgb(175,0,0)">&#34;</span>, <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">n13</span><span style="color: rgb(175,0,0)">&#34;</span>, <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">n14</span><span style="color: rgb(175,0,0)">&#34;</span>,
+<span class="ansi-green-intense-fg ansi-bold">      5</span>                                      <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">o16</span><span style="color: rgb(175,0,0)">&#34;</span>, <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">f18</span><span style="color: rgb(175,0,0)">&#34;</span>, <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">ne20</span><span style="color: rgb(175,0,0)">&#34;</span>,
+<span class="ansi-green-fg">   (...)</span>
+<span class="ansi-green-intense-fg ansi-bold">     11</span>                                      <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">cr48</span><span style="color: rgb(175,0,0)">&#34;</span>, <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">mn51</span><span style="color: rgb(175,0,0)">&#34;</span>,
+<span class="ansi-green-intense-fg ansi-bold">     12</span>                                      <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">fe52</span><span style="color: rgb(175,0,0)">&#34;</span>,<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">co55</span><span style="color: rgb(175,0,0)">&#34;</span>,<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">ni56</span><span style="color: rgb(175,0,0)">&#34;</span>])
+<span class="ansi-green-intense-fg ansi-bold">     14</span> nse <span style="color: rgb(98,98,98)">=</span> pyna<span style="color: rgb(98,98,98)">.</span>NSENetwork(libraries<span style="color: rgb(98,98,98)">=</span>subch_full)
+
+<span class="ansi-red-fg">NameError</span>: name &#39;pyna&#39; is not defined
+</pre></div></div>
+</div>
 <p><code class="docutils literal notranslate"><span class="pre">get_comp_nse(rho,T,ye)</span></code> is a method of <code class="docutils literal notranslate"><span class="pre">NSEState</span></code> that returns composition at NSE as an object <code class="docutils literal notranslate"><span class="pre">Composition</span></code> by providing density, temperature, and a presribed electron fraction.</p>
 <p>There is pre-set initial guess for the proton and neutron chemical potentials, however one should adjust the initial guess, accordingly if no solutions are found or taking a long time as the algorithm is searching for the correct initial guess. To pass in the initial guess, set <code class="docutils literal notranslate"><span class="pre">initial_guess=guess</span></code>. <code class="docutils literal notranslate"><span class="pre">guess</span></code> is a user-supplied list of the form <code class="docutils literal notranslate"><span class="pre">[mu_p,</span> <span class="pre">mu_n]</span></code>, where <code class="docutils literal notranslate"><span class="pre">mu_p</span></code> and <code class="docutils literal notranslate"><span class="pre">mu_n</span></code> are the chemical potential for proton and neutron, respectively.</p>
 <p>It has options of incorporating coulomb correction terms by let <code class="docutils literal notranslate"><span class="pre">use_coulomb_corr=True</span></code>, and return the solution of proton and neutron chemical potentials by <code class="docutils literal notranslate"><span class="pre">return_sol=True</span></code>.</p>
@@ -538,8 +628,15 @@ document.write(`
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/NSE-example_6_0.png" src="_images/NSE-example_6_0.png" />
-</div>
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[3], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> comp, sol <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">nse</span><span style="color: rgb(98,98,98)">.</span>get_comp_nse(<span style="color: rgb(98,98,98)">1e7</span>, <span style="color: rgb(98,98,98)">6e9</span>, <span style="color: rgb(98,98,98)">0.50</span>, use_coulomb_corr<span style="color: rgb(98,98,98)">=</span><span class="ansi-bold" style="color: rgb(0,135,0)">True</span>, return_sol<span style="color: rgb(98,98,98)">=</span><span class="ansi-bold" style="color: rgb(0,135,0)">True</span>)
+<span class="ansi-green-intense-fg ansi-bold">      2</span> fig <span style="color: rgb(98,98,98)">=</span> comp<span style="color: rgb(98,98,98)">.</span>plot()
+
+<span class="ansi-red-fg">NameError</span>: name &#39;nse&#39; is not defined
+</pre></div></div>
 </div>
 <p>We can also explicitly print the composition</p>
 <div class="nbinput docutils container">
@@ -556,34 +653,13 @@ document.write(`
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-p      :     0.00934989821059
-He4    :       0.433640616227
-C12    :    7.72859959965e-06
-N13    :    2.59190269463e-10
-N14    :    1.36631324171e-09
-O16    :    1.56975241119e-05
-F18    :    2.41138161836e-11
-Ne20   :    3.01874050001e-07
-Ne21   :    3.95638586959e-09
-Na22   :    9.68462282544e-10
-Na23   :    7.29695210583e-08
-Mg24   :    3.47019416232e-05
-Al27   :     3.3525821184e-05
-Si28   :      0.0104391634336
-P31    :     0.00213500726862
-S32    :     0.00916060183422
-Cl35   :     0.00400094977488
-Ar36   :     0.00487944875964
-K39    :     0.00555275469044
-Ca40   :     0.00477002847089
-Sc43   :      0.0003726716421
-Ti44   :    0.000229271130459
-V47    :     0.00490466077421
-Cr48   :      0.0011465823045
-Mn51   :      0.0689585743911
-Fe52   :     0.00576589690229
-Co55   :       0.415686733967
-Ni56   :      0.0189151049137
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[4], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> c, v <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> <span class="ansi-yellow-bg">comp</span><span style="color: rgb(98,98,98)">.</span>X<span style="color: rgb(98,98,98)">.</span>items():
+<span class="ansi-green-intense-fg ansi-bold">      2</span>     <span style="color: rgb(0,135,0)">print</span>(<span style="color: rgb(175,0,0)">f</span><span style="color: rgb(175,0,0)">&#34;</span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span><span style="color: rgb(0,135,0)">str</span>(c)<span class="ansi-bold" style="color: rgb(175,95,135)">:</span><span style="color: rgb(175,0,0)">6</span><span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)"> : </span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>v<span class="ansi-bold" style="color: rgb(175,95,135)">:</span><span style="color: rgb(175,0,0)">20.12g</span><span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)">&#34;</span>)
+
+<span class="ansi-red-fg">NameError</span>: name &#39;comp&#39; is not defined
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -599,12 +675,17 @@ Ni56   :      0.0189151049137
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-After solving, the chemical potential for proton and neutron are -7.7386289 and -9.9990481
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[5], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> <span style="color: rgb(0,135,0)">print</span>(<span style="color: rgb(175,0,0)">f</span><span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">After solving, the chemical potential for proton and neutron are </span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span><span class="ansi-yellow-bg">sol</span>[<span style="color: rgb(98,98,98)">0</span>]<span class="ansi-bold" style="color: rgb(175,95,135)">:</span><span style="color: rgb(175,0,0)">10.7f</span><span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)"> and </span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>sol[<span style="color: rgb(98,98,98)">1</span>]<span class="ansi-bold" style="color: rgb(175,95,135)">:</span><span style="color: rgb(175,0,0)">10.7f</span><span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)">&#34;</span>)
+
+<span class="ansi-red-fg">NameError</span>: name &#39;sol&#39; is not defined
 </pre></div></div>
 </div>
 <p>For <span class="math notranslate nohighlight">\(\rho = 10^7~\mathrm{g~cm^{-3}}\)</span> and electron fraction, <span class="math notranslate nohighlight">\(Y_e = 0.5\)</span>, we can explore how the NSE state changes with temperature.</p>
 <p>Here we used a guess for chemical potential of proton and neutron of -6.0 and -11.5, respectively.</p>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
@@ -622,6 +703,23 @@ After solving, the chemical potential for proton and neutron are -7.7386289 and 
     <span class="n">X_s</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">nse_X_s</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[6], line 3</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> rho <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(98,98,98)">1e7</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> ye <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(98,98,98)">0.5</span>
+<span class="ansi-green-fg">----&gt; 3</span> temps <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">np</span><span style="color: rgb(98,98,98)">.</span>linspace(<span style="color: rgb(98,98,98)">2.5</span>, <span style="color: rgb(98,98,98)">12.0</span>, <span style="color: rgb(98,98,98)">100</span>)
+<span class="ansi-green-intense-fg ansi-bold">      4</span> X_s <span style="color: rgb(98,98,98)">=</span> []
+<span class="ansi-green-intense-fg ansi-bold">      6</span> guess <span style="color: rgb(98,98,98)">=</span> [<span style="color: rgb(98,98,98)">-</span><span style="color: rgb(98,98,98)">6.0</span>, <span style="color: rgb(98,98,98)">-</span><span style="color: rgb(98,98,98)">11.5</span>]
+
+<span class="ansi-red-fg">NameError</span>: name &#39;np&#39; is not defined
+</pre></div></div>
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
@@ -653,12 +751,20 @@ After solving, the chemical potential for proton and neutron are -7.7386289 and 
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/NSE-example_12_0.png" src="_images/NSE-example_12_0.png" />
-</div>
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[7], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> X_s <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">np</span><span style="color: rgb(98,98,98)">.</span>array(X_s)
+<span class="ansi-green-intense-fg ansi-bold">      2</span> nuc_names <span style="color: rgb(98,98,98)">=</span> nse<span style="color: rgb(98,98,98)">.</span>get_nuclei()
+<span class="ansi-green-intense-fg ansi-bold">      4</span> low_limit <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(98,98,98)">1e-2</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;np&#39; is not defined
+</pre></div></div>
 </div>
 <p>For <span class="math notranslate nohighlight">\(\rho = 10^7~\mathrm{g~cm^{-3}}\)</span> and a relatively high temperature of <span class="math notranslate nohighlight">\(T = 6 \times 10^9~\mathrm{K}\)</span>, we can look at how the NSE state changes with varying <span class="math notranslate nohighlight">\(Y_e\)</span>.</p>
 <p>Note: there will be a lowest <span class="math notranslate nohighlight">\(Y_e\)</span> that is attainable by the network, depending on what species are represented. As long as protons are in the network, we can reach a <span class="math notranslate nohighlight">\(Y_e\)</span> of <span class="math notranslate nohighlight">\(1\)</span>.</p>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
@@ -666,7 +772,20 @@ After solving, the chemical potential for proton and neutron are -7.7386289 and 
 </pre></div>
 </div>
 </div>
-<div class="nbinput nblast docutils container">
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[8], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> ye_low <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(0,135,0)">min</span>(nuc<span style="color: rgb(98,98,98)">.</span>Z<span style="color: rgb(98,98,98)">/</span>nuc<span style="color: rgb(98,98,98)">.</span>A <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> nuc <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> <span class="ansi-yellow-bg">nse</span><span style="color: rgb(98,98,98)">.</span>unique_nuclei)
+
+<span class="ansi-red-fg">NameError</span>: name &#39;nse&#39; is not defined
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
@@ -684,6 +803,22 @@ After solving, the chemical potential for proton and neutron are -7.7386289 and 
     <span class="n">X_s_1</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">nse_X_s_1</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[9], line 2</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> rho <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(98,98,98)">1e7</span>
+<span class="ansi-green-fg">----&gt; 2</span> ye_s <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">np</span><span style="color: rgb(98,98,98)">.</span>linspace(ye_low, <span style="color: rgb(98,98,98)">0.65</span>, <span style="color: rgb(98,98,98)">100</span>)
+<span class="ansi-green-intense-fg ansi-bold">      3</span> temp <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(98,98,98)">6.0e9</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span> X_s_1 <span style="color: rgb(98,98,98)">=</span> []
+
+<span class="ansi-red-fg">NameError</span>: name &#39;np&#39; is not defined
+</pre></div></div>
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
@@ -714,8 +849,16 @@ After solving, the chemical potential for proton and neutron are -7.7386289 and 
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/NSE-example_16_0.png" src="_images/NSE-example_16_0.png" />
-</div>
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[10], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> X_s_1 <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">np</span><span style="color: rgb(98,98,98)">.</span>array(X_s_1)
+<span class="ansi-green-intense-fg ansi-bold">      2</span> nuc_names <span style="color: rgb(98,98,98)">=</span> nse<span style="color: rgb(98,98,98)">.</span>get_nuclei()
+<span class="ansi-green-intense-fg ansi-bold">      4</span> fig, ax <span style="color: rgb(98,98,98)">=</span> plt<span style="color: rgb(98,98,98)">.</span>subplots()
+
+<span class="ansi-red-fg">NameError</span>: name &#39;np&#39; is not defined
+</pre></div></div>
 </div>
 </section>
 

@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Creating a Custom Rate &#8212; pynucastro 2.2.0.post58+g3a4cf8be documentation</title>
+    <title>Creating a Custom Rate &#8212; pynucastro 2.2.0.post61+g239735d5 documentation</title>
   
   
   
@@ -39,7 +39,7 @@
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="_static/documentation_options.js?v=69fcbf72"></script>
+    <script src="_static/documentation_options.js?v=6366dfec"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
@@ -507,7 +507,7 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\frac{dY(A)}{dt} = -\rho Y(A) Y(B) r_0 \left ( \frac{T}{T_0} \right )^\nu\]</div>
 <p>and likewise for the other nuclei.</p>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
@@ -515,8 +515,76 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[1], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span> <span class="ansi-bold" style="color: rgb(0,135,0)">as</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pyna</span>
+
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/__init__.py:131</span>
+<span class="ansi-green-intense-fg ansi-bold">    126</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">_version</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> version
+<span class="ansi-green-intense-fg ansi-bold">    128</span> __version__ <span style="color: rgb(98,98,98)">=</span> version
+<span class="ansi-green-fg">--&gt; 131</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">screening</span>
+<span class="ansi-green-intense-fg ansi-bold">    132</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">networks</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> (AmrexAstroCxxNetwork, BaseCxxNetwork,
+<span class="ansi-green-intense-fg ansi-bold">    133</span>                                  Composition, Explorer, NSENetwork,
+<span class="ansi-green-intense-fg ansi-bold">    134</span>                                  NumpyNetwork, PythonNetwork, RateCollection,
+<span class="ansi-green-intense-fg ansi-bold">    135</span>                                  SimpleCxxNetwork, StarKillerCxxNetwork,
+<span class="ansi-green-intense-fg ansi-bold">    136</span>                                  SympyRates)
+<span class="ansi-green-intense-fg ansi-bold">    137</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">nucdata</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> Nucleus, get_all_nuclei, get_nuclei_in_range
+
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/screening/__init__.py:5</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> <span style="color: rgb(175,0,0)">&#34;&#34;&#34;Screening routines&#34;&#34;&#34;</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span> __all__ <span style="color: rgb(98,98,98)">=</span> [<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">screen</span><span style="color: rgb(175,0,0)">&#34;</span>, <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">screening_util</span><span style="color: rgb(175,0,0)">&#34;</span>]
+<span class="ansi-green-fg">----&gt; 5</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">screen</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> (NseState, PlasmaState, ScreenFactors, chugunov_2007,
+<span class="ansi-green-intense-fg ansi-bold">      6</span>                      chugunov_2009, make_plasma_state, make_screen_factors,
+<span class="ansi-green-intense-fg ansi-bold">      7</span>                      potekhin_1998, screen5)
+<span class="ansi-green-intense-fg ansi-bold">      8</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">screening_util</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> ScreeningPair, get_screening_map
+
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/screening/screen.py:7</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> <span class="ansi-bold" style="color: rgb(0,0,255)">numpy</span> <span class="ansi-bold" style="color: rgb(0,135,0)">as</span> <span class="ansi-bold" style="color: rgb(0,0,255)">np</span>
+<span class="ansi-green-intense-fg ansi-bold">      6</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">constants</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> constants
+<span class="ansi-green-fg">----&gt; 7</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">nucdata</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> Nucleus
+<span class="ansi-green-intense-fg ansi-bold">      8</span> <span style="color: rgb(95,135,135)"># use the jitclass placeholder from rate.py</span>
+<span class="ansi-green-intense-fg ansi-bold">      9</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">rates</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">rate</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> jitclass, numba
+
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/nucdata/__init__.py:10</span>
+<span class="ansi-green-intense-fg ansi-bold">      8</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">elements</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> Element, PeriodicTable, UnidentifiedElement
+<span class="ansi-green-intense-fg ansi-bold">      9</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">mass_table</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> MassTable
+<span class="ansi-green-fg">---&gt; 10</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">nucleus</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> (Nucleus, UnsupportedNucleus, get_all_nuclei,
+<span class="ansi-green-intense-fg ansi-bold">     11</span>                       get_nuclei_in_range)
+<span class="ansi-green-intense-fg ansi-bold">     12</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">partition_function</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> (PartitionFunction,
+<span class="ansi-green-intense-fg ansi-bold">     13</span>                                  PartitionFunctionCollection,
+<span class="ansi-green-intense-fg ansi-bold">     14</span>                                  PartitionFunctionTable)
+<span class="ansi-green-intense-fg ansi-bold">     15</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">spin_table</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> SpinTable
+
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/nucdata/nucleus.py:21</span>
+<span class="ansi-green-intense-fg ansi-bold">     19</span> <span style="color: rgb(95,135,135)"># read the various tables with nuclear properties at the module-level</span>
+<span class="ansi-green-intense-fg ansi-bold">     20</span> _mass_table <span style="color: rgb(98,98,98)">=</span> MassTable()
+<span class="ansi-green-fg">---&gt; 21</span> _halflife_table <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">HalfLifeTable</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     22</span> _spin_table <span style="color: rgb(98,98,98)">=</span> SpinTable(reliable<span style="color: rgb(98,98,98)">=</span><span class="ansi-bold" style="color: rgb(0,135,0)">True</span>)
+<span class="ansi-green-intense-fg ansi-bold">     24</span> <span style="color: rgb(95,135,135)"># read the partition function table once and store it at the module-level</span>
+
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/nucdata/halflife_table.py:20</span>, in <span class="ansi-cyan-fg">HalfLifeTable.__init__</span><span class="ansi-blue-fg">(self, filename)</span>
+<span class="ansi-green-intense-fg ansi-bold">     17</span>     datafile_name <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">halflife2020.txt</span><span style="color: rgb(175,0,0)">&#39;</span>
+<span class="ansi-green-intense-fg ansi-bold">     18</span>     <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>filename <span style="color: rgb(98,98,98)">=</span> nucdata_dir<span style="color: rgb(98,98,98)">/</span><span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">AtomicMassEvaluation</span><span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(98,98,98)">/</span>datafile_name
+<span class="ansi-green-fg">---&gt; 20</span> <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">_read_table</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span>
+
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/nucdata/halflife_table.py:33</span>, in <span class="ansi-cyan-fg">HalfLifeTable._read_table</span><span class="ansi-blue-fg">(self)</span>
+<span class="ansi-green-intense-fg ansi-bold">     29</span>         f<span style="color: rgb(98,98,98)">.</span>readline()
+<span class="ansi-green-intense-fg ansi-bold">     31</span> <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> line <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> file:
+<span class="ansi-green-fg">---&gt; 33</span>     A, Z, tau <span style="color: rgb(98,98,98)">=</span> line<span style="color: rgb(98,98,98)">.</span>strip()<span style="color: rgb(98,98,98)">.</span>split()
+<span class="ansi-green-intense-fg ansi-bold">     34</span>     <span style="color: rgb(95,135,135)">#print(data_list)</span>
+<span class="ansi-green-intense-fg ansi-bold">     36</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> tau <span style="color: rgb(98,98,98)">!=</span> <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">stable</span><span style="color: rgb(175,0,0)">&#34;</span>:
+
+<span class="ansi-red-fg">ValueError</span>: too many values to unpack (expected 3)
+</pre></div></div>
+</div>
 <p>We’ll use this to approximate the rate <span class="math notranslate nohighlight">\({}^{14}\mathrm{N}(p, \gamma){}^{15}\mathrm{O}\)</span> around a temperature of <span class="math notranslate nohighlight">\(T = 3\times 10^7~\mathrm{K}\)</span></p>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
@@ -524,6 +592,20 @@ document.write(`
 <span class="n">r</span> <span class="o">=</span> <span class="n">rl</span><span class="o">.</span><span class="n">get_rate_by_name</span><span class="p">(</span><span class="s2">&quot;n14(p,g)o15&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[2], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> rl <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">pyna</span><span style="color: rgb(98,98,98)">.</span>ReacLibLibrary()
+<span class="ansi-green-intense-fg ansi-bold">      2</span> r <span style="color: rgb(98,98,98)">=</span> rl<span style="color: rgb(98,98,98)">.</span>get_rate_by_name(<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">n14(p,g)o15</span><span style="color: rgb(175,0,0)">&#34;</span>)
+
+<span class="ansi-red-fg">NameError</span>: name &#39;pyna&#39; is not defined
+</pre></div></div>
 </div>
 <p>We can get the values of <span class="math notranslate nohighlight">\(r_0\)</span> and <span class="math notranslate nohighlight">\(\nu\)</span> about this temperature from the rate</p>
 <div class="nbinput docutils container">
@@ -542,7 +624,15 @@ document.write(`
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-1.416655077954945e-13 15.601859314950396
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[3], line 2</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> T0 <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(98,98,98)">3.e7</span>
+<span class="ansi-green-fg">----&gt; 2</span> nu <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">r</span><span style="color: rgb(98,98,98)">.</span>get_rate_exponent(T0)
+<span class="ansi-green-intense-fg ansi-bold">      3</span> r0 <span style="color: rgb(98,98,98)">=</span> r<span style="color: rgb(98,98,98)">.</span>eval(T0)
+<span class="ansi-green-intense-fg ansi-bold">      4</span> <span style="color: rgb(0,135,0)">print</span>(r0, nu)
+
+<span class="ansi-red-fg">NameError</span>: name &#39;r&#39; is not defined
 </pre></div></div>
 </div>
 <p>Now we can write our custom rate. A few bits are needed in the initialization:</p>
@@ -555,7 +645,7 @@ document.write(`
 <li><p><code class="docutils literal notranslate"><span class="pre">function_string_py()</span></code> is used when outputting a <code class="docutils literal notranslate"><span class="pre">PythonNetwork</span></code> to a <code class="docutils literal notranslate"><span class="pre">.py</span></code> file that can be imported and used for integration</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">eval()</span></code> is used when evaluating the rate interactively (including when making plots)</p></li>
 </ul>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
@@ -587,8 +677,26 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[4], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> <span class="ansi-bold" style="color: rgb(0,135,0)">class</span> <span class="ansi-bold" style="color: rgb(0,0,255)">MyRate</span>(<span class="ansi-yellow-bg">pyna</span><span style="color: rgb(98,98,98)">.</span>Rate):
+<span class="ansi-green-intense-fg ansi-bold">      2</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">def</span> <span style="color: rgb(0,0,255)">__init__</span>(<span style="color: rgb(0,135,0)">self</span>, reactants<span style="color: rgb(98,98,98)">=</span><span class="ansi-bold" style="color: rgb(0,135,0)">None</span>, products<span style="color: rgb(98,98,98)">=</span><span class="ansi-bold" style="color: rgb(0,135,0)">None</span>,
+<span class="ansi-green-intense-fg ansi-bold">      3</span>                  r0<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(98,98,98)">1.0</span>, T0<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(98,98,98)">1.0</span>, nu<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(98,98,98)">0</span>):
+<span class="ansi-green-intense-fg ansi-bold">      4</span>
+<span class="ansi-green-intense-fg ansi-bold">      5</span>         <span style="color: rgb(95,135,135)"># we set the chapter to custom so the network knows how to deal with it</span>
+<span class="ansi-green-intense-fg ansi-bold">      6</span>         <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>chapter <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">custom</span><span style="color: rgb(175,0,0)">&#34;</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;pyna&#39; is not defined
+</pre></div></div>
+</div>
 <p>Now we can create our custom rate</p>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
@@ -597,6 +705,21 @@ document.write(`
                   <span class="n">r0</span><span class="o">=</span><span class="n">r0</span><span class="p">,</span> <span class="n">T0</span><span class="o">=</span><span class="n">T0</span><span class="p">,</span> <span class="n">nu</span><span class="o">=</span><span class="n">nu</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[5], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> r_custom <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">MyRate</span>(reactants<span style="color: rgb(98,98,98)">=</span>[pyna<span style="color: rgb(98,98,98)">.</span>Nucleus(<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">n14</span><span style="color: rgb(175,0,0)">&#34;</span>), pyna<span style="color: rgb(98,98,98)">.</span>Nucleus(<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">p</span><span style="color: rgb(175,0,0)">&#34;</span>)],
+<span class="ansi-green-intense-fg ansi-bold">      2</span>                   products<span style="color: rgb(98,98,98)">=</span>[pyna<span style="color: rgb(98,98,98)">.</span>Nucleus(<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">o15</span><span style="color: rgb(175,0,0)">&#34;</span>)],
+<span class="ansi-green-intense-fg ansi-bold">      3</span>                   r0<span style="color: rgb(98,98,98)">=</span>r0, T0<span style="color: rgb(98,98,98)">=</span>T0, nu<span style="color: rgb(98,98,98)">=</span>nu)
+
+<span class="ansi-red-fg">NameError</span>: name &#39;MyRate&#39; is not defined
+</pre></div></div>
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
@@ -607,12 +730,16 @@ document.write(`
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
-</pre></div>
+<div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&#39;N14_p__O15__generic&#39;
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[6], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> <span class="ansi-yellow-bg">r_custom</span><span style="color: rgb(98,98,98)">.</span>fname
+
+<span class="ansi-red-fg">NameError</span>: name &#39;r_custom&#39; is not defined
 </pre></div></div>
 </div>
 <p>Notice that it can write out the function needed to evaluate this rate in a python module</p>
@@ -629,17 +756,18 @@ document.write(`
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-@numba.njit()
-def N14_p__O15__generic(rate_eval, tf):
-    rate_eval.N14_p__O15__generic = 1.416655077954945e-13 * (tf.T9 * 1.e9 / 30000000.0 )**(15.601859314950396)
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[7], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> <span style="color: rgb(0,135,0)">print</span>(<span class="ansi-yellow-bg">r_custom</span><span style="color: rgb(98,98,98)">.</span>function_string_py())
 
-
+<span class="ansi-red-fg">NameError</span>: name &#39;r_custom&#39; is not defined
 </pre></div></div>
 </div>
 <section id="Creating-a-network-with-our-rate">
 <h2>Creating a network with our rate<a class="headerlink" href="#Creating-a-network-with-our-rate" title="Link to this heading">#</a></h2>
 <p>Now let’s create a network that includes this rate. We’ll base it off of the CNO net, but we’ll leave out the rate that we are approximating.</p>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
@@ -654,8 +782,27 @@ def N14_p__O15__generic(rate_eval, tf):
 </pre></div>
 </div>
 </div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[8], line 8</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> rate_names <span style="color: rgb(98,98,98)">=</span> [<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">c12(p,g)n13</span><span style="color: rgb(175,0,0)">&#34;</span>,
+<span class="ansi-green-intense-fg ansi-bold">      2</span>               <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">c13(p,g)n14</span><span style="color: rgb(175,0,0)">&#34;</span>,
+<span class="ansi-green-intense-fg ansi-bold">      3</span>               <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">n13(,)c13</span><span style="color: rgb(175,0,0)">&#34;</span>,
+<span class="ansi-green-fg">   (...)</span>
+<span class="ansi-green-intense-fg ansi-bold">      6</span>               <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">o14(,)n14</span><span style="color: rgb(175,0,0)">&#34;</span>,
+<span class="ansi-green-intense-fg ansi-bold">      7</span>               <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">o15(,)n15</span><span style="color: rgb(175,0,0)">&#34;</span>]
+<span class="ansi-green-fg">----&gt; 8</span> rates <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">rl</span><span style="color: rgb(98,98,98)">.</span>get_rate_by_name(rate_names)
+
+<span class="ansi-red-fg">NameError</span>: name &#39;rl&#39; is not defined
+</pre></div></div>
+</div>
 <p>Here we’ll add our custom rate to the remaining rates we pulled from ReacLib</p>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
@@ -663,8 +810,21 @@ def N14_p__O15__generic(rate_eval, tf):
 </pre></div>
 </div>
 </div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[9], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> pynet <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">pyna</span><span style="color: rgb(98,98,98)">.</span>PythonNetwork(rates<span style="color: rgb(98,98,98)">=</span>rates<span style="color: rgb(98,98,98)">+</span>[r_custom])
+
+<span class="ansi-red-fg">NameError</span>: name &#39;pyna&#39; is not defined
+</pre></div></div>
+</div>
 <p>We can plot this to see how it behaves. First a low temperature</p>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
 </div>
@@ -674,6 +834,22 @@ def N14_p__O15__generic(rate_eval, tf):
 <span class="n">comp</span><span class="o">.</span><span class="n">set_solar_like</span><span class="p">()</span>
 </pre></div>
 </div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[10], line 3</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> T <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(98,98,98)">3.e7</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> rho <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(98,98,98)">200</span>
+<span class="ansi-green-fg">----&gt; 3</span> comp <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">pyna</span><span style="color: rgb(98,98,98)">.</span>Composition(pynet<span style="color: rgb(98,98,98)">.</span>unique_nuclei)
+<span class="ansi-green-intense-fg ansi-bold">      4</span> comp<span style="color: rgb(98,98,98)">.</span>set_solar_like()
+
+<span class="ansi-red-fg">NameError</span>: name &#39;pyna&#39; is not defined
+</pre></div></div>
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
@@ -687,8 +863,14 @@ def N14_p__O15__generic(rate_eval, tf):
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/custom-rates_21_0.png" src="_images/custom-rates_21_0.png" />
-</div>
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[11], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> fig <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">pynet</span><span style="color: rgb(98,98,98)">.</span>plot(rho<span style="color: rgb(98,98,98)">=</span>rho, T<span style="color: rgb(98,98,98)">=</span>T, comp<span style="color: rgb(98,98,98)">=</span>comp)
+
+<span class="ansi-red-fg">NameError</span>: name &#39;pynet&#39; is not defined
+</pre></div></div>
 </div>
 <p>Now a higher temperature</p>
 <div class="nbinput nblast docutils container">
@@ -711,8 +893,14 @@ def N14_p__O15__generic(rate_eval, tf):
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/custom-rates_24_0.png" src="_images/custom-rates_24_0.png" />
-</div>
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[13], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> fig <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">pynet</span><span style="color: rgb(98,98,98)">.</span>plot(rho<span style="color: rgb(98,98,98)">=</span>rho, T<span style="color: rgb(98,98,98)">=</span>T, comp<span style="color: rgb(98,98,98)">=</span>comp)
+
+<span class="ansi-red-fg">NameError</span>: name &#39;pynet&#39; is not defined
+</pre></div></div>
 </div>
 <p>Notice that at the higher temperature, this rate becomes higher than the beta decay to <span class="math notranslate nohighlight">\({}^{13}\mathrm{C}\)</span>.</p>
 <p>We can also see the values of the ydot terms in the network</p>
@@ -725,20 +913,16 @@ def N14_p__O15__generic(rate_eval, tf):
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
-</pre></div>
+<div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-{p: -140.31578946054762,
- He4: 124.10404295119419,
- C12: 124.09500217697241,
- C13: -0.017818574032238365,
- N13: 0.00701794538740977,
- N14: -16.16504349981351,
- N15: -124.1040418689929,
- O14: 0.002020570415053316,
- O15: 16.182863250063768}
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[14], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> <span class="ansi-yellow-bg">pynet</span><span style="color: rgb(98,98,98)">.</span>evaluate_ydots(rho, T, comp)
+
+<span class="ansi-red-fg">NameError</span>: name &#39;pynet&#39; is not defined
 </pre></div></div>
 </div>
 <p>Finally, we can see that when the network constructs the <code class="docutils literal notranslate"><span class="pre">dYdt</span></code> term, when writing out the network (via <code class="docutils literal notranslate"><span class="pre">pynet.write_network()</span></code>), our rate is included. For example, for the protons:</p>
@@ -755,15 +939,12 @@ def N14_p__O15__generic(rate_eval, tf):
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-dYdt[jp] = (
-   -rho*Y[jp]*Y[jc12]*rate_eval.p_C12__N13
-   -rho*Y[jp]*Y[jc13]*rate_eval.p_C13__N14
-   -rho*Y[jp]*Y[jn13]*rate_eval.p_N13__O14
-   -rho*Y[jp]*Y[jn15]*rate_eval.p_N15__He4_C12
-   -rho*Y[jp]*Y[jn14]*rate_eval.N14_p__O15__generic
-   )
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[15], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> <span style="color: rgb(0,135,0)">print</span>(<span class="ansi-yellow-bg">pynet</span><span style="color: rgb(98,98,98)">.</span>full_ydot_string(pyna<span style="color: rgb(98,98,98)">.</span>Nucleus(<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">p</span><span style="color: rgb(175,0,0)">&#34;</span>)))
 
-
+<span class="ansi-red-fg">NameError</span>: name &#39;pynet&#39; is not defined
 </pre></div></div>
 </div>
 </section>
