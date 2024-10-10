@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Nuclear Properties &#8212; pynucastro 2.2.0.post64+g73a248eb documentation</title>
+    <title>Nuclear Properties &#8212; pynucastro 2.2.0.post65+g538d219e documentation</title>
   
   
   
@@ -39,7 +39,7 @@
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="_static/documentation_options.js?v=0502ae45"></script>
+    <script src="_static/documentation_options.js?v=0652a123"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
@@ -559,25 +559,26 @@ File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/pyt
 <span class="ansi-green-intense-fg ansi-bold">     14</span>                                  PartitionFunctionTable)
 <span class="ansi-green-intense-fg ansi-bold">     15</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">spin_table</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> SpinTable
 
-File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/nucdata/nucleus.py:21</span>
-<span class="ansi-green-intense-fg ansi-bold">     19</span> <span style="color: rgb(95,135,135)"># read the various tables with nuclear properties at the module-level</span>
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/nucdata/nucleus.py:22</span>
 <span class="ansi-green-intense-fg ansi-bold">     20</span> _mass_table <span style="color: rgb(98,98,98)">=</span> MassTable()
-<span class="ansi-green-fg">---&gt; 21</span> _halflife_table <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">HalfLifeTable</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     22</span> _spin_table <span style="color: rgb(98,98,98)">=</span> SpinTable(reliable<span style="color: rgb(98,98,98)">=</span><span class="ansi-bold" style="color: rgb(0,135,0)">True</span>)
+<span class="ansi-green-intense-fg ansi-bold">     21</span> _halflife_table <span style="color: rgb(98,98,98)">=</span> HalfLifeTable()
+<span class="ansi-green-fg">---&gt; 22</span> _spin_table <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">SpinTable</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">reliable</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg ansi-bold" style="color: rgb(0,135,0)">True</span><span class="ansi-yellow-bg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">     24</span> <span style="color: rgb(95,135,135)"># read the partition function table once and store it at the module-level</span>
+<span class="ansi-green-intense-fg ansi-bold">     25</span> _pcollection <span style="color: rgb(98,98,98)">=</span> PartitionFunctionCollection(use_high_temperatures<span style="color: rgb(98,98,98)">=</span><span class="ansi-bold" style="color: rgb(0,135,0)">True</span>, use_set<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">frdm</span><span style="color: rgb(175,0,0)">&#39;</span>)
 
-File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/nucdata/halflife_table.py:20</span>, in <span class="ansi-cyan-fg">HalfLifeTable.__init__</span><span class="ansi-blue-fg">(self, filename)</span>
-<span class="ansi-green-intense-fg ansi-bold">     17</span>     datafile_name <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">halflife2020.txt</span><span style="color: rgb(175,0,0)">&#39;</span>
-<span class="ansi-green-intense-fg ansi-bold">     18</span>     <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>filename <span style="color: rgb(98,98,98)">=</span> nucdata_dir<span style="color: rgb(98,98,98)">/</span><span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">AtomicMassEvaluation</span><span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(98,98,98)">/</span>datafile_name
-<span class="ansi-green-fg">---&gt; 20</span> <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">_read_table</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span>
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/nucdata/spin_table.py:27</span>, in <span class="ansi-cyan-fg">SpinTable.__init__</span><span class="ansi-blue-fg">(self, datafile, reliable)</span>
+<span class="ansi-green-intense-fg ansi-bold">     24</span>     datafile_name <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">nubase2020_1.txt</span><span style="color: rgb(175,0,0)">&#39;</span>
+<span class="ansi-green-intense-fg ansi-bold">     25</span>     <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>datafile <span style="color: rgb(98,98,98)">=</span> nucdata_dir<span style="color: rgb(98,98,98)">/</span><span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">AtomicMassEvaluation</span><span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(98,98,98)">/</span>datafile_name
+<span class="ansi-green-fg">---&gt; 27</span> <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">_read_table</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span>
 
-File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/nucdata/halflife_table.py:37</span>, in <span class="ansi-cyan-fg">HalfLifeTable._read_table</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-intense-fg ansi-bold">     34</span> <span style="color: rgb(95,135,135)">#print(data_list)</span>
-<span class="ansi-green-intense-fg ansi-bold">     36</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> tau <span style="color: rgb(98,98,98)">!=</span> <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">stable</span><span style="color: rgb(175,0,0)">&#34;</span>:
-<span class="ansi-green-fg">---&gt; 37</span>     tau <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">float</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">tau</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     39</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>halflife[<span style="color: rgb(0,135,0)">int</span>(A), <span style="color: rgb(0,135,0)">int</span>(Z)] <span style="color: rgb(98,98,98)">=</span> tau
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/nucdata/spin_table.py:35</span>, in <span class="ansi-cyan-fg">SpinTable._read_table</span><span class="ansi-blue-fg">(self)</span>
+<span class="ansi-green-intense-fg ansi-bold">     31</span> <span class="ansi-bold" style="color: rgb(0,135,0)">with</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>datafile<span style="color: rgb(98,98,98)">.</span>open(<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">r</span><span style="color: rgb(175,0,0)">&#34;</span>) <span class="ansi-bold" style="color: rgb(0,135,0)">as</span> f:
+<span class="ansi-green-intense-fg ansi-bold">     33</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> line <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> f<span style="color: rgb(98,98,98)">.</span>readlines()[<span style="color: rgb(98,98,98)">4</span>:]:
+<span class="ansi-green-fg">---&gt; 35</span>         A, Z, _, spin_states, experimental <span style="color: rgb(98,98,98)">=</span> line<span style="color: rgb(98,98,98)">.</span>strip()<span style="color: rgb(98,98,98)">.</span>split()[:<span style="color: rgb(98,98,98)">4</span>]
+<span class="ansi-green-intense-fg ansi-bold">     36</span>         A, Z, spin_states <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(0,135,0)">int</span>(A), <span style="color: rgb(0,135,0)">int</span>(Z), <span style="color: rgb(0,135,0)">int</span>(spin_states)
+<span class="ansi-green-intense-fg ansi-bold">     38</span>         <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>reliable:
 
-<span class="ansi-red-fg">ValueError</span>: could not convert string to float: &#39;evaluation&#39;
+<span class="ansi-red-fg">ValueError</span>: not enough values to unpack (expected 5, got 4)
 </pre></div></div>
 </div>
 <section id="Nucleus">
