@@ -186,6 +186,7 @@ class ScreenFactors:
     lzav: float
     aznut: float
     ztilde: float
+    C_fs: float
 
     def __init__(self, z1: int, a1: int, z2: int, a2: int) -> None:
         self.z1 = z1
