@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Tabulated Weak Rate Example &#8212; pynucastro 2.2.0.post80+g725c2dfe documentation</title>
+    <title>Tabulated Weak Rate Example &#8212; pynucastro 2.2.0.post83+g77da132b documentation</title>
   
   
   
@@ -39,7 +39,7 @@
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="_static/documentation_options.js?v=8d1240d2"></script>
+    <script src="_static/documentation_options.js?v=62c1a2c5"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
@@ -526,11 +526,11 @@ Cell <span class="ansi-green-fg">In[2], line 1</span>
 <span class="ansi-green-intense-fg ansi-bold">      2</span> lib <span style="color: rgb(98,98,98)">=</span> tl<span style="color: rgb(98,98,98)">.</span>linking_nuclei([<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">ni56</span><span style="color: rgb(175,0,0)">&#34;</span>, <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">co56</span><span style="color: rgb(175,0,0)">&#34;</span>])
 <span class="ansi-green-intense-fg ansi-bold">      3</span> lib
 
-File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/library.py:719</span>, in <span class="ansi-cyan-fg">TabularLibrary.__init__</span><span class="ansi-blue-fg">(self, source)</span>
-<span class="ansi-green-intense-fg ansi-bold">    717</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> f <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> <span style="color: rgb(0,135,0)">sorted</span>(filenames):
-<span class="ansi-green-intense-fg ansi-bold">    718</span>         <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> f<span style="color: rgb(98,98,98)">.</span>endswith(<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">-toki</span><span style="color: rgb(175,0,0)">&#34;</span>):
-<span class="ansi-green-fg">--&gt; 719</span>             trates<span style="color: rgb(98,98,98)">.</span>append(load_rate(f, source<span style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">source</span>))
-<span class="ansi-green-intense-fg ansi-bold">    721</span> Library<span style="color: rgb(98,98,98)">.</span><span style="color: rgb(0,0,255)">__init__</span>(<span style="color: rgb(0,135,0)">self</span>, rates<span style="color: rgb(98,98,98)">=</span>trates)
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/library.py:721</span>, in <span class="ansi-cyan-fg">TabularLibrary.__init__</span><span class="ansi-blue-fg">(self, source)</span>
+<span class="ansi-green-intense-fg ansi-bold">    719</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> f <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> <span style="color: rgb(0,135,0)">sorted</span>(filenames):
+<span class="ansi-green-intense-fg ansi-bold">    720</span>         <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> f<span style="color: rgb(98,98,98)">.</span>endswith(<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">-toki</span><span style="color: rgb(175,0,0)">&#34;</span>):
+<span class="ansi-green-fg">--&gt; 721</span>             trates<span style="color: rgb(98,98,98)">.</span>append(load_rate(f, source<span style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">source</span>))
+<span class="ansi-green-intense-fg ansi-bold">    723</span> Library<span style="color: rgb(98,98,98)">.</span><span style="color: rgb(0,0,255)">__init__</span>(<span style="color: rgb(0,135,0)">self</span>, rates<span style="color: rgb(98,98,98)">=</span>trates)
 
 <span class="ansi-red-fg">AttributeError</span>: &#39;TabularLibrary&#39; object has no attribute &#39;source&#39;
 </pre></div></div>

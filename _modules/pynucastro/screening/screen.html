@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>pynucastro.screening.screen &#8212; pynucastro 2.2.0.post80+g725c2dfe documentation</title>
+    <title>pynucastro.screening.screen &#8212; pynucastro 2.2.0.post83+g77da132b documentation</title>
   
   
   
@@ -37,7 +37,7 @@
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../../../_static/documentation_options.js?v=8d1240d2"></script>
+    <script src="../../../_static/documentation_options.js?v=62c1a2c5"></script>
     <script src="../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -451,8 +451,7 @@ document.write(`
     <span class="n">n_e</span><span class="p">:</span> <span class="nb">float</span>
     <span class="n">gamma_e_fac</span><span class="p">:</span> <span class="nb">float</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">temp</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">dens</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
-                 <span class="n">Ys</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">Zs</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">temp</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">dens</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">Ys</span><span class="p">,</span> <span class="n">Zs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        :param temp: temperature in K</span>
 <span class="sd">        :param dens: density in g/cm^3</span>
@@ -542,7 +541,7 @@ document.write(`
 <div class="viewcode-block" id="make_plasma_state">
 <a class="viewcode-back" href="../../../pynucastro.screening.html#pynucastro.screening.screen.make_plasma_state">[docs]</a>
 <span class="k">def</span> <span class="nf">make_plasma_state</span><span class="p">(</span><span class="n">temp</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">dens</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
-                      <span class="n">molar_fractions</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="n">Nucleus</span><span class="p">:</span> <span class="nb">float</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">PlasmaState</span><span class="p">:</span>
+                      <span class="n">molar_fractions</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="n">Nucleus</span><span class="p">,</span> <span class="nb">float</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">PlasmaState</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Construct a PlasmaState object from simulation data.</span>
 
