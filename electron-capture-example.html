@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Tabulated Weak Rate Example &#8212; pynucastro 2.2.0.post93+g93e45af7 documentation</title>
+    <title>Tabulated Weak Rate Example &#8212; pynucastro 2.2.0.post95+g8538f4c5 documentation</title>
   
   
   
@@ -39,7 +39,7 @@
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="_static/documentation_options.js?v=746d3994"></script>
+    <script src="_static/documentation_options.js?v=e51f18dd"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
@@ -539,24 +539,21 @@ File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/pyt
 <span class="ansi-green-intense-fg ansi-bold">     11</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> numba <span class="ansi-bold" style="color: rgb(175,0,255)">is</span> <span class="ansi-bold" style="color: rgb(175,0,255)">not</span> <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>:
 <span class="ansi-green-intense-fg ansi-bold">     12</span>     njit <span style="color: rgb(98,98,98)">=</span> numba<span style="color: rgb(98,98,98)">.</span>njit
 
-File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/__init__.py:6</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span> __all__ <span style="color: rgb(98,98,98)">=</span> [<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">rate</span><span style="color: rgb(175,0,0)">&#34;</span>, <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">library</span><span style="color: rgb(175,0,0)">&#34;</span>]
-<span class="ansi-green-intense-fg ansi-bold">      5</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">known_duplicates</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> find_duplicate_rates, is_allowed_dupe
-<span class="ansi-green-fg">----&gt; 6</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">library</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> (LangankeLibrary, Library, RateFilter, ReacLibLibrary,
-<span class="ansi-green-intense-fg ansi-bold">      7</span>                       SuzukiLibrary, TabularLibrary, list_known_rates)
-<span class="ansi-green-intense-fg ansi-bold">      8</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">rate</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> (ApproximateRate, DerivedRate, Rate, RateFileError, RatePair,
-<span class="ansi-green-intense-fg ansi-bold">      9</span>                    ReacLibRate, SingleSet, TableIndex, TableInterpolator,
-<span class="ansi-green-intense-fg ansi-bold">     10</span>                    TabularRate, Tfactors, _find_rate_file, load_rate)
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/__init__.py:5</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> <span style="color: rgb(175,0,0)">&#34;&#34;&#34;The core routines needed to read and interpret nuclear reaction rates&#34;&#34;&#34;</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span> __all__ <span style="color: rgb(98,98,98)">=</span> [<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">approximate_rates</span><span style="color: rgb(175,0,0)">&#34;</span>, <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">rate</span><span style="color: rgb(175,0,0)">&#34;</span>, <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">library</span><span style="color: rgb(175,0,0)">&#34;</span>]
+<span class="ansi-green-fg">----&gt; 5</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">approximate_rates</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> ApproximateRate
+<span class="ansi-green-intense-fg ansi-bold">      6</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">known_duplicates</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> find_duplicate_rates, is_allowed_dupe
+<span class="ansi-green-intense-fg ansi-bold">      7</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">library</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> (LangankeLibrary, Library, RateFilter, ReacLibLibrary,
+<span class="ansi-green-intense-fg ansi-bold">      8</span>                       SuzukiLibrary, TabularLibrary, list_known_rates)
 
-File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/library.py:10</span>
-<span class="ansi-green-intense-fg ansi-bold">      7</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">nucdata</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> Nucleus, UnsupportedNucleus
-<span class="ansi-green-intense-fg ansi-bold">      8</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">rates</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">known_duplicates</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> (find_duplicate_rates,
-<span class="ansi-green-intense-fg ansi-bold">      9</span>                                                is_allowed_dupe)
-<span class="ansi-green-fg">---&gt; 10</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">rates</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">rate</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> (DerivedRate, Rate, RateFileError,
-<span class="ansi-green-intense-fg ansi-bold">     11</span>                                    ReacLibRate, TabularRate, _find_rate_file,
-<span class="ansi-green-intense-fg ansi-bold">     12</span>                                    get_rates_dir, load_rate)
-<span class="ansi-green-intense-fg ansi-bold">     15</span> <span class="ansi-bold" style="color: rgb(0,135,0)">def</span> <span style="color: rgb(0,0,255)">list_known_rates</span>() <span style="color: rgb(98,98,98)">-</span><span style="color: rgb(98,98,98)">&gt;</span> <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>:
-<span class="ansi-green-intense-fg ansi-bold">     16</span> <span style="color: rgb(188,188,188)">    </span><span style="color: rgb(175,0,0)">&#34;&#34;&#34; list the rates found in the library &#34;&#34;&#34;</span>
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/approximate_rates.py:2</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">nucdata</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> Nucleus
+<span class="ansi-green-fg">----&gt; 2</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">rates</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">rate</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> Rate
+<span class="ansi-green-intense-fg ansi-bold">      5</span> <span class="ansi-bold" style="color: rgb(0,135,0)">class</span> <span class="ansi-bold" style="color: rgb(0,0,255)">ApproximateRate</span>(Rate):
+<span class="ansi-green-intense-fg ansi-bold">      7</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">def</span> <span style="color: rgb(0,0,255)">__init__</span>(<span style="color: rgb(0,135,0)">self</span>, primary_rate: Rate, secondary_rates: <span style="color: rgb(0,135,0)">list</span>[Rate],
+<span class="ansi-green-intense-fg ansi-bold">      8</span>                  primary_reverse: Rate, secondary_reverse: <span style="color: rgb(0,135,0)">list</span>[Rate],
+<span class="ansi-green-intense-fg ansi-bold">      9</span>                  is_reverse: <span style="color: rgb(0,135,0)">bool</span> <span style="color: rgb(98,98,98)">=</span> <span class="ansi-bold" style="color: rgb(0,135,0)">False</span>, approx_type: <span style="color: rgb(0,135,0)">str</span><span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">ap_pg</span><span style="color: rgb(175,0,0)">&#34;</span>) <span style="color: rgb(98,98,98)">-</span><span style="color: rgb(98,98,98)">&gt;</span> <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>:
 
 File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/rate.py:313</span>
 <span class="ansi-green-intense-fg ansi-bold">    309</span>         string <span style="color: rgb(98,98,98)">+</span><span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">;</span><span style="color: rgb(175,0,0)">&#34;</span>
