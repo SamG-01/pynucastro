@@ -6,7 +6,7 @@ class ApproximateRate(Rate):
 
     def __init__(self, primary_rate: Rate, secondary_rates: list[Rate],
                  primary_reverse: Rate, secondary_reverse: list[Rate],
-                 is_reverse: bool = False, approx_type: str= "ap_pg") -> None:
+                 is_reverse: bool = False, approx_type: str = "ap_pg") -> None:
         """the primary rate has the same reactants and products and the final
         approximate rate would have.  The secondary rates are ordered such that
         together they would give the same sequence"""
