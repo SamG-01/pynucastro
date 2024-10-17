@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Dealing with Duplicate Rates &#8212; pynucastro 2.2.0.post83+g77da132b documentation</title>
+    <title>Dealing with Duplicate Rates &#8212; pynucastro 2.2.0.post85+g1067324d documentation</title>
   
   
   
@@ -39,7 +39,7 @@
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="_static/documentation_options.js?v=62c1a2c5"></script>
+    <script src="_static/documentation_options.js?v=a984c22d"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
@@ -496,7 +496,7 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="nbinput docutils container">
+<div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
@@ -504,26 +504,6 @@ document.write(`
 <span class="n">wl</span> <span class="o">=</span> <span class="n">pyna</span><span class="o">.</span><span class="n">TabularLibrary</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">AttributeError</span>                            Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[2], line 2</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> rl <span style="color: rgb(98,98,98)">=</span> pyna<span style="color: rgb(98,98,98)">.</span>ReacLibLibrary()
-<span class="ansi-green-fg">----&gt; 2</span> wl <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">pyna</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">TabularLibrary</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span>
-
-File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/library.py:721</span>, in <span class="ansi-cyan-fg">TabularLibrary.__init__</span><span class="ansi-blue-fg">(self, source)</span>
-<span class="ansi-green-intense-fg ansi-bold">    719</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> f <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> <span style="color: rgb(0,135,0)">sorted</span>(filenames):
-<span class="ansi-green-intense-fg ansi-bold">    720</span>         <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> f<span style="color: rgb(98,98,98)">.</span>endswith(<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">-toki</span><span style="color: rgb(175,0,0)">&#34;</span>):
-<span class="ansi-green-fg">--&gt; 721</span>             trates<span style="color: rgb(98,98,98)">.</span>append(load_rate(f, source<span style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">source</span>))
-<span class="ansi-green-intense-fg ansi-bold">    723</span> Library<span style="color: rgb(98,98,98)">.</span><span style="color: rgb(0,0,255)">__init__</span>(<span style="color: rgb(0,135,0)">self</span>, rates<span style="color: rgb(98,98,98)">=</span>trates)
-
-<span class="ansi-red-fg">AttributeError</span>: &#39;TabularLibrary&#39; object has no attribute &#39;source&#39;
-</pre></div></div>
 </div>
 <p>Let’s create a set of nuclei that can describe basic C burning</p>
 <div class="nbinput nblast docutils container">
@@ -550,12 +530,11 @@ File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/pyt
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[4], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> lib <span style="color: rgb(98,98,98)">=</span> rl<span style="color: rgb(98,98,98)">.</span>linking_nuclei(nuclei) <span style="color: rgb(98,98,98)">+</span> <span class="ansi-yellow-bg">wl</span><span style="color: rgb(98,98,98)">.</span>linking_nuclei(nuclei)
-
-<span class="ansi-red-fg">NameError</span>: name &#39;wl&#39; is not defined
+warning: C12 was not able to be linked
+warning: He4 was not able to be linked
+warning: O16 was not able to be linked
+warning: Ne20 was not able to be linked
+warning: Mg24 was not able to be linked
 </pre></div></div>
 </div>
 <p>If we try to create a network or <code class="docutils literal notranslate"><span class="pre">RateCollection</span></code> now, it will fail:</p>
@@ -567,17 +546,37 @@ Cell <span class="ansi-green-fg">In[4], line 1</span>
 </pre></div>
 </div>
 </div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/networks/rate_collection.py:583: UserWarning: ReacLib neutron decay rate (&lt;n_to_p_weak_wc12&gt;) does not account for degeneracy at high densities. Consider using tabular rate from Langanke.
+  warnings.warn(msg)
+</pre></div></div>
+</div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-red-fg">RateDuplicationError</span>                      Traceback (most recent call last)
 Cell <span class="ansi-green-fg">In[5], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> rc <span style="color: rgb(98,98,98)">=</span> pyna<span style="color: rgb(98,98,98)">.</span>RateCollection(libraries<span style="color: rgb(98,98,98)">=</span>[<span class="ansi-yellow-bg">lib</span>])
+<span class="ansi-green-fg">----&gt; 1</span> rc <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">pyna</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">RateCollection</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">libraries</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">[</span><span class="ansi-yellow-bg">lib</span><span class="ansi-yellow-bg">]</span><span class="ansi-yellow-bg">)</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;lib&#39; is not defined
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/networks/rate_collection.py:479</span>, in <span class="ansi-cyan-fg">RateCollection.__init__</span><span class="ansi-blue-fg">(self, rate_files, libraries, rates, inert_nuclei, symmetric_screening, do_screening)</span>
+<span class="ansi-green-intense-fg ansi-bold">    475</span>         combined_library <span style="color: rgb(98,98,98)">+</span><span style="color: rgb(98,98,98)">=</span> lib
+<span class="ansi-green-intense-fg ansi-bold">    477</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>rates <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>rates <span style="color: rgb(98,98,98)">+</span> combined_library<span style="color: rgb(98,98,98)">.</span>get_rates()
+<span class="ansi-green-fg">--&gt; 479</span> <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">_build_collection</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span>
+
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/networks/rate_collection.py:593</span>, in <span class="ansi-cyan-fg">RateCollection._build_collection</span><span class="ansi-blue-fg">(self)</span>
+<span class="ansi-green-intense-fg ansi-bold">    590</span> <span style="color: rgb(95,135,135)"># finally check for duplicate rates -- these are not</span>
+<span class="ansi-green-intense-fg ansi-bold">    591</span> <span style="color: rgb(95,135,135)"># allowed</span>
+<span class="ansi-green-intense-fg ansi-bold">    592</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>find_duplicate_links():
+<span class="ansi-green-fg">--&gt; 593</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">raise</span> RateDuplicationError(<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">Duplicate rates found</span><span style="color: rgb(175,0,0)">&#34;</span>)
+
+<span class="ansi-red-fg">RateDuplicationError</span>: Duplicate rates found
 </pre></div></div>
 </div>
 <p>We see that we get a <code class="docutils literal notranslate"><span class="pre">RateDuplicationError</span></code> because one or more rates has a duplicate.</p>
@@ -591,16 +590,13 @@ Cell <span class="ansi-green-fg">In[5], line 1</span>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[6], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> <span class="ansi-yellow-bg">lib</span><span style="color: rgb(98,98,98)">.</span>find_duplicate_links()
-
-<span class="ansi-red-fg">NameError</span>: name &#39;lib&#39; is not defined
+[[n ⟶ p + e⁻ + 𝜈, n ⟶ p + e⁻ + 𝜈],
+ [Mg23 ⟶ Na23 + e⁺ + 𝜈, Mg23 + e⁻ ⟶ Na23 + 𝜈]]
 </pre></div></div>
 </div>
 <p>We see that the neutron decay and the decay of <span class="math notranslate nohighlight">\({}^{23}\mathrm{Mg}\)</span> are both duplicated. Let’s see if we can learn more:</p>
@@ -620,14 +616,12 @@ Cell <span class="ansi-green-fg">In[6], line 1</span>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[7], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> n, p <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> <span style="color: rgb(0,135,0)">enumerate</span>(<span class="ansi-yellow-bg">lib</span><span style="color: rgb(98,98,98)">.</span>find_duplicate_links()):
-<span class="ansi-green-intense-fg ansi-bold">      2</span>     <span style="color: rgb(0,135,0)">print</span>(<span style="color: rgb(175,0,0)">f</span><span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">dupe </span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>n<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)">:</span><span style="color: rgb(175,0,0)">&#34;</span>)
-<span class="ansi-green-intense-fg ansi-bold">      3</span>     <span style="color: rgb(0,135,0)">print</span>(<span style="color: rgb(175,0,0)">f</span><span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">   rate 1: </span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>p[<span style="color: rgb(98,98,98)">0</span>]<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)"> (</span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span><span style="color: rgb(0,135,0)">type</span>(p[<span style="color: rgb(98,98,98)">0</span>])<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)">)</span><span style="color: rgb(175,0,0)">&#34;</span>)
-
-<span class="ansi-red-fg">NameError</span>: name &#39;lib&#39; is not defined
+dupe 0:
+   rate 1: n ⟶ p + e⁻ + 𝜈 (&lt;class &#39;pynucastro.rates.rate.ReacLibRate&#39;&gt;)
+   rate 2: n ⟶ p + e⁻ + 𝜈 (&lt;class &#39;pynucastro.rates.rate.TabularRate&#39;&gt;)
+dupe 1:
+   rate 1: Mg23 ⟶ Na23 + e⁺ + 𝜈 (&lt;class &#39;pynucastro.rates.rate.ReacLibRate&#39;&gt;)
+   rate 2: Mg23 + e⁻ ⟶ Na23 + 𝜈 (&lt;class &#39;pynucastro.rates.rate.TabularRate&#39;&gt;)
 </pre></div></div>
 </div>
 <p>In this case, we see that one is a <code class="docutils literal notranslate"><span class="pre">ReacLibRate</span></code> and the other is a <code class="docutils literal notranslate"><span class="pre">TabularRate</span></code>. For the tabular rates, we take the approach that the sequences:</p>
@@ -639,7 +633,7 @@ Cell <span class="ansi-green-fg">In[7], line 1</span>
 \[(Z, A) + e^- \rightarrow (Z - 1, A) + \bar{\nu}_e\]</div>
 <p>into a single effective rate. This means that our <code class="docutils literal notranslate"><span class="pre">TabularRate</span></code> version of the <span class="math notranslate nohighlight">\({}^{23}\mathrm{Mg}\)</span> decay will contain both the <span class="math notranslate nohighlight">\(\beta+\)</span> decay and electron capture. Furthermore, the tabular rates have both the density and temperature dependence, and thus should be preferred to the <code class="docutils literal notranslate"><span class="pre">ReacLibRates</span></code> when we have a duplicate.</p>
 <p>Here we loop over the duplicates and store the rates (the ReacLib versions) that we wish to <em>remove</em> in a list</p>
-<div class="nbinput docutils container">
+<div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
@@ -650,22 +644,6 @@ Cell <span class="ansi-green-fg">In[7], line 1</span>
             <span class="n">rates_to_remove</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[8], line 2</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> rates_to_remove <span style="color: rgb(98,98,98)">=</span> []
-<span class="ansi-green-fg">----&gt; 2</span> <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> pair <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> <span class="ansi-yellow-bg">lib</span><span style="color: rgb(98,98,98)">.</span>find_duplicate_links():
-<span class="ansi-green-intense-fg ansi-bold">      3</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> r <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> pair:
-<span class="ansi-green-intense-fg ansi-bold">      4</span>         <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> <span style="color: rgb(0,135,0)">isinstance</span>(r, pyna<span style="color: rgb(98,98,98)">.</span>rates<span style="color: rgb(98,98,98)">.</span>ReacLibRate):
-
-<span class="ansi-red-fg">NameError</span>: name &#39;lib&#39; is not defined
-</pre></div></div>
 </div>
 <p>Now we remove the duplicates from the list</p>
 <div class="nbinput nblast docutils container">
@@ -678,26 +656,13 @@ Cell <span class="ansi-green-fg">In[8], line 2</span>
 </div>
 </div>
 <p>Finally, we can make the <code class="docutils literal notranslate"><span class="pre">RateCollection</span></code> without error:</p>
-<div class="nbinput docutils container">
+<div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rc</span> <span class="o">=</span> <span class="n">pyna</span><span class="o">.</span><span class="n">RateCollection</span><span class="p">(</span><span class="n">libraries</span><span class="o">=</span><span class="p">[</span><span class="n">lib</span><span class="p">])</span>
 </pre></div>
 </div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[10], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> rc <span style="color: rgb(98,98,98)">=</span> pyna<span style="color: rgb(98,98,98)">.</span>RateCollection(libraries<span style="color: rgb(98,98,98)">=</span>[<span class="ansi-yellow-bg">lib</span>])
-
-<span class="ansi-red-fg">NameError</span>: name &#39;lib&#39; is not defined
-</pre></div></div>
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
@@ -711,14 +676,8 @@ Cell <span class="ansi-green-fg">In[10], line 1</span>
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[11], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> fig <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">rc</span><span style="color: rgb(98,98,98)">.</span>plot(rotated<span style="color: rgb(98,98,98)">=</span><span class="ansi-bold" style="color: rgb(0,135,0)">True</span>)
-
-<span class="ansi-red-fg">NameError</span>: name &#39;rc&#39; is not defined
-</pre></div></div>
+<img alt="_images/duplicate-rates_23_0.png" src="_images/duplicate-rates_23_0.png" />
+</div>
 </div>
 </section>
 
