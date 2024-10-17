@@ -617,7 +617,7 @@ class Rate:
                 nuc = n
         return nuc
 
-    def ydot_string_py(self) -> warnings.LiteralString:
+    def ydot_string_py(self):
         """
         Return a string containing the term in a dY/dt equation
         in a reaction network corresponding to this rate.
@@ -655,7 +655,7 @@ class Rate:
     def eval(self, T: float, rhoY: float = None) -> float:
         raise NotImplementedError("base Rate class does not know how to eval()")
 
-    def jacobian_string_py(self, y_i) -> warnings.LiteralString:
+    def jacobian_string_py(self, y_i):
         """
         Return a string containing the term in a jacobian matrix
         in a reaction network corresponding to this rate differentiated
