@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>pynucastro.screening.screen &#8212; pynucastro 2.2.0.post77+gd2805a7c documentation</title>
+    <title>pynucastro.screening.screen &#8212; pynucastro 2.2.0.post80+g725c2dfe documentation</title>
   
   
   
@@ -37,7 +37,7 @@
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../../../_static/documentation_options.js?v=69ea5e86"></script>
+    <script src="../../../_static/documentation_options.js?v=8d1240d2"></script>
     <script src="../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -451,7 +451,8 @@ document.write(`
     <span class="n">n_e</span><span class="p">:</span> <span class="nb">float</span>
     <span class="n">gamma_e_fac</span><span class="p">:</span> <span class="nb">float</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">temp</span><span class="p">,</span> <span class="n">dens</span><span class="p">,</span> <span class="n">Ys</span><span class="p">,</span> <span class="n">Zs</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">temp</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">dens</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+                 <span class="n">Ys</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">Zs</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        :param temp: temperature in K</span>
 <span class="sd">        :param dens: density in g/cm^3</span>
@@ -518,7 +519,7 @@ document.write(`
     <span class="n">ye</span><span class="p">:</span> <span class="nb">float</span>
     <span class="n">gamma_e_fac</span><span class="p">:</span> <span class="nb">float</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">temp</span><span class="p">,</span> <span class="n">dens</span><span class="p">,</span> <span class="n">ye</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">temp</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">dens</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">ye</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        :param temp:        temperature in K</span>
@@ -540,7 +541,8 @@ document.write(`
 
 <div class="viewcode-block" id="make_plasma_state">
 <a class="viewcode-back" href="../../../pynucastro.screening.html#pynucastro.screening.screen.make_plasma_state">[docs]</a>
-<span class="k">def</span> <span class="nf">make_plasma_state</span><span class="p">(</span><span class="n">temp</span><span class="p">,</span> <span class="n">dens</span><span class="p">,</span> <span class="n">molar_fractions</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">make_plasma_state</span><span class="p">(</span><span class="n">temp</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">dens</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+                      <span class="n">molar_fractions</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="n">Nucleus</span><span class="p">:</span> <span class="nb">float</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">PlasmaState</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Construct a PlasmaState object from simulation data.</span>
 
@@ -586,7 +588,7 @@ document.write(`
     <span class="n">aznut</span><span class="p">:</span> <span class="nb">float</span>
     <span class="n">ztilde</span><span class="p">:</span> <span class="nb">float</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">z1</span><span class="p">,</span> <span class="n">a1</span><span class="p">,</span> <span class="n">z2</span><span class="p">,</span> <span class="n">a2</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">z1</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">a1</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">z2</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">a2</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">z1</span> <span class="o">=</span> <span class="n">z1</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">z2</span> <span class="o">=</span> <span class="n">z2</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">a1</span> <span class="o">=</span> <span class="n">a1</span>
@@ -602,7 +604,7 @@ document.write(`
 
 <div class="viewcode-block" id="make_screen_factors">
 <a class="viewcode-back" href="../../../pynucastro.screening.html#pynucastro.screening.screen.make_screen_factors">[docs]</a>
-<span class="k">def</span> <span class="nf">make_screen_factors</span><span class="p">(</span><span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">make_screen_factors</span><span class="p">(</span><span class="n">n1</span><span class="p">:</span> <span class="n">Nucleus</span><span class="p">,</span> <span class="n">n2</span><span class="p">:</span> <span class="n">Nucleus</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ScreenFactors</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Construct a ScreenFactors object from a pair of nuclei.</span>
 
@@ -618,7 +620,7 @@ document.write(`
 <div class="viewcode-block" id="screen5">
 <a class="viewcode-back" href="../../../pynucastro.screening.html#pynucastro.screening.screen.screen5">[docs]</a>
 <span class="nd">@njit</span>
-<span class="k">def</span> <span class="nf">screen5</span><span class="p">(</span><span class="n">state</span><span class="p">:</span> <span class="n">PlasmaState</span><span class="p">,</span> <span class="n">scn_fac</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">screen5</span><span class="p">(</span><span class="n">state</span><span class="p">:</span> <span class="n">PlasmaState</span><span class="p">,</span> <span class="n">scn_fac</span><span class="p">:</span> <span class="n">ScreenFactors</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Calculates screening factors following the appendix of :cite:t:`Wallace:1982`.</span>
 
 <span class="sd">    Based on :cite:t:`graboske:1973` for weak screening. Based on</span>
@@ -752,7 +754,7 @@ document.write(`
 
 
 <span class="nd">@njit</span>
-<span class="k">def</span> <span class="nf">smooth_clip</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">limit</span><span class="p">,</span> <span class="n">start</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">smooth_clip</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">limit</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">start</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Smoothly transition between y=limit and y=x with a half-cosine.</span>
 
 <span class="sd">    Clips smaller values if limit &lt; start and larger values if start &lt; limit.</span>
@@ -783,7 +785,7 @@ document.write(`
 <div class="viewcode-block" id="chugunov_2007">
 <a class="viewcode-back" href="../../../pynucastro.screening.html#pynucastro.screening.screen.chugunov_2007">[docs]</a>
 <span class="nd">@njit</span>
-<span class="k">def</span> <span class="nf">chugunov_2007</span><span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="n">scn_fac</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">chugunov_2007</span><span class="p">(</span><span class="n">state</span><span class="p">:</span> <span class="n">PlasmaState</span><span class="p">,</span> <span class="n">scn_fac</span><span class="p">:</span> <span class="n">ScreenFactors</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Calculates screening factors based on :cite:t:`chugunov:2007`.</span>
 
 <span class="sd">    Follows the approach in :cite:t:`yakovlev:2006` to extend to a</span>
@@ -882,7 +884,7 @@ document.write(`
 
 
 <span class="nd">@njit</span>
-<span class="k">def</span> <span class="nf">f0</span><span class="p">(</span><span class="n">gamma</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">f0</span><span class="p">(</span><span class="n">gamma</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Calculate the free energy per ion in a OCP from :cite:t:`chugunov:2009` eq. 24</span>
 
 <span class="sd">    :param gamma: Coulomb coupling parameter</span>
@@ -914,7 +916,7 @@ document.write(`
 <div class="viewcode-block" id="chugunov_2009">
 <a class="viewcode-back" href="../../../pynucastro.screening.html#pynucastro.screening.screen.chugunov_2009">[docs]</a>
 <span class="nd">@njit</span>
-<span class="k">def</span> <span class="nf">chugunov_2009</span><span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="n">scn_fac</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">chugunov_2009</span><span class="p">(</span><span class="n">state</span><span class="p">:</span> <span class="n">PlasmaState</span><span class="p">,</span> <span class="n">scn_fac</span><span class="p">:</span> <span class="n">ScreenFactors</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Calculates screening factors based on :cite:t:`chugunov:2009`.</span>
 
 <span class="sd">    :param PlasmaState state:     the precomputed plasma state factors</span>
@@ -982,7 +984,7 @@ document.write(`
 <div class="viewcode-block" id="potekhin_1998">
 <a class="viewcode-back" href="../../../pynucastro.screening.html#pynucastro.screening.screen.potekhin_1998">[docs]</a>
 <span class="nd">@njit</span>
-<span class="k">def</span> <span class="nf">potekhin_1998</span><span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="n">scn_fac</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">potekhin_1998</span><span class="p">(</span><span class="n">state</span><span class="p">:</span> <span class="n">PlasmaState</span><span class="p">,</span> <span class="n">scn_fac</span><span class="p">:</span> <span class="n">ScreenFactors</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Calculates screening factors based on :cite:t:`chabrier_potekhin:1998`.</span>
 
 <span class="sd">    :param PlasmaState state:     the precomputed plasma state factors</span>

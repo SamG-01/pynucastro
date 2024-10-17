@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Checking your network &#8212; pynucastro 2.2.0.post77+gd2805a7c documentation</title>
+    <title>Checking your network &#8212; pynucastro 2.2.0.post80+g725c2dfe documentation</title>
   
   
   
@@ -39,7 +39,7 @@
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="_static/documentation_options.js?v=69ea5e86"></script>
+    <script src="_static/documentation_options.js?v=8d1240d2"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
@@ -538,31 +538,15 @@ document.write(`
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[4], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> rc <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">pyna</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">RateCollection</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">libraries</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">[</span><span class="ansi-yellow-bg">cburn_library</span><span class="ansi-yellow-bg">]</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> rc
-
-File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/networks/rate_collection.py:475</span>, in <span class="ansi-cyan-fg">RateCollection.__init__</span><span class="ansi-blue-fg">(self, rate_files, libraries, rates, inert_nuclei, symmetric_screening, do_screening)</span>
-<span class="ansi-green-intense-fg ansi-bold">    473</span>             <span class="ansi-bold" style="color: rgb(0,135,0)">raise</span> <span class="ansi-bold" style="color: rgb(215,95,95)">ValueError</span>(<span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">Expected Library object or list of Library objects passed as the libraries argument.</span><span style="color: rgb(175,0,0)">&#39;</span>)
-<span class="ansi-green-intense-fg ansi-bold">    474</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> lib <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> libraries:
-<span class="ansi-green-fg">--&gt; 475</span>         <span class="ansi-yellow-bg">combined_library</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">+</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">lib</span>
-<span class="ansi-green-intense-fg ansi-bold">    477</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>rates <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>rates <span style="color: rgb(98,98,98)">+</span> combined_library<span style="color: rgb(98,98,98)">.</span>get_rates()
-<span class="ansi-green-intense-fg ansi-bold">    479</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_build_collection()
-
-File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/library.py:360</span>, in <span class="ansi-cyan-fg">Library.__add__</span><span class="ansi-blue-fg">(self, other)</span>
-<span class="ansi-green-intense-fg ansi-bold">    358</span> new_rates <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_rates
-<span class="ansi-green-intense-fg ansi-bold">    359</span> <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> rid, r <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> other<span style="color: rgb(98,98,98)">.</span>_rates<span style="color: rgb(98,98,98)">.</span>items():
-<span class="ansi-green-fg">--&gt; 360</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> <span class="ansi-yellow-bg">rid</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg ansi-bold" style="color: rgb(175,0,255)">in</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">new_rates</span>:
-<span class="ansi-green-intense-fg ansi-bold">    361</span>         <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> r <span style="color: rgb(98,98,98)">!=</span> new_rates[rid]:
-<span class="ansi-green-intense-fg ansi-bold">    362</span>             <span class="ansi-bold" style="color: rgb(0,135,0)">raise</span> <span class="ansi-bold" style="color: rgb(215,95,95)">ValueError</span>(<span style="color: rgb(175,0,0)">f</span><span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">rate </span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>r<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)"> defined differently in libraries </span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span><span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_library_file<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)"> and </span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>other<span style="color: rgb(98,98,98)">.</span>_library_file<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)">&#39;</span>)
-
-<span class="ansi-red-fg">TypeError</span>: argument of type &#39;NoneType&#39; is not iterable
+C12 ⟶ He4 + He4 + He4
+C12 + C12 ⟶ He4 + Ne20
+Ne20 + He4 ⟶ C12 + C12
+He4 + He4 + He4 ⟶ C12 + 𝛾
 </pre></div></div>
 </div>
 <p>Now, since we are primarily interested in <span class="math notranslate nohighlight">\({}^{12}\mathrm{C} + {}^{12}\mathrm{C}\)</span>, let’s make sure we are not missing any other reactions that have the same reactants. The <code class="docutils literal notranslate"><span class="pre">validate()</span></code> method will do this, by comparing the rates we have selected to another library.</p>
@@ -574,17 +558,25 @@ File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/pyt
 </pre></div>
 </div>
 </div>
-<div class="nboutput nblast docutils container">
+<div class="nboutput docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[5], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> <span class="ansi-yellow-bg">rc</span><span style="color: rgb(98,98,98)">.</span>validate(reaclib_library)
-
-<span class="ansi-red-fg">NameError</span>: name &#39;rc&#39; is not defined
+validation: Ne20 produced in C12 + C12 ⟶ He4 + Ne20 never consumed.
+validation: missing He4 + He4 + He4 ⟶ p + B11 as alternative to He4 + He4 + He4 ⟶ C12 + 𝛾 (Q = -8.682 MeV).
+validation: missing He4 + He4 + He4 ⟶ n + C11 as alternative to He4 + He4 + He4 ⟶ C12 + 𝛾 (Q = -11.4466 MeV).
+validation: missing C12 + C12 ⟶ p + Na23 as alternative to C12 + C12 ⟶ He4 + Ne20 (Q = 2.242 MeV).
+validation: missing C12 + C12 ⟶ n + Mg23 as alternative to C12 + C12 ⟶ He4 + Ne20 (Q = -2.598 MeV).
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+False
 </pre></div></div>
 </div>
 <p>This tells us that we are missing 2 branches of the <span class="math notranslate nohighlight">\({}^{12}\mathrm{C} + {}^{12}\mathrm{C}\)</span> reaction. ReacLib already scales the rates based on the branching of the products, so we should try to include these other branches.</p>
@@ -602,33 +594,19 @@ Cell <span class="ansi-green-fg">In[5], line 1</span>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[6], line 3</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> nuclei <span style="color: rgb(98,98,98)">+</span><span style="color: rgb(98,98,98)">=</span> [<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">p</span><span style="color: rgb(175,0,0)">&#34;</span>, <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">na23</span><span style="color: rgb(175,0,0)">&#34;</span>]
-<span class="ansi-green-intense-fg ansi-bold">      2</span> cburn_library <span style="color: rgb(98,98,98)">=</span> reaclib_library<span style="color: rgb(98,98,98)">.</span>linking_nuclei(nuclei)
-<span class="ansi-green-fg">----&gt; 3</span> rc <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">pyna</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">RateCollection</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">libraries</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">[</span><span class="ansi-yellow-bg">cburn_library</span><span class="ansi-yellow-bg">]</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      4</span> rc
-
-File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/networks/rate_collection.py:475</span>, in <span class="ansi-cyan-fg">RateCollection.__init__</span><span class="ansi-blue-fg">(self, rate_files, libraries, rates, inert_nuclei, symmetric_screening, do_screening)</span>
-<span class="ansi-green-intense-fg ansi-bold">    473</span>             <span class="ansi-bold" style="color: rgb(0,135,0)">raise</span> <span class="ansi-bold" style="color: rgb(215,95,95)">ValueError</span>(<span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">Expected Library object or list of Library objects passed as the libraries argument.</span><span style="color: rgb(175,0,0)">&#39;</span>)
-<span class="ansi-green-intense-fg ansi-bold">    474</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> lib <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> libraries:
-<span class="ansi-green-fg">--&gt; 475</span>         <span class="ansi-yellow-bg">combined_library</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">+</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">lib</span>
-<span class="ansi-green-intense-fg ansi-bold">    477</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>rates <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>rates <span style="color: rgb(98,98,98)">+</span> combined_library<span style="color: rgb(98,98,98)">.</span>get_rates()
-<span class="ansi-green-intense-fg ansi-bold">    479</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_build_collection()
-
-File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/library.py:360</span>, in <span class="ansi-cyan-fg">Library.__add__</span><span class="ansi-blue-fg">(self, other)</span>
-<span class="ansi-green-intense-fg ansi-bold">    358</span> new_rates <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_rates
-<span class="ansi-green-intense-fg ansi-bold">    359</span> <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> rid, r <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> other<span style="color: rgb(98,98,98)">.</span>_rates<span style="color: rgb(98,98,98)">.</span>items():
-<span class="ansi-green-fg">--&gt; 360</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> <span class="ansi-yellow-bg">rid</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg ansi-bold" style="color: rgb(175,0,255)">in</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">new_rates</span>:
-<span class="ansi-green-intense-fg ansi-bold">    361</span>         <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> r <span style="color: rgb(98,98,98)">!=</span> new_rates[rid]:
-<span class="ansi-green-intense-fg ansi-bold">    362</span>             <span class="ansi-bold" style="color: rgb(0,135,0)">raise</span> <span class="ansi-bold" style="color: rgb(215,95,95)">ValueError</span>(<span style="color: rgb(175,0,0)">f</span><span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">rate </span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>r<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)"> defined differently in libraries </span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span><span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_library_file<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)"> and </span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>other<span style="color: rgb(98,98,98)">.</span>_library_file<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)">&#39;</span>)
-
-<span class="ansi-red-fg">TypeError</span>: argument of type &#39;NoneType&#39; is not iterable
+C12 ⟶ He4 + He4 + He4
+C12 + C12 ⟶ p + Na23
+C12 + C12 ⟶ He4 + Ne20
+Ne20 + He4 ⟶ p + Na23
+Ne20 + He4 ⟶ C12 + C12
+Na23 + p ⟶ He4 + Ne20
+Na23 + p ⟶ C12 + C12
+He4 + He4 + He4 ⟶ C12 + 𝛾
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -639,17 +617,28 @@ File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/pyt
 </pre></div>
 </div>
 </div>
-<div class="nboutput nblast docutils container">
+<div class="nboutput docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[7], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> <span class="ansi-yellow-bg">rc</span><span style="color: rgb(98,98,98)">.</span>validate(reaclib_library)
-
-<span class="ansi-red-fg">NameError</span>: name &#39;rc&#39; is not defined
+validation: Ne20 produced in C12 + C12 ⟶ He4 + Ne20 never consumed.
+validation: Ne20 produced in Na23 + p ⟶ He4 + Ne20 never consumed.
+validation: missing He4 + He4 + He4 ⟶ p + B11 as alternative to He4 + He4 + He4 ⟶ C12 + 𝛾 (Q = -8.682 MeV).
+validation: missing He4 + He4 + He4 ⟶ n + C11 as alternative to He4 + He4 + He4 ⟶ C12 + 𝛾 (Q = -11.4466 MeV).
+validation: missing C12 + C12 ⟶ n + Mg23 as alternative to C12 + C12 ⟶ He4 + Ne20 (Q = -2.598 MeV).
+validation: missing C12 + C12 ⟶ n + Mg23 as alternative to C12 + C12 ⟶ p + Na23 (Q = -2.598 MeV).
+validation: missing Na23 + p ⟶ n + Mg23 as alternative to Na23 + p ⟶ He4 + Ne20 (Q = -4.839 MeV).
+validation: missing Na23 + p ⟶ Mg24 + 𝛾 as alternative to Na23 + p ⟶ He4 + Ne20 (Q = 11.6927 MeV).
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+False
 </pre></div></div>
 </div>
 <p>Now, looking at what is missing, we probably want to include <span class="math notranslate nohighlight">\({}^{24}\mathrm{Mg}\)</span> as an endpoint for carbon burning.</p>
@@ -665,33 +654,23 @@ Cell <span class="ansi-green-fg">In[7], line 1</span>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[8], line 3</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> nuclei <span style="color: rgb(98,98,98)">+</span><span style="color: rgb(98,98,98)">=</span> [<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">mg24</span><span style="color: rgb(175,0,0)">&#34;</span>]
-<span class="ansi-green-intense-fg ansi-bold">      2</span> cburn_library <span style="color: rgb(98,98,98)">=</span> reaclib_library<span style="color: rgb(98,98,98)">.</span>linking_nuclei(nuclei)
-<span class="ansi-green-fg">----&gt; 3</span> rc <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">pyna</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">RateCollection</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">libraries</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">[</span><span class="ansi-yellow-bg">cburn_library</span><span class="ansi-yellow-bg">]</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      4</span> rc
-
-File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/networks/rate_collection.py:475</span>, in <span class="ansi-cyan-fg">RateCollection.__init__</span><span class="ansi-blue-fg">(self, rate_files, libraries, rates, inert_nuclei, symmetric_screening, do_screening)</span>
-<span class="ansi-green-intense-fg ansi-bold">    473</span>             <span class="ansi-bold" style="color: rgb(0,135,0)">raise</span> <span class="ansi-bold" style="color: rgb(215,95,95)">ValueError</span>(<span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">Expected Library object or list of Library objects passed as the libraries argument.</span><span style="color: rgb(175,0,0)">&#39;</span>)
-<span class="ansi-green-intense-fg ansi-bold">    474</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> lib <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> libraries:
-<span class="ansi-green-fg">--&gt; 475</span>         <span class="ansi-yellow-bg">combined_library</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">+</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">lib</span>
-<span class="ansi-green-intense-fg ansi-bold">    477</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>rates <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>rates <span style="color: rgb(98,98,98)">+</span> combined_library<span style="color: rgb(98,98,98)">.</span>get_rates()
-<span class="ansi-green-intense-fg ansi-bold">    479</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_build_collection()
-
-File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/library.py:360</span>, in <span class="ansi-cyan-fg">Library.__add__</span><span class="ansi-blue-fg">(self, other)</span>
-<span class="ansi-green-intense-fg ansi-bold">    358</span> new_rates <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_rates
-<span class="ansi-green-intense-fg ansi-bold">    359</span> <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> rid, r <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> other<span style="color: rgb(98,98,98)">.</span>_rates<span style="color: rgb(98,98,98)">.</span>items():
-<span class="ansi-green-fg">--&gt; 360</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> <span class="ansi-yellow-bg">rid</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg ansi-bold" style="color: rgb(175,0,255)">in</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">new_rates</span>:
-<span class="ansi-green-intense-fg ansi-bold">    361</span>         <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> r <span style="color: rgb(98,98,98)">!=</span> new_rates[rid]:
-<span class="ansi-green-intense-fg ansi-bold">    362</span>             <span class="ansi-bold" style="color: rgb(0,135,0)">raise</span> <span class="ansi-bold" style="color: rgb(215,95,95)">ValueError</span>(<span style="color: rgb(175,0,0)">f</span><span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">rate </span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>r<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)"> defined differently in libraries </span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span><span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_library_file<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)"> and </span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>other<span style="color: rgb(98,98,98)">.</span>_library_file<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)">&#39;</span>)
-
-<span class="ansi-red-fg">TypeError</span>: argument of type &#39;NoneType&#39; is not iterable
+Mg24 ⟶ p + Na23
+Mg24 ⟶ He4 + Ne20
+C12 ⟶ He4 + He4 + He4
+Ne20 + He4 ⟶ Mg24 + 𝛾
+Na23 + p ⟶ Mg24 + 𝛾
+C12 + C12 ⟶ p + Na23
+C12 + C12 ⟶ He4 + Ne20
+Ne20 + He4 ⟶ p + Na23
+Ne20 + He4 ⟶ C12 + C12
+Na23 + p ⟶ He4 + Ne20
+Na23 + p ⟶ C12 + C12
+He4 + He4 + He4 ⟶ C12 + 𝛾
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -702,17 +681,29 @@ File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/pyt
 </pre></div>
 </div>
 </div>
-<div class="nboutput nblast docutils container">
+<div class="nboutput docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[9], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> <span class="ansi-yellow-bg">rc</span><span style="color: rgb(98,98,98)">.</span>validate(reaclib_library)
-
-<span class="ansi-red-fg">NameError</span>: name &#39;rc&#39; is not defined
+validation: Mg24 produced in Ne20 + He4 ⟶ Mg24 + 𝛾 never consumed.
+validation: Mg24 produced in Na23 + p ⟶ Mg24 + 𝛾 never consumed.
+validation: missing He4 + He4 + He4 ⟶ p + B11 as alternative to He4 + He4 + He4 ⟶ C12 + 𝛾 (Q = -8.682 MeV).
+validation: missing He4 + He4 + He4 ⟶ n + C11 as alternative to He4 + He4 + He4 ⟶ C12 + 𝛾 (Q = -11.4466 MeV).
+validation: missing C12 + C12 ⟶ n + Mg23 as alternative to C12 + C12 ⟶ He4 + Ne20 (Q = -2.598 MeV).
+validation: missing C12 + C12 ⟶ n + Mg23 as alternative to C12 + C12 ⟶ p + Na23 (Q = -2.598 MeV).
+validation: missing Ne20 + He4 ⟶ n + Mg23 as alternative to Ne20 + He4 ⟶ Mg24 + 𝛾 (Q = -7.21457 MeV).
+validation: missing Na23 + p ⟶ n + Mg23 as alternative to Na23 + p ⟶ He4 + Ne20 (Q = -4.839 MeV).
+validation: missing Na23 + p ⟶ n + Mg23 as alternative to Na23 + p ⟶ Mg24 + 𝛾 (Q = -4.839 MeV).
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+False
 </pre></div></div>
 </div>
 <p>This now seems reasonable. The reactions that are missing are all endothermic.</p>
@@ -728,14 +719,8 @@ Cell <span class="ansi-green-fg">In[9], line 1</span>
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[10], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> fig <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">rc</span><span style="color: rgb(98,98,98)">.</span>plot(curved_edges<span style="color: rgb(98,98,98)">=</span><span class="ansi-bold" style="color: rgb(0,135,0)">True</span>)
-
-<span class="ansi-red-fg">NameError</span>: name &#39;rc&#39; is not defined
-</pre></div></div>
+<img alt="_images/validate-example_19_0.png" src="_images/validate-example_19_0.png" />
+</div>
 </div>
 </section>
 </section>

@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Plotting Examples &#8212; pynucastro 2.2.0.post77+gd2805a7c documentation</title>
+    <title>Plotting Examples &#8212; pynucastro 2.2.0.post80+g725c2dfe documentation</title>
   
   
   
@@ -39,7 +39,7 @@
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="_static/documentation_options.js?v=69ea5e86"></script>
+    <script src="_static/documentation_options.js?v=8d1240d2"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
@@ -522,7 +522,7 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="nbinput docutils container">
+<div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
@@ -532,36 +532,6 @@ document.write(`
 <span class="n">rc</span> <span class="o">=</span> <span class="n">pyna</span><span class="o">.</span><span class="n">RateCollection</span><span class="p">(</span><span class="n">libraries</span><span class="o">=</span><span class="n">sub</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[3], line 4</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> sub <span style="color: rgb(98,98,98)">=</span> library<span style="color: rgb(98,98,98)">.</span>linking_nuclei([<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">p</span><span style="color: rgb(175,0,0)">&#34;</span>, <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">n</span><span style="color: rgb(175,0,0)">&#34;</span>, <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">he4</span><span style="color: rgb(175,0,0)">&#34;</span>, <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">c12</span><span style="color: rgb(175,0,0)">&#34;</span>, <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">n13</span><span style="color: rgb(175,0,0)">&#34;</span>, <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">n14</span><span style="color: rgb(175,0,0)">&#34;</span>, <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">o16</span><span style="color: rgb(175,0,0)">&#34;</span>,
-<span class="ansi-green-intense-fg ansi-bold">      2</span>                               <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">ne20</span><span style="color: rgb(175,0,0)">&#34;</span>, <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">ne21</span><span style="color: rgb(175,0,0)">&#34;</span>, <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">na23</span><span style="color: rgb(175,0,0)">&#34;</span>, <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">mg23</span><span style="color: rgb(175,0,0)">&#34;</span>, <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">mg24</span><span style="color: rgb(175,0,0)">&#34;</span>, <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">al27</span><span style="color: rgb(175,0,0)">&#34;</span>,
-<span class="ansi-green-intense-fg ansi-bold">      3</span>                               <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">si27</span><span style="color: rgb(175,0,0)">&#34;</span>, <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">si28</span><span style="color: rgb(175,0,0)">&#34;</span>])
-<span class="ansi-green-fg">----&gt; 4</span> rc <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">pyna</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">RateCollection</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">libraries</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">sub</span><span class="ansi-yellow-bg">)</span>
-
-File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/networks/rate_collection.py:475</span>, in <span class="ansi-cyan-fg">RateCollection.__init__</span><span class="ansi-blue-fg">(self, rate_files, libraries, rates, inert_nuclei, symmetric_screening, do_screening)</span>
-<span class="ansi-green-intense-fg ansi-bold">    473</span>             <span class="ansi-bold" style="color: rgb(0,135,0)">raise</span> <span class="ansi-bold" style="color: rgb(215,95,95)">ValueError</span>(<span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">Expected Library object or list of Library objects passed as the libraries argument.</span><span style="color: rgb(175,0,0)">&#39;</span>)
-<span class="ansi-green-intense-fg ansi-bold">    474</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> lib <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> libraries:
-<span class="ansi-green-fg">--&gt; 475</span>         <span class="ansi-yellow-bg">combined_library</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">+</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">lib</span>
-<span class="ansi-green-intense-fg ansi-bold">    477</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>rates <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>rates <span style="color: rgb(98,98,98)">+</span> combined_library<span style="color: rgb(98,98,98)">.</span>get_rates()
-<span class="ansi-green-intense-fg ansi-bold">    479</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_build_collection()
-
-File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/library.py:360</span>, in <span class="ansi-cyan-fg">Library.__add__</span><span class="ansi-blue-fg">(self, other)</span>
-<span class="ansi-green-intense-fg ansi-bold">    358</span> new_rates <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_rates
-<span class="ansi-green-intense-fg ansi-bold">    359</span> <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> rid, r <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> other<span style="color: rgb(98,98,98)">.</span>_rates<span style="color: rgb(98,98,98)">.</span>items():
-<span class="ansi-green-fg">--&gt; 360</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> <span class="ansi-yellow-bg">rid</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg ansi-bold" style="color: rgb(175,0,255)">in</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">new_rates</span>:
-<span class="ansi-green-intense-fg ansi-bold">    361</span>         <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> r <span style="color: rgb(98,98,98)">!=</span> new_rates[rid]:
-<span class="ansi-green-intense-fg ansi-bold">    362</span>             <span class="ansi-bold" style="color: rgb(0,135,0)">raise</span> <span class="ansi-bold" style="color: rgb(215,95,95)">ValueError</span>(<span style="color: rgb(175,0,0)">f</span><span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">rate </span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>r<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)"> defined differently in libraries </span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span><span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_library_file<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)"> and </span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>other<span style="color: rgb(98,98,98)">.</span>_library_file<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)">&#39;</span>)
-
-<span class="ansi-red-fg">TypeError</span>: argument of type &#39;NoneType&#39; is not iterable
-</pre></div></div>
 </div>
 <p>The standard network plot of this is:</p>
 <div class="nbinput docutils container">
@@ -576,21 +546,15 @@ File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/pyt
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[4], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> fig <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">rc</span><span style="color: rgb(98,98,98)">.</span>plot()
-
-<span class="ansi-red-fg">NameError</span>: name &#39;rc&#39; is not defined
-</pre></div></div>
+<img alt="_images/plot-types_6_0.png" src="_images/plot-types_6_0.png" />
+</div>
 </div>
 </section>
 <section id="Rotated-view">
 <h2>Rotated view<a class="headerlink" href="#Rotated-view" title="Link to this heading">#</a></h2>
 <p>Since everything lies close to the diagonal, it is hard to see the structure. We can instead look at a rotated view of the network.</p>
 <p>While we’re at it, we’ll also color the rates by reaction rate strength</p>
-<div class="nbinput docutils container">
+<div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
@@ -600,22 +564,6 @@ Cell <span class="ansi-green-fg">In[4], line 1</span>
 <span class="n">comp</span><span class="o">.</span><span class="n">set_solar_like</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[5], line 3</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> rho <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(98,98,98)">1.e4</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> T <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(98,98,98)">1.e8</span>
-<span class="ansi-green-fg">----&gt; 3</span> comp <span style="color: rgb(98,98,98)">=</span> pyna<span style="color: rgb(98,98,98)">.</span>Composition(<span class="ansi-yellow-bg">rc</span><span style="color: rgb(98,98,98)">.</span>get_nuclei())
-<span class="ansi-green-intense-fg ansi-bold">      4</span> comp<span style="color: rgb(98,98,98)">.</span>set_solar_like()
-
-<span class="ansi-red-fg">NameError</span>: name &#39;rc&#39; is not defined
-</pre></div></div>
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
@@ -629,14 +577,8 @@ Cell <span class="ansi-green-fg">In[5], line 3</span>
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[6], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> fig <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">rc</span><span style="color: rgb(98,98,98)">.</span>plot(rho, T, comp, rotated<span style="color: rgb(98,98,98)">=</span><span class="ansi-bold" style="color: rgb(0,135,0)">True</span>)
-
-<span class="ansi-red-fg">NameError</span>: name &#39;rc&#39; is not defined
-</pre></div></div>
+<img alt="_images/plot-types_9_0.png" src="_images/plot-types_9_0.png" />
+</div>
 </div>
 <p>This looks a bit crowded, since it is showing all of the links to <span class="math notranslate nohighlight">\({}^4\mathrm{He}\)</span> from reactions of the form <span class="math notranslate nohighlight">\(A(x, \alpha)B\)</span>. We can hide those links with <code class="docutils literal notranslate"><span class="pre">hide_xalpha=True</span></code></p>
 <div class="nbinput docutils container">
@@ -651,14 +593,8 @@ Cell <span class="ansi-green-fg">In[6], line 1</span>
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[7], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> fig <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">rc</span><span style="color: rgb(98,98,98)">.</span>plot(rho, T, comp, rotated<span style="color: rgb(98,98,98)">=</span><span class="ansi-bold" style="color: rgb(0,135,0)">True</span>, hide_xalpha<span style="color: rgb(98,98,98)">=</span><span class="ansi-bold" style="color: rgb(0,135,0)">True</span>)
-
-<span class="ansi-red-fg">NameError</span>: name &#39;rc&#39; is not defined
-</pre></div></div>
+<img alt="_images/plot-types_11_0.png" src="_images/plot-types_11_0.png" />
+</div>
 </div>
 <p>We can also plot the edges curved, to help distinguish the forward and reverse rates</p>
 <div class="nbinput docutils container">
@@ -674,15 +610,8 @@ Cell <span class="ansi-green-fg">In[7], line 1</span>
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[8], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> fig <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">rc</span><span style="color: rgb(98,98,98)">.</span>plot(rho, T, comp, rotated<span style="color: rgb(98,98,98)">=</span><span class="ansi-bold" style="color: rgb(0,135,0)">True</span>, hide_xalpha<span style="color: rgb(98,98,98)">=</span><span class="ansi-bold" style="color: rgb(0,135,0)">True</span>,
-<span class="ansi-green-intense-fg ansi-bold">      2</span>               curved_edges<span style="color: rgb(98,98,98)">=</span><span class="ansi-bold" style="color: rgb(0,135,0)">True</span>)
-
-<span class="ansi-red-fg">NameError</span>: name &#39;rc&#39; is not defined
-</pre></div></div>
+<img alt="_images/plot-types_13_0.png" src="_images/plot-types_13_0.png" />
+</div>
 </div>
 </section>
 <section id="Filters">
@@ -701,15 +630,8 @@ Cell <span class="ansi-green-fg">In[8], line 1</span>
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[9], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> fig <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">rc</span><span style="color: rgb(98,98,98)">.</span>plot(rho, T, comp, rotated<span style="color: rgb(98,98,98)">=</span><span class="ansi-bold" style="color: rgb(0,135,0)">True</span>, hide_xalpha<span style="color: rgb(98,98,98)">=</span><span class="ansi-bold" style="color: rgb(0,135,0)">True</span>,
-<span class="ansi-green-intense-fg ansi-bold">      2</span>               rate_filter_function<span style="color: rgb(98,98,98)">=</span><span class="ansi-bold" style="color: rgb(0,135,0)">lambda</span> r: pyna<span style="color: rgb(98,98,98)">.</span>Nucleus(<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">p</span><span style="color: rgb(175,0,0)">&#34;</span>) <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> r<span style="color: rgb(98,98,98)">.</span>reactants)
-
-<span class="ansi-red-fg">NameError</span>: name &#39;rc&#39; is not defined
-</pre></div></div>
+<img alt="_images/plot-types_15_0.png" src="_images/plot-types_15_0.png" />
+</div>
 </div>
 <p>We can also highlight rates using the <code class="docutils literal notranslate"><span class="pre">highlight_filter_function</span></code> mechanism. This takes a function that operates on a rate and returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if we wish to highlight the rate (i.e., as if we used a highlighter marker over the line).</p>
 <p>Here’s an example where we highlight the rates that have <span class="math notranslate nohighlight">\(Q &gt; 0\)</span></p>
@@ -727,16 +649,8 @@ Cell <span class="ansi-green-fg">In[9], line 1</span>
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[10], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> fig <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">rc</span><span style="color: rgb(98,98,98)">.</span>plot(rotated<span style="color: rgb(98,98,98)">=</span><span class="ansi-bold" style="color: rgb(0,135,0)">True</span>, hide_xalpha<span style="color: rgb(98,98,98)">=</span><span class="ansi-bold" style="color: rgb(0,135,0)">True</span>, size<span style="color: rgb(98,98,98)">=</span>(<span style="color: rgb(98,98,98)">1500</span>, <span style="color: rgb(98,98,98)">600</span>),
-<span class="ansi-green-intense-fg ansi-bold">      2</span>               highlight_filter_function<span style="color: rgb(98,98,98)">=</span><span class="ansi-bold" style="color: rgb(0,135,0)">lambda</span> r: r<span style="color: rgb(98,98,98)">.</span>Q <span style="color: rgb(98,98,98)">&gt;</span> <span style="color: rgb(98,98,98)">0</span>,
-<span class="ansi-green-intense-fg ansi-bold">      3</span>               curved_edges<span style="color: rgb(98,98,98)">=</span><span class="ansi-bold" style="color: rgb(0,135,0)">True</span>)
-
-<span class="ansi-red-fg">NameError</span>: name &#39;rc&#39; is not defined
-</pre></div></div>
+<img alt="_images/plot-types_17_0.png" src="_images/plot-types_17_0.png" />
+</div>
 </div>
 </section>
 <section id="Plotting-the-Jacobian">
@@ -761,14 +675,8 @@ Cell <span class="ansi-green-fg">In[10], line 1</span>
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[11], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> fig <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">rc</span><span style="color: rgb(98,98,98)">.</span>plot_jacobian(rho, T, comp, rate_scaling<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(98,98,98)">1.e50</span>)
-
-<span class="ansi-red-fg">NameError</span>: name &#39;rc&#39; is not defined
-</pre></div></div>
+<img alt="_images/plot-types_19_0.png" src="_images/plot-types_19_0.png" />
+</div>
 </div>
 </section>
 <section id="Plot-nuclides-on-a-grid">
@@ -808,12 +716,12 @@ Cell <span class="ansi-green-fg">In[12], line 9</span>
 <span class="ansi-green-fg">----&gt; 9</span> rates <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">library</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">get_rate_by_name</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">rate_names</span><span class="ansi-yellow-bg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">     10</span> rc <span style="color: rgb(98,98,98)">=</span> pyna<span style="color: rgb(98,98,98)">.</span>RateCollection(rates<span style="color: rgb(98,98,98)">=</span>rates)
 
-File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/library.py:203</span>, in <span class="ansi-cyan-fg">Library.get_rate_by_name</span><span class="ansi-blue-fg">(self, name)</span>
-<span class="ansi-green-intense-fg ansi-bold">    200</span> rates_out <span style="color: rgb(98,98,98)">=</span> []
-<span class="ansi-green-intense-fg ansi-bold">    202</span> <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> rname <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> rate_name_list:
-<span class="ansi-green-fg">--&gt; 203</span>     reactants, products <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">_rate_name_to_nuc</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">rname</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    205</span>     rf <span style="color: rgb(98,98,98)">=</span> RateFilter(reactants<span style="color: rgb(98,98,98)">=</span>reactants, products<span style="color: rgb(98,98,98)">=</span>products)
-<span class="ansi-green-intense-fg ansi-bold">    206</span>     _lib <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>filter(rf)
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/library.py:200</span>, in <span class="ansi-cyan-fg">Library.get_rate_by_name</span><span class="ansi-blue-fg">(self, name)</span>
+<span class="ansi-green-intense-fg ansi-bold">    197</span> rates_out <span style="color: rgb(98,98,98)">=</span> []
+<span class="ansi-green-intense-fg ansi-bold">    199</span> <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> rname <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> rate_name_list:
+<span class="ansi-green-fg">--&gt; 200</span>     reactants, products <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">_rate_name_to_nuc</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">rname</span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    202</span>     rf <span style="color: rgb(98,98,98)">=</span> RateFilter(reactants<span style="color: rgb(98,98,98)">=</span>reactants, products<span style="color: rgb(98,98,98)">=</span>products)
+<span class="ansi-green-intense-fg ansi-bold">    203</span>     _lib <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>filter(rf)
 
 File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/library.py:87</span>, in <span class="ansi-cyan-fg">_rate_name_to_nuc</span><span class="ansi-blue-fg">(name)</span>
 <span class="ansi-green-intense-fg ansi-bold">     85</span>         <span style="color: rgb(0,135,0)">print</span>(<span style="color: rgb(175,0,0)">f</span><span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">couldn</span><span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">t deal with </span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>nuc<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)">&#34;</span>)
@@ -853,7 +761,7 @@ File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/pyt
 <span class="ansi-red-fg">ValueError</span>: invalid literal for int() with base 10: &#39;&#39;
 </pre></div></div>
 </div>
-<div class="nbinput docutils container">
+<div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
 </pre></div>
 </div>
@@ -863,22 +771,6 @@ File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/pyt
 <span class="n">comp</span><span class="o">.</span><span class="n">set_solar_like</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[13], line 3</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> rho <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(98,98,98)">1.e4</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> T <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(98,98,98)">1.e8</span>
-<span class="ansi-green-fg">----&gt; 3</span> comp <span style="color: rgb(98,98,98)">=</span> pyna<span style="color: rgb(98,98,98)">.</span>Composition(<span class="ansi-yellow-bg">rc</span><span style="color: rgb(98,98,98)">.</span>get_nuclei())
-<span class="ansi-green-intense-fg ansi-bold">      4</span> comp<span style="color: rgb(98,98,98)">.</span>set_solar_like()
-
-<span class="ansi-red-fg">NameError</span>: name &#39;rc&#39; is not defined
-</pre></div></div>
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
@@ -892,14 +784,8 @@ Cell <span class="ansi-green-fg">In[13], line 3</span>
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[14], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> fig <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">rc</span><span style="color: rgb(98,98,98)">.</span>gridplot(comp<span style="color: rgb(98,98,98)">=</span>comp, color_field<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">X</span><span style="color: rgb(175,0,0)">&#34;</span>, scale<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">log</span><span style="color: rgb(175,0,0)">&#34;</span>, area<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(98,98,98)">36</span>)
-
-<span class="ansi-red-fg">NameError</span>: name &#39;rc&#39; is not defined
-</pre></div></div>
+<img alt="_images/plot-types_24_0.png" src="_images/plot-types_24_0.png" />
+</div>
 </div>
 <p>The plot is configurable through a large number of keyword arguments. Here we want to look at the rates at which nuclides are being created or destroyed, so we color by <span class="math notranslate nohighlight">\(\dot{Y}\)</span>, the rate of change of molar abundance. Density and temperature need to be supplied to evaluate the rates. A full list of valid keyword arguments can be found in the API documentation.</p>
 <div class="nbinput docutils container">
@@ -915,15 +801,8 @@ Cell <span class="ansi-green-fg">In[14], line 1</span>
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[15], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> fig <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">rc</span><span style="color: rgb(98,98,98)">.</span>gridplot(comp<span style="color: rgb(98,98,98)">=</span>comp, rho<span style="color: rgb(98,98,98)">=</span>rho, T<span style="color: rgb(98,98,98)">=</span>T, color_field<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">ydot</span><span style="color: rgb(175,0,0)">&#34;</span>, area<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(98,98,98)">36</span>,
-<span class="ansi-green-intense-fg ansi-bold">      2</span>                   cmap<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">RdGy</span><span style="color: rgb(175,0,0)">&#34;</span>, cbar_bounds<span style="color: rgb(98,98,98)">=</span>(<span style="color: rgb(98,98,98)">-</span><span style="color: rgb(98,98,98)">0.1</span>, <span style="color: rgb(98,98,98)">0.1</span>))
-
-<span class="ansi-red-fg">NameError</span>: name &#39;rc&#39; is not defined
-</pre></div></div>
+<img alt="_images/plot-types_26_0.png" src="_images/plot-types_26_0.png" />
+</div>
 </div>
 <p>Unlike the network plot, this won’t omit hydrogen and helium by default. To just look at the heavier nuclides, we can define a function to filter by proton number. Here we also plot <em>activity</em>, which is the sum of all rates contributions to Ydot ignoring the sign.</p>
 <div class="nbinput docutils container">
@@ -940,16 +819,8 @@ Cell <span class="ansi-green-fg">In[15], line 1</span>
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[16], line 2</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> ff <span style="color: rgb(98,98,98)">=</span> <span class="ansi-bold" style="color: rgb(0,135,0)">lambda</span> nuc: nuc<span style="color: rgb(98,98,98)">.</span>Z <span style="color: rgb(98,98,98)">&gt;</span> <span style="color: rgb(98,98,98)">2</span>
-<span class="ansi-green-fg">----&gt; 2</span> fig <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">rc</span><span style="color: rgb(98,98,98)">.</span>gridplot(comp<span style="color: rgb(98,98,98)">=</span>comp, rho<span style="color: rgb(98,98,98)">=</span>rho, T<span style="color: rgb(98,98,98)">=</span>T, color_field<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">activity</span><span style="color: rgb(175,0,0)">&#34;</span>, scale<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">log</span><span style="color: rgb(175,0,0)">&#34;</span>,
-<span class="ansi-green-intense-fg ansi-bold">      3</span>                   filter_function<span style="color: rgb(98,98,98)">=</span>ff, area<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(98,98,98)">20</span>, cmap<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">Blues</span><span style="color: rgb(175,0,0)">&#34;</span>)
-
-<span class="ansi-red-fg">NameError</span>: name &#39;rc&#39; is not defined
-</pre></div></div>
+<img alt="_images/plot-types_28_0.png" src="_images/plot-types_28_0.png" />
+</div>
 </div>
 </section>
 <section id="Network-Chart">
@@ -967,14 +838,8 @@ Cell <span class="ansi-green-fg">In[16], line 2</span>
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[17], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> fig <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">rc</span><span style="color: rgb(98,98,98)">.</span>plot_network_chart(rho, T, comp)
-
-<span class="ansi-red-fg">NameError</span>: name &#39;rc&#39; is not defined
-</pre></div></div>
+<img alt="_images/plot-types_31_0.png" src="_images/plot-types_31_0.png" />
+</div>
 </div>
 </section>
 </section>

@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>pynucastro.networks.rate_collection &#8212; pynucastro 2.2.0.post77+gd2805a7c documentation</title>
+    <title>pynucastro.networks.rate_collection &#8212; pynucastro 2.2.0.post80+g725c2dfe documentation</title>
   
   
   
@@ -37,7 +37,7 @@
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../../../_static/documentation_options.js?v=69ea5e86"></script>
+    <script src="../../../_static/documentation_options.js?v=8d1240d2"></script>
     <script src="../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -873,7 +873,7 @@ document.write(`
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rate_files</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">libraries</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">rates</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">inert_nuclei</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">symmetric_screening</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">do_screening</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+                 <span class="n">symmetric_screening</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">do_screening</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;rate_files are the files that together define the network.  This</span>
 <span class="sd">        can be any iterable or single string.</span>
 
@@ -1445,7 +1445,7 @@ document.write(`
 
 <div class="viewcode-block" id="RateCollection.evaluate_jacobian">
 <a class="viewcode-back" href="../../../pynucastro.networks.html#pynucastro.networks.rate_collection.RateCollection.evaluate_jacobian">[docs]</a>
-    <span class="k">def</span> <span class="nf">evaluate_jacobian</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rho</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">comp</span><span class="p">,</span> <span class="n">screen_func</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">evaluate_jacobian</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rho</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">comp</span><span class="p">,</span> <span class="n">screen_func</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;return an array of the form J_ij = dYdot_i/dY_j for the network&quot;&quot;&quot;</span>
 
         <span class="c1"># the rate.eval_jacobian_term does not compute the screening,</span>
@@ -1568,7 +1568,8 @@ document.write(`
 
 <div class="viewcode-block" id="RateCollection.find_unimportant_rates">
 <a class="viewcode-back" href="../../../pynucastro.networks.html#pynucastro.networks.rate_collection.RateCollection.find_unimportant_rates">[docs]</a>
-    <span class="k">def</span> <span class="nf">find_unimportant_rates</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">states</span><span class="p">,</span> <span class="n">cutoff_ratio</span><span class="p">,</span> <span class="n">screen_func</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">find_unimportant_rates</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">states</span><span class="p">,</span> <span class="n">cutoff_ratio</span><span class="p">,</span>
+                               <span class="n">screen_func</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="n">Rate</span><span class="p">:</span> <span class="nb">float</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;evaluate the rates at multiple thermodynamic states, and find the</span>
 <span class="sd">        rates that are always less than `cutoff_ratio` times the fastest rate</span>
 <span class="sd">        for each state</span>
@@ -1588,7 +1589,7 @@ document.write(`
 <div class="viewcode-block" id="RateCollection.evaluate_screening">
 <a class="viewcode-back" href="../../../pynucastro.networks.html#pynucastro.networks.rate_collection.RateCollection.evaluate_screening">[docs]</a>
     <span class="k">def</span> <span class="nf">evaluate_screening</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rho</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">T</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
-                           <span class="n">composition</span><span class="p">:</span> <span class="n">Composition</span><span class="p">,</span> <span class="n">screen_func</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+                           <span class="n">composition</span><span class="p">:</span> <span class="n">Composition</span><span class="p">,</span> <span class="n">screen_func</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="n">Rate</span><span class="p">:</span> <span class="nb">float</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Evaluate the screening factors for each rate, using one of the</span>
 <span class="sd">        methods in :py:mod:`pynucastro.screening`&quot;&quot;&quot;</span>
         <span class="c1"># this follows the same logic as BaseCxxNetwork._compute_screening_factors()</span>
@@ -1634,7 +1635,9 @@ document.write(`
 
 <div class="viewcode-block" id="RateCollection.evaluate_ydots">
 <a class="viewcode-back" href="../../../pynucastro.networks.html#pynucastro.networks.rate_collection.RateCollection.evaluate_ydots">[docs]</a>
-    <span class="k">def</span> <span class="nf">evaluate_ydots</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rho</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">composition</span><span class="p">,</span> <span class="n">screen_func</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">rate_filter</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">evaluate_ydots</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rho</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">T</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+                       <span class="n">composition</span><span class="p">:</span> <span class="n">Composition</span><span class="p">,</span>
+                       <span class="n">screen_func</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">rate_filter</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="n">Rate</span><span class="p">:</span> <span class="nb">float</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;evaluate net rate of change of molar abundance for each nucleus</span>
 <span class="sd">        for a specific density, temperature, and composition</span>
 
@@ -1867,7 +1870,8 @@ document.write(`
 
 <div class="viewcode-block" id="RateCollection.plot">
 <a class="viewcode-back" href="../../../pynucastro.networks.html#pynucastro.networks.rate_collection.RateCollection.plot">[docs]</a>
-    <span class="k">def</span> <span class="nf">plot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rho</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">T</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">comp</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span>
+    <span class="k">def</span> <span class="nf">plot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rho</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">T</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+             <span class="n">comp</span><span class="p">:</span> <span class="n">Composition</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span>
              <span class="n">outfile</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
              <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">),</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
              <span class="n">ydot_cutoff_value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">show_small_ydot</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>

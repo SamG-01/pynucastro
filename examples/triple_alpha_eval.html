@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Computing the Screened Triple-alpha rate &#8212; pynucastro 2.2.0.post77+gd2805a7c documentation</title>
+    <title>Computing the Screened Triple-alpha rate &#8212; pynucastro 2.2.0.post80+g725c2dfe documentation</title>
   
   
   
@@ -39,7 +39,7 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=69ea5e86"></script>
+    <script src="../_static/documentation_options.js?v=8d1240d2"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -569,12 +569,12 @@ document.write(`
 Cell <span class="ansi-green-fg">In[5], line 1</span>
 <span class="ansi-green-fg">----&gt; 1</span> triple_alpha <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">rl</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">get_rate_by_name</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">&#34;</span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">a(aa,)c12</span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">&#34;</span><span class="ansi-yellow-bg">)</span>
 
-File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/library.py:203</span>, in <span class="ansi-cyan-fg">Library.get_rate_by_name</span><span class="ansi-blue-fg">(self, name)</span>
-<span class="ansi-green-intense-fg ansi-bold">    200</span> rates_out <span style="color: rgb(98,98,98)">=</span> []
-<span class="ansi-green-intense-fg ansi-bold">    202</span> <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> rname <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> rate_name_list:
-<span class="ansi-green-fg">--&gt; 203</span>     reactants, products <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">_rate_name_to_nuc</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">rname</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    205</span>     rf <span style="color: rgb(98,98,98)">=</span> RateFilter(reactants<span style="color: rgb(98,98,98)">=</span>reactants, products<span style="color: rgb(98,98,98)">=</span>products)
-<span class="ansi-green-intense-fg ansi-bold">    206</span>     _lib <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>filter(rf)
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/library.py:200</span>, in <span class="ansi-cyan-fg">Library.get_rate_by_name</span><span class="ansi-blue-fg">(self, name)</span>
+<span class="ansi-green-intense-fg ansi-bold">    197</span> rates_out <span style="color: rgb(98,98,98)">=</span> []
+<span class="ansi-green-intense-fg ansi-bold">    199</span> <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> rname <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> rate_name_list:
+<span class="ansi-green-fg">--&gt; 200</span>     reactants, products <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">_rate_name_to_nuc</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">rname</span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    202</span>     rf <span style="color: rgb(98,98,98)">=</span> RateFilter(reactants<span style="color: rgb(98,98,98)">=</span>reactants, products<span style="color: rgb(98,98,98)">=</span>products)
+<span class="ansi-green-intense-fg ansi-bold">    203</span>     _lib <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>filter(rf)
 
 File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/library.py:66</span>, in <span class="ansi-cyan-fg">_rate_name_to_nuc</span><span class="ansi-blue-fg">(name)</span>
 <span class="ansi-green-intense-fg ansi-bold">     64</span>         <span style="color: rgb(0,135,0)">print</span>(<span style="color: rgb(175,0,0)">f</span><span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">couldn</span><span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">t deal with </span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>nuc<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)">&#34;</span>)

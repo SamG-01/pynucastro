@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>hot-CNO and breakout &#8212; pynucastro 2.2.0.post77+gd2805a7c documentation</title>
+    <title>hot-CNO and breakout &#8212; pynucastro 2.2.0.post80+g725c2dfe documentation</title>
   
   
   
@@ -39,7 +39,7 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=69ea5e86"></script>
+    <script src="../_static/documentation_options.js?v=8d1240d2"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -547,12 +547,12 @@ Cell <span class="ansi-green-fg">In[3], line 6</span>
 <span class="ansi-green-fg">----&gt; 6</span> r3a <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">lib</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">get_rate_by_name</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">&#34;</span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">he4(aa,g)c12</span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">&#34;</span><span class="ansi-yellow-bg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      7</span> lib<span style="color: rgb(98,98,98)">.</span>remove_rate(r3a)
 
-File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/library.py:203</span>, in <span class="ansi-cyan-fg">Library.get_rate_by_name</span><span class="ansi-blue-fg">(self, name)</span>
-<span class="ansi-green-intense-fg ansi-bold">    200</span> rates_out <span style="color: rgb(98,98,98)">=</span> []
-<span class="ansi-green-intense-fg ansi-bold">    202</span> <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> rname <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> rate_name_list:
-<span class="ansi-green-fg">--&gt; 203</span>     reactants, products <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">_rate_name_to_nuc</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">rname</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    205</span>     rf <span style="color: rgb(98,98,98)">=</span> RateFilter(reactants<span style="color: rgb(98,98,98)">=</span>reactants, products<span style="color: rgb(98,98,98)">=</span>products)
-<span class="ansi-green-intense-fg ansi-bold">    206</span>     _lib <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>filter(rf)
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/library.py:200</span>, in <span class="ansi-cyan-fg">Library.get_rate_by_name</span><span class="ansi-blue-fg">(self, name)</span>
+<span class="ansi-green-intense-fg ansi-bold">    197</span> rates_out <span style="color: rgb(98,98,98)">=</span> []
+<span class="ansi-green-intense-fg ansi-bold">    199</span> <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> rname <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> rate_name_list:
+<span class="ansi-green-fg">--&gt; 200</span>     reactants, products <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">_rate_name_to_nuc</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">rname</span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    202</span>     rf <span style="color: rgb(98,98,98)">=</span> RateFilter(reactants<span style="color: rgb(98,98,98)">=</span>reactants, products<span style="color: rgb(98,98,98)">=</span>products)
+<span class="ansi-green-intense-fg ansi-bold">    203</span>     _lib <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>filter(rf)
 
 File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/library.py:66</span>, in <span class="ansi-cyan-fg">_rate_name_to_nuc</span><span class="ansi-blue-fg">(name)</span>
 <span class="ansi-green-intense-fg ansi-bold">     64</span>         <span style="color: rgb(0,135,0)">print</span>(<span style="color: rgb(175,0,0)">f</span><span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">couldn</span><span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">t deal with </span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>nuc<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)">&#34;</span>)
@@ -593,40 +593,13 @@ File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/pyt
 <span class="ansi-red-fg">ValueError</span>: invalid literal for int() with base 10: &#39;&#39;
 </pre></div></div>
 </div>
-<div class="nbinput docutils container">
+<div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rc</span> <span class="o">=</span> <span class="n">pyna</span><span class="o">.</span><span class="n">RateCollection</span><span class="p">(</span><span class="n">libraries</span><span class="o">=</span><span class="n">lib</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[4], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> rc <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">pyna</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">RateCollection</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">libraries</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">lib</span><span class="ansi-yellow-bg">)</span>
-
-File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/networks/rate_collection.py:475</span>, in <span class="ansi-cyan-fg">RateCollection.__init__</span><span class="ansi-blue-fg">(self, rate_files, libraries, rates, inert_nuclei, symmetric_screening, do_screening)</span>
-<span class="ansi-green-intense-fg ansi-bold">    473</span>             <span class="ansi-bold" style="color: rgb(0,135,0)">raise</span> <span class="ansi-bold" style="color: rgb(215,95,95)">ValueError</span>(<span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">Expected Library object or list of Library objects passed as the libraries argument.</span><span style="color: rgb(175,0,0)">&#39;</span>)
-<span class="ansi-green-intense-fg ansi-bold">    474</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> lib <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> libraries:
-<span class="ansi-green-fg">--&gt; 475</span>         <span class="ansi-yellow-bg">combined_library</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">+</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">lib</span>
-<span class="ansi-green-intense-fg ansi-bold">    477</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>rates <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>rates <span style="color: rgb(98,98,98)">+</span> combined_library<span style="color: rgb(98,98,98)">.</span>get_rates()
-<span class="ansi-green-intense-fg ansi-bold">    479</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_build_collection()
-
-File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/library.py:360</span>, in <span class="ansi-cyan-fg">Library.__add__</span><span class="ansi-blue-fg">(self, other)</span>
-<span class="ansi-green-intense-fg ansi-bold">    358</span> new_rates <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_rates
-<span class="ansi-green-intense-fg ansi-bold">    359</span> <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> rid, r <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> other<span style="color: rgb(98,98,98)">.</span>_rates<span style="color: rgb(98,98,98)">.</span>items():
-<span class="ansi-green-fg">--&gt; 360</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> <span class="ansi-yellow-bg">rid</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg ansi-bold" style="color: rgb(175,0,255)">in</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">new_rates</span>:
-<span class="ansi-green-intense-fg ansi-bold">    361</span>         <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> r <span style="color: rgb(98,98,98)">!=</span> new_rates[rid]:
-<span class="ansi-green-intense-fg ansi-bold">    362</span>             <span class="ansi-bold" style="color: rgb(0,135,0)">raise</span> <span class="ansi-bold" style="color: rgb(215,95,95)">ValueError</span>(<span style="color: rgb(175,0,0)">f</span><span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">rate </span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>r<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)"> defined differently in libraries </span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span><span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_library_file<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)"> and </span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>other<span style="color: rgb(98,98,98)">.</span>_library_file<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)">&#39;</span>)
-
-<span class="ansi-red-fg">TypeError</span>: argument of type &#39;NoneType&#39; is not iterable
-</pre></div></div>
 </div>
 <p>To evaluate the rates, we need a composition. This is defined using a list of <code class="docutils literal notranslate"><span class="pre">Nucleus</span></code> objects. Here we set H and He to approximate their solar values and distribute the remaining mass evenly across the other nuclei.</p>
 <div class="nbinput docutils container">
@@ -643,16 +616,8 @@ File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/pyt
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[5], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> comp <span style="color: rgb(98,98,98)">=</span> pyna<span style="color: rgb(98,98,98)">.</span>Composition(<span class="ansi-yellow-bg">rc</span><span style="color: rgb(98,98,98)">.</span>get_nuclei())
-<span class="ansi-green-intense-fg ansi-bold">      2</span> comp<span style="color: rgb(98,98,98)">.</span>set_solar_like()
-<span class="ansi-green-intense-fg ansi-bold">      3</span> fig <span style="color: rgb(98,98,98)">=</span> comp<span style="color: rgb(98,98,98)">.</span>plot()
-
-<span class="ansi-red-fg">NameError</span>: name &#39;rc&#39; is not defined
-</pre></div></div>
+<img alt="../_images/examples_hot-CNO-breakout-example_9_0.png" src="../_images/examples_hot-CNO-breakout-example_9_0.png" />
+</div>
 </div>
 <section id="Transition-from-CNO-to-hot-CNO">
 <h2>Transition from CNO to hot-CNO<a class="headerlink" href="#Transition-from-CNO-to-hot-CNO" title="Link to this heading">#</a></h2>
@@ -678,14 +643,8 @@ Cell <span class="ansi-green-fg">In[5], line 1</span>
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[7], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> fig <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">rc</span><span style="color: rgb(98,98,98)">.</span>plot(rho<span style="color: rgb(98,98,98)">=</span>rho, T<span style="color: rgb(98,98,98)">=</span>T, comp<span style="color: rgb(98,98,98)">=</span>comp, ydot_cutoff_value<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(98,98,98)">1.e-20</span>)
-
-<span class="ansi-red-fg">NameError</span>: name &#39;rc&#39; is not defined
-</pre></div></div>
+<img alt="../_images/examples_hot-CNO-breakout-example_13_0.png" src="../_images/examples_hot-CNO-breakout-example_13_0.png" />
+</div>
 </div>
 <p>Starting at <span class="math notranslate nohighlight">\({}^{12}\mathrm{C}\)</span>, we see the following sequence dominate:</p>
 <ul class="simple">
@@ -710,15 +669,8 @@ Cell <span class="ansi-green-fg">In[7], line 1</span>
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[8], line 2</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> T <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(98,98,98)">3.e8</span>
-<span class="ansi-green-fg">----&gt; 2</span> fig <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">rc</span><span style="color: rgb(98,98,98)">.</span>plot(rho<span style="color: rgb(98,98,98)">=</span>rho, T<span style="color: rgb(98,98,98)">=</span>T, comp<span style="color: rgb(98,98,98)">=</span>comp, ydot_cutoff_value<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(98,98,98)">1.e-20</span>)
-
-<span class="ansi-red-fg">NameError</span>: name &#39;rc&#39; is not defined
-</pre></div></div>
+<img alt="../_images/examples_hot-CNO-breakout-example_16_0.png" src="../_images/examples_hot-CNO-breakout-example_16_0.png" />
+</div>
 </div>
 <p>Now we see that the proton capture on <span class="math notranslate nohighlight">\({}^{13}\mathrm{N}\)</span> is faster than the beta-decay, and we make <span class="math notranslate nohighlight">\({}^{14}\mathrm{O}\)</span>. Then the cycle continues as before.</p>
 <p>As we increase the temperature and density further, we see that the beta decays become the rate-limiting steps.</p>
@@ -736,16 +688,8 @@ Cell <span class="ansi-green-fg">In[8], line 2</span>
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[9], line 3</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> T <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(98,98,98)">5.e8</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> rho <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(98,98,98)">1.e4</span>
-<span class="ansi-green-fg">----&gt; 3</span> fig <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">rc</span><span style="color: rgb(98,98,98)">.</span>plot(rho<span style="color: rgb(98,98,98)">=</span>rho, T<span style="color: rgb(98,98,98)">=</span>T, comp<span style="color: rgb(98,98,98)">=</span>comp, ydot_cutoff_value<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(98,98,98)">1.e-20</span>)
-
-<span class="ansi-red-fg">NameError</span>: name &#39;rc&#39; is not defined
-</pre></div></div>
+<img alt="../_images/examples_hot-CNO-breakout-example_19_0.png" src="../_images/examples_hot-CNO-breakout-example_19_0.png" />
+</div>
 </div>
 <p>Since the beta-decays are temperature independent (you just have to wait for the nucleus to decay), the overall hot-CNO rate becomes insensitive to temperature.</p>
 </section>
@@ -772,12 +716,12 @@ Cell <span class="ansi-green-fg">In[10], line 1</span>
 <span class="ansi-green-fg">----&gt; 1</span> r1 <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">rl</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">get_rate_by_name</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">&#34;</span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">n13(p,g)o14</span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">&#34;</span><span class="ansi-yellow-bg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      2</span> r2 <span style="color: rgb(98,98,98)">=</span> rl<span style="color: rgb(98,98,98)">.</span>get_rate_by_name(<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">n13(,)c13</span><span style="color: rgb(175,0,0)">&#34;</span>)
 
-File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/library.py:203</span>, in <span class="ansi-cyan-fg">Library.get_rate_by_name</span><span class="ansi-blue-fg">(self, name)</span>
-<span class="ansi-green-intense-fg ansi-bold">    200</span> rates_out <span style="color: rgb(98,98,98)">=</span> []
-<span class="ansi-green-intense-fg ansi-bold">    202</span> <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> rname <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> rate_name_list:
-<span class="ansi-green-fg">--&gt; 203</span>     reactants, products <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">_rate_name_to_nuc</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">rname</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    205</span>     rf <span style="color: rgb(98,98,98)">=</span> RateFilter(reactants<span style="color: rgb(98,98,98)">=</span>reactants, products<span style="color: rgb(98,98,98)">=</span>products)
-<span class="ansi-green-intense-fg ansi-bold">    206</span>     _lib <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>filter(rf)
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/library.py:200</span>, in <span class="ansi-cyan-fg">Library.get_rate_by_name</span><span class="ansi-blue-fg">(self, name)</span>
+<span class="ansi-green-intense-fg ansi-bold">    197</span> rates_out <span style="color: rgb(98,98,98)">=</span> []
+<span class="ansi-green-intense-fg ansi-bold">    199</span> <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> rname <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> rate_name_list:
+<span class="ansi-green-fg">--&gt; 200</span>     reactants, products <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">_rate_name_to_nuc</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">rname</span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    202</span>     rf <span style="color: rgb(98,98,98)">=</span> RateFilter(reactants<span style="color: rgb(98,98,98)">=</span>reactants, products<span style="color: rgb(98,98,98)">=</span>products)
+<span class="ansi-green-intense-fg ansi-bold">    203</span>     _lib <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>filter(rf)
 
 File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/library.py:87</span>, in <span class="ansi-cyan-fg">_rate_name_to_nuc</span><span class="ansi-blue-fg">(name)</span>
 <span class="ansi-green-intense-fg ansi-bold">     85</span>         <span style="color: rgb(0,135,0)">print</span>(<span style="color: rgb(175,0,0)">f</span><span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">couldn</span><span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">t deal with </span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>nuc<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)">&#34;</span>)
