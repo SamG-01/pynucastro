@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Creating an NSE table &#8212; pynucastro 2.2.0.post68+g6fee5d26 documentation</title>
+    <title>Creating an NSE table &#8212; pynucastro 2.2.0.post69+ge28506f3 documentation</title>
   
   
   
@@ -39,7 +39,7 @@
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="_static/documentation_options.js?v=73f9e8fd"></script>
+    <script src="_static/documentation_options.js?v=91000fb7"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
@@ -496,7 +496,7 @@ document.write(`
 <li><p><span class="math notranslate nohighlight">\(d\langle B/A\rangle/dt\)</span> : the time-evolution of the binding energy per nucleon due to weak reactions [MeV/s]</p></li>
 <li><p><span class="math notranslate nohighlight">\(\epsilon_\nu\)</span> : the energy loss due to neutrinos [erg / g / s]</p></li>
 </ul>
-<div class="nbinput docutils container">
+<div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
@@ -505,70 +505,8 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">ModuleNotFoundError</span>                       Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[1], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span> <span class="ansi-bold" style="color: rgb(0,135,0)">as</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pyna</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> Nucleus
-
-File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/__init__.py:132</span>
-<span class="ansi-green-intense-fg ansi-bold">    128</span> __version__ <span style="color: rgb(98,98,98)">=</span> version
-<span class="ansi-green-intense-fg ansi-bold">    131</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">screening</span>
-<span class="ansi-green-fg">--&gt; 132</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">networks</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> (AmrexAstroCxxNetwork, BaseCxxNetwork,
-<span class="ansi-green-intense-fg ansi-bold">    133</span>                                  Composition, Explorer, NSENetwork,
-<span class="ansi-green-intense-fg ansi-bold">    134</span>                                  NumpyNetwork, PythonNetwork, RateCollection,
-<span class="ansi-green-intense-fg ansi-bold">    135</span>                                  SimpleCxxNetwork, StarKillerCxxNetwork,
-<span class="ansi-green-intense-fg ansi-bold">    136</span>                                  SympyRates)
-<span class="ansi-green-intense-fg ansi-bold">    137</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">nucdata</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> Nucleus, get_all_nuclei, get_nuclei_in_range
-<span class="ansi-green-intense-fg ansi-bold">    138</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">rates</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> (ApproximateRate, DerivedRate, LangankeLibrary,
-<span class="ansi-green-intense-fg ansi-bold">    139</span>                               Library, Rate, RateFilter, ReacLibLibrary,
-<span class="ansi-green-intense-fg ansi-bold">    140</span>                               SuzukiLibrary, TabularLibrary, Tfactors,
-<span class="ansi-green-intense-fg ansi-bold">    141</span>                               list_known_rates, load_rate)
-
-File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/networks/__init__.py:29</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> <span style="color: rgb(175,0,0)">&#34;&#34;&#34;The pynucastro modules that support the creation of networks.</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> <span style="color: rgb(175,0,0)">There are several main submodules here:</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span>
-<span class="ansi-green-fg">   (...)</span>
-<span class="ansi-green-intense-fg ansi-bold">     24</span>
-<span class="ansi-green-intense-fg ansi-bold">     25</span> <span style="color: rgb(175,0,0)">&#34;&#34;&#34;</span>
-<span class="ansi-green-intense-fg ansi-bold">     27</span> <span style="color: rgb(95,135,135)">#__all__ = [&#34;python_network&#34;, &#34;rate_collection&#34;, &#34;sympy_network_support&#34;]</span>
-<span class="ansi-green-fg">---&gt; 29</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">amrexastro_cxx_network</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> AmrexAstroCxxNetwork
-<span class="ansi-green-intense-fg ansi-bold">     30</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">base_cxx_network</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> BaseCxxNetwork
-<span class="ansi-green-intense-fg ansi-bold">     31</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">nse_network</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> NSENetwork
-
-File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/networks/amrexastro_cxx_network.py:9</span>
-<span class="ansi-green-intense-fg ansi-bold">      6</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> <span class="ansi-bold" style="color: rgb(0,0,255)">re</span>
-<span class="ansi-green-intense-fg ansi-bold">      7</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pathlib</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> Path
-<span class="ansi-green-fg">----&gt; 9</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">networks</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">base_cxx_network</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> BaseCxxNetwork
-<span class="ansi-green-intense-fg ansi-bold">     10</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">nucdata</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> Nucleus
-<span class="ansi-green-intense-fg ansi-bold">     11</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">rates</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> ReacLibRate
-
-File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/networks/base_cxx_network.py:19</span>
-<span class="ansi-green-intense-fg ansi-bold">     16</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> <span class="ansi-bold" style="color: rgb(0,0,255)">numpy</span> <span class="ansi-bold" style="color: rgb(0,135,0)">as</span> <span class="ansi-bold" style="color: rgb(0,0,255)">np</span>
-<span class="ansi-green-intense-fg ansi-bold">     17</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> <span class="ansi-bold" style="color: rgb(0,0,255)">sympy</span>
-<span class="ansi-green-fg">---&gt; 19</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">networks</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">rate_collection</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> RateCollection
-<span class="ansi-green-intense-fg ansi-bold">     20</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">networks</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">sympy_network_support</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> SympyRates
-<span class="ansi-green-intense-fg ansi-bold">     21</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">rates</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> DerivedRate
-
-File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/networks/rate_collection.py:32</span>
-<span class="ansi-green-intense-fg ansi-bold">     28</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">rates</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">library</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> _rate_name_to_nuc, capitalize_rid
-<span class="ansi-green-intense-fg ansi-bold">     29</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">screening</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> (get_screening_map, make_plasma_state,
-<span class="ansi-green-intense-fg ansi-bold">     30</span>                                   make_screen_factors)
-<span class="ansi-green-fg">---&gt; 32</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">microphysics</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">nucdata</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> nucleus
-<span class="ansi-green-intense-fg ansi-bold">     34</span> mpl<span style="color: rgb(98,98,98)">.</span>rcParams[<span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">figure.dpi</span><span style="color: rgb(175,0,0)">&#39;</span>] <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(98,98,98)">100</span>
-<span class="ansi-green-intense-fg ansi-bold">     37</span> <span class="ansi-bold" style="color: rgb(0,135,0)">class</span> <span class="ansi-bold" style="color: rgb(0,0,255)">RateDuplicationError</span>(<span class="ansi-bold" style="color: rgb(215,95,95)">Exception</span>):
-
-<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named &#39;microphysics&#39;
-</pre></div></div>
-</div>
 <p>First we’ll create a simple NSE network with a few nuclei. We’ll include tabulated weak rates so we can compute the change in the state due to electron/positron captures and decays.</p>
-<div class="nbinput docutils container">
+<div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
@@ -579,23 +517,6 @@ File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/pyt
         <span class="n">Nucleus</span><span class="p">(</span><span class="s2">&quot;ni56&quot;</span><span class="p">),</span> <span class="n">Nucleus</span><span class="p">(</span><span class="s2">&quot;ni57&quot;</span><span class="p">)]</span>
 </pre></div>
 </div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[2], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> nucs <span style="color: rgb(98,98,98)">=</span> [<span class="ansi-yellow-bg">Nucleus</span>(<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">p</span><span style="color: rgb(175,0,0)">&#34;</span>), Nucleus(<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">n</span><span style="color: rgb(175,0,0)">&#34;</span>), Nucleus(<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">he4</span><span style="color: rgb(175,0,0)">&#34;</span>),
-<span class="ansi-green-intense-fg ansi-bold">      2</span>         Nucleus(<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">fe52</span><span style="color: rgb(175,0,0)">&#34;</span>), Nucleus(<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">fe53</span><span style="color: rgb(175,0,0)">&#34;</span>), Nucleus(<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">fe54</span><span style="color: rgb(175,0,0)">&#34;</span>),
-<span class="ansi-green-intense-fg ansi-bold">      3</span>         Nucleus(<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">fe55</span><span style="color: rgb(175,0,0)">&#34;</span>), Nucleus(<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">fe56</span><span style="color: rgb(175,0,0)">&#34;</span>),
-<span class="ansi-green-intense-fg ansi-bold">      4</span>         Nucleus(<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">co54</span><span style="color: rgb(175,0,0)">&#34;</span>), Nucleus(<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">co55</span><span style="color: rgb(175,0,0)">&#34;</span>), Nucleus(<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">co56</span><span style="color: rgb(175,0,0)">&#34;</span>),
-<span class="ansi-green-intense-fg ansi-bold">      5</span>         Nucleus(<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">ni56</span><span style="color: rgb(175,0,0)">&#34;</span>), Nucleus(<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">ni57</span><span style="color: rgb(175,0,0)">&#34;</span>)]
-
-<span class="ansi-red-fg">NameError</span>: name &#39;Nucleus&#39; is not defined
-</pre></div></div>
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
@@ -613,13 +534,37 @@ Cell <span class="ansi-green-fg">In[2], line 1</span>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-red-fg">AttributeError</span>                            Traceback (most recent call last)
 Cell <span class="ansi-green-fg">In[3], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> tl <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">pyna</span><span style="color: rgb(98,98,98)">.</span>TabularLibrary()<span style="color: rgb(98,98,98)">.</span>linking_nuclei(nucs)
+<span class="ansi-green-fg">----&gt; 1</span> tl <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">pyna</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">TabularLibrary</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span><span style="color: rgb(98,98,98)">.</span>linking_nuclei(nucs)
 <span class="ansi-green-intense-fg ansi-bold">      2</span> rl <span style="color: rgb(98,98,98)">=</span> pyna<span style="color: rgb(98,98,98)">.</span>ReacLibLibrary()<span style="color: rgb(98,98,98)">.</span>linking_nuclei(nucs)
 <span class="ansi-green-intense-fg ansi-bold">      3</span> all_lib <span style="color: rgb(98,98,98)">=</span> tl <span style="color: rgb(98,98,98)">+</span> rl
 
-<span class="ansi-red-fg">NameError</span>: name &#39;pyna&#39; is not defined
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/library.py:716</span>, in <span class="ansi-cyan-fg">TabularLibrary.__init__</span><span class="ansi-blue-fg">(self)</span>
+<span class="ansi-green-intense-fg ansi-bold">    713</span>         <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> f<span style="color: rgb(98,98,98)">.</span>endswith(<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">-toki</span><span style="color: rgb(175,0,0)">&#34;</span>):
+<span class="ansi-green-intense-fg ansi-bold">    714</span>             trates<span style="color: rgb(98,98,98)">.</span>append(load_rate(f))
+<span class="ansi-green-fg">--&gt; 716</span> <span class="ansi-yellow-bg">Library</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg" style="color: rgb(0,0,255)">__init__</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">rates</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">trates</span><span class="ansi-yellow-bg">)</span>
+
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/library.py:130</span>, in <span class="ansi-cyan-fg">Library.__init__</span><span class="ansi-blue-fg">(self, libfile, rates)</span>
+<span class="ansi-green-intense-fg ansi-bold">    128</span>     <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_rates <span style="color: rgb(98,98,98)">=</span> rates
+<span class="ansi-green-intense-fg ansi-bold">    129</span> <span class="ansi-bold" style="color: rgb(0,135,0)">elif</span> <span style="color: rgb(0,135,0)">isinstance</span>(rates, (<span style="color: rgb(0,135,0)">list</span>, <span style="color: rgb(0,135,0)">set</span>)):
+<span class="ansi-green-fg">--&gt; 130</span>     <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">add_rates</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">rates</span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    131</span> <span class="ansi-bold" style="color: rgb(0,135,0)">else</span>:
+<span class="ansi-green-intense-fg ansi-bold">    132</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">raise</span> <span class="ansi-bold" style="color: rgb(215,95,95)">TypeError</span>(<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">rates in Library constructor must be a Rate object, list of Rate objects, or dictionary of Rate objects keyed by Rate.get_rate_id()</span><span style="color: rgb(175,0,0)">&#34;</span>)
+
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/library.py:180</span>, in <span class="ansi-cyan-fg">Library.add_rates</span><span class="ansi-blue-fg">(self, ratelist)</span>
+<span class="ansi-green-intense-fg ansi-bold">    178</span> <span style="color: rgb(175,0,0)">&#34;&#34;&#34; Add to the rate dictionary from the supplied list of Rate objects.&#34;&#34;&#34;</span>
+<span class="ansi-green-intense-fg ansi-bold">    179</span> <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> rate <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> ratelist:
+<span class="ansi-green-fg">--&gt; 180</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> rate <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">rates</span>:
+<span class="ansi-green-intense-fg ansi-bold">    181</span>         rid <span style="color: rgb(98,98,98)">=</span> rate<span style="color: rgb(98,98,98)">.</span>id
+<span class="ansi-green-intense-fg ansi-bold">    182</span>         <span class="ansi-bold" style="color: rgb(0,135,0)">raise</span> <span class="ansi-bold" style="color: rgb(215,95,95)">ValueError</span>(<span style="color: rgb(175,0,0)">f</span><span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">supplied a Rate object already in the Library: </span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>rid<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)">&#34;</span>)
+
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/library.py:143</span>, in <span class="ansi-cyan-fg">Library.get_rates</span><span class="ansi-blue-fg">(self)</span>
+<span class="ansi-green-intense-fg ansi-bold">    141</span> <span class="ansi-bold" style="color: rgb(0,135,0)">def</span> <span style="color: rgb(0,0,255)">get_rates</span>(<span style="color: rgb(0,135,0)">self</span>) <span style="color: rgb(98,98,98)">-</span><span style="color: rgb(98,98,98)">&gt;</span> <span style="color: rgb(0,135,0)">list</span>[Rate]:
+<span class="ansi-green-intense-fg ansi-bold">    142</span> <span style="color: rgb(188,188,188)">    </span><span style="color: rgb(175,0,0)">&#34;&#34;&#34; Return a list of the rates in this library.&#34;&#34;&#34;</span>
+<span class="ansi-green-fg">--&gt; 143</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> <span style="color: rgb(0,135,0)">list</span>(<span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">_rates</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">values</span>())
+
+<span class="ansi-red-fg">AttributeError</span>: &#39;NoneType&#39; object has no attribute &#39;values&#39;
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -667,9 +612,9 @@ Cell <span class="ansi-green-fg">In[4], line 1</span>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
 Cell <span class="ansi-green-fg">In[5], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> nse <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">pyna</span><span style="color: rgb(98,98,98)">.</span>NSENetwork(libraries<span style="color: rgb(98,98,98)">=</span>[all_lib])
+<span class="ansi-green-fg">----&gt; 1</span> nse <span style="color: rgb(98,98,98)">=</span> pyna<span style="color: rgb(98,98,98)">.</span>NSENetwork(libraries<span style="color: rgb(98,98,98)">=</span>[<span class="ansi-yellow-bg">all_lib</span>])
 
-<span class="ansi-red-fg">NameError</span>: name &#39;pyna&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name &#39;all_lib&#39; is not defined
 </pre></div></div>
 </div>
 <p>Now we’ll create a grid of temperature, density, and <span class="math notranslate nohighlight">\(Y_e\)</span> where we want to compute the NSE state</p>
