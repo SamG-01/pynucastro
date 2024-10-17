@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Combining ReacLib Rates with Electron Capture Tables &#8212; pynucastro 2.2.0.post87+g041a0f00 documentation</title>
+    <title>Combining ReacLib Rates with Electron Capture Tables &#8212; pynucastro 2.2.0.post92+ga2a985a0 documentation</title>
   
   
   
@@ -39,7 +39,7 @@
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="_static/documentation_options.js?v=5efbb5ae"></script>
+    <script src="_static/documentation_options.js?v=692ae812"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
@@ -488,7 +488,7 @@ document.write(`
 <h1>Combining ReacLib Rates with Electron Capture Tables<a class="headerlink" href="#Combining-ReacLib-Rates-with-Electron-Capture-Tables" title="Link to this heading">#</a></h1>
 <p>Here’s an example of using tabulated weak rates from <span id="id1">Suzuki <em>et al.</em> [<a class="reference internal" href="zreferences.html#id10" title="Toshio Suzuki, Hiroshi Toki, and Ken’ichi Nomoto. Electron-capture and β-decay rates for sd-shell nuclei in stellar environments relevant to high-density o–ne–mg cores. The Astrophysical Journal, 817(2):163, January 2016. doi:10.3847/0004-637X/817/2/163.">2016</a>]</span> together with rates from the ReacLib database.</p>
 <p>We’ll build a network suitable for e-capture supernovae.</p>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
@@ -496,8 +496,89 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">AttributeError</span>                            Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[1], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span> <span class="ansi-bold" style="color: rgb(0,135,0)">as</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pyna</span>
+
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/__init__.py:131</span>
+<span class="ansi-green-intense-fg ansi-bold">    126</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">_version</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> version
+<span class="ansi-green-intense-fg ansi-bold">    128</span> __version__ <span style="color: rgb(98,98,98)">=</span> version
+<span class="ansi-green-fg">--&gt; 131</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">screening</span>
+<span class="ansi-green-intense-fg ansi-bold">    132</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">networks</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> (AmrexAstroCxxNetwork, BaseCxxNetwork,
+<span class="ansi-green-intense-fg ansi-bold">    133</span>                                  Composition, Explorer, NSENetwork,
+<span class="ansi-green-intense-fg ansi-bold">    134</span>                                  NumpyNetwork, PythonNetwork, RateCollection,
+<span class="ansi-green-intense-fg ansi-bold">    135</span>                                  SimpleCxxNetwork, StarKillerCxxNetwork,
+<span class="ansi-green-intense-fg ansi-bold">    136</span>                                  SympyRates)
+<span class="ansi-green-intense-fg ansi-bold">    137</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">nucdata</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> Nucleus, get_all_nuclei, get_nuclei_in_range
+
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/screening/__init__.py:5</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> <span style="color: rgb(175,0,0)">&#34;&#34;&#34;Screening routines&#34;&#34;&#34;</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span> __all__ <span style="color: rgb(98,98,98)">=</span> [<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">screen</span><span style="color: rgb(175,0,0)">&#34;</span>, <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">screening_util</span><span style="color: rgb(175,0,0)">&#34;</span>]
+<span class="ansi-green-fg">----&gt; 5</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">screen</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> (NseState, PlasmaState, ScreenFactors, chugunov_2007,
+<span class="ansi-green-intense-fg ansi-bold">      6</span>                      chugunov_2009, make_plasma_state, make_screen_factors,
+<span class="ansi-green-intense-fg ansi-bold">      7</span>                      potekhin_1998, screen5)
+<span class="ansi-green-intense-fg ansi-bold">      8</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">screening_util</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> ScreeningPair, get_screening_map
+
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/screening/screen.py:9</span>
+<span class="ansi-green-intense-fg ansi-bold">      7</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">nucdata</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> Nucleus
+<span class="ansi-green-intense-fg ansi-bold">      8</span> <span style="color: rgb(95,135,135)"># use the jitclass placeholder from rate.py</span>
+<span class="ansi-green-fg">----&gt; 9</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">rates</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">rate</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> jitclass, numba
+<span class="ansi-green-intense-fg ansi-bold">     11</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> numba <span class="ansi-bold" style="color: rgb(175,0,255)">is</span> <span class="ansi-bold" style="color: rgb(175,0,255)">not</span> <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>:
+<span class="ansi-green-intense-fg ansi-bold">     12</span>     njit <span style="color: rgb(98,98,98)">=</span> numba<span style="color: rgb(98,98,98)">.</span>njit
+
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/__init__.py:6</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span> __all__ <span style="color: rgb(98,98,98)">=</span> [<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">rate</span><span style="color: rgb(175,0,0)">&#34;</span>, <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">library</span><span style="color: rgb(175,0,0)">&#34;</span>]
+<span class="ansi-green-intense-fg ansi-bold">      5</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">known_duplicates</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> find_duplicate_rates, is_allowed_dupe
+<span class="ansi-green-fg">----&gt; 6</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">library</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> (LangankeLibrary, Library, RateFilter, ReacLibLibrary,
+<span class="ansi-green-intense-fg ansi-bold">      7</span>                       SuzukiLibrary, TabularLibrary, list_known_rates)
+<span class="ansi-green-intense-fg ansi-bold">      8</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">rate</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> (ApproximateRate, DerivedRate, Rate, RateFileError, RatePair,
+<span class="ansi-green-intense-fg ansi-bold">      9</span>                    ReacLibRate, SingleSet, TableIndex, TableInterpolator,
+<span class="ansi-green-intense-fg ansi-bold">     10</span>                    TabularRate, Tfactors, _find_rate_file, load_rate)
+
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/library.py:10</span>
+<span class="ansi-green-intense-fg ansi-bold">      7</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">nucdata</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> Nucleus, UnsupportedNucleus
+<span class="ansi-green-intense-fg ansi-bold">      8</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">rates</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">known_duplicates</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> (find_duplicate_rates,
+<span class="ansi-green-intense-fg ansi-bold">      9</span>                                                is_allowed_dupe)
+<span class="ansi-green-fg">---&gt; 10</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">rates</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">rate</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> (DerivedRate, Rate, RateFileError,
+<span class="ansi-green-intense-fg ansi-bold">     11</span>                                    ReacLibRate, TabularRate, _find_rate_file,
+<span class="ansi-green-intense-fg ansi-bold">     12</span>                                    get_rates_dir, load_rate)
+<span class="ansi-green-intense-fg ansi-bold">     15</span> <span class="ansi-bold" style="color: rgb(0,135,0)">def</span> <span style="color: rgb(0,0,255)">list_known_rates</span>() <span style="color: rgb(98,98,98)">-</span><span style="color: rgb(98,98,98)">&gt;</span> <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>:
+<span class="ansi-green-intense-fg ansi-bold">     16</span> <span style="color: rgb(188,188,188)">    </span><span style="color: rgb(175,0,0)">&#34;&#34;&#34; list the rates found in the library &#34;&#34;&#34;</span>
+
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/rate.py:313</span>
+<span class="ansi-green-intense-fg ansi-bold">    309</span>         string <span style="color: rgb(98,98,98)">+</span><span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">;</span><span style="color: rgb(175,0,0)">&#34;</span>
+<span class="ansi-green-intense-fg ansi-bold">    310</span>         <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> string
+<span class="ansi-green-fg">--&gt; 313</span> <span class="ansi-yellow-bg ansi-bold" style="color: rgb(0,135,0)">class</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg ansi-bold" style="color: rgb(0,0,255)">Rate</span><span class="ansi-yellow-bg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    314</span> <span class="ansi-yellow-bg" style="color: rgb(188,188,188)">    </span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">&#34;&#34;&#34;The base reaction rate class.  Most rate types will subclass</span>
+<span class="ansi-green-intense-fg ansi-bold">    315</span> <span class="ansi-yellow-bg" style="color: rgb(175,0,0)">    this and extend to their particular format.</span>
+<span class="ansi-green-intense-fg ansi-bold">    316</span>
+<span class="ansi-green-intense-fg ansi-bold">    317</span> <span class="ansi-yellow-bg" style="color: rgb(175,0,0)">    &#34;&#34;&#34;</span>
+<span class="ansi-green-intense-fg ansi-bold">    318</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg ansi-bold" style="color: rgb(0,135,0)">def</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(0,0,255)">__init__</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">reactants</span><span class="ansi-yellow-bg">:</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(0,135,0)">list</span><span class="ansi-yellow-bg">[</span><span class="ansi-yellow-bg" style="color: rgb(0,135,0)">str</span><span class="ansi-yellow-bg">]</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">|</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(0,135,0)">list</span><span class="ansi-yellow-bg">[</span><span class="ansi-yellow-bg">Nucleus</span><span class="ansi-yellow-bg">]</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg ansi-bold" style="color: rgb(0,135,0)">None</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-intense-fg ansi-bold">    319</span> <span class="ansi-yellow-bg">                 </span><span class="ansi-yellow-bg">products</span><span class="ansi-yellow-bg">:</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(0,135,0)">list</span><span class="ansi-yellow-bg">[</span><span class="ansi-yellow-bg" style="color: rgb(0,135,0)">str</span><span class="ansi-yellow-bg">]</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">|</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(0,135,0)">list</span><span class="ansi-yellow-bg">[</span><span class="ansi-yellow-bg">Nucleus</span><span class="ansi-yellow-bg">]</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg ansi-bold" style="color: rgb(0,135,0)">None</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-intense-fg ansi-bold">    320</span> <span class="ansi-yellow-bg">                 </span><span class="ansi-yellow-bg">Q</span><span class="ansi-yellow-bg">:</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(0,135,0)">float</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg ansi-bold" style="color: rgb(0,135,0)">None</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">weak_type</span><span class="ansi-yellow-bg">:</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(0,135,0)">str</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">&#34;</span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">&#34;</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-intense-fg ansi-bold">    321</span> <span class="ansi-yellow-bg">                 </span><span class="ansi-yellow-bg">label</span><span class="ansi-yellow-bg">:</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(0,135,0)">str</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">&#34;</span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">generic</span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">&#34;</span><span class="ansi-yellow-bg">)</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">-</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">&gt;</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg ansi-bold" style="color: rgb(0,135,0)">None</span><span class="ansi-yellow-bg">:</span>
+
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/rate.py:620</span>, in <span class="ansi-cyan-fg">Rate</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">    617</span>             nuc <span style="color: rgb(98,98,98)">=</span> n
+<span class="ansi-green-intense-fg ansi-bold">    618</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> nuc
+<span class="ansi-green-fg">--&gt; 620</span> <span class="ansi-bold" style="color: rgb(0,135,0)">def</span> <span style="color: rgb(0,0,255)">ydot_string_py</span>(<span style="color: rgb(0,135,0)">self</span>) <span style="color: rgb(98,98,98)">-</span><span style="color: rgb(98,98,98)">&gt;</span> <span class="ansi-yellow-bg">warnings</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">LiteralString</span>:
+<span class="ansi-green-intense-fg ansi-bold">    621</span> <span style="color: rgb(188,188,188)">    </span><span style="color: rgb(175,0,0)">&#34;&#34;&#34;</span>
+<span class="ansi-green-intense-fg ansi-bold">    622</span> <span style="color: rgb(175,0,0)">    Return a string containing the term in a dY/dt equation</span>
+<span class="ansi-green-intense-fg ansi-bold">    623</span> <span style="color: rgb(175,0,0)">    in a reaction network corresponding to this rate.</span>
+<span class="ansi-green-intense-fg ansi-bold">    624</span> <span style="color: rgb(175,0,0)">    &#34;&#34;&#34;</span>
+<span class="ansi-green-intense-fg ansi-bold">    626</span>     ydot_string_components <span style="color: rgb(98,98,98)">=</span> []
+
+<span class="ansi-red-fg">AttributeError</span>: module &#39;warnings&#39; has no attribute &#39;LiteralString&#39;
+</pre></div></div>
+</div>
 <p>First create a library from ReacLib using a set of nuclei.</p>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
@@ -510,6 +591,24 @@ document.write(`
 <span class="n">ecsn_library</span> <span class="o">=</span> <span class="n">reaclib_library</span><span class="o">.</span><span class="n">linking_nuclei</span><span class="p">(</span><span class="n">all_nuclei</span><span class="p">,</span><span class="n">with_reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[2], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> reaclib_library <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">pyna</span><span style="color: rgb(98,98,98)">.</span>ReacLibLibrary()
+<span class="ansi-green-intense-fg ansi-bold">      3</span> all_nuclei <span style="color: rgb(98,98,98)">=</span> [<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">p</span><span style="color: rgb(175,0,0)">&#34;</span>, <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">he4</span><span style="color: rgb(175,0,0)">&#34;</span>,
+<span class="ansi-green-intense-fg ansi-bold">      4</span>               <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">ne20</span><span style="color: rgb(175,0,0)">&#34;</span>, <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">o20</span><span style="color: rgb(175,0,0)">&#34;</span>, <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">f20</span><span style="color: rgb(175,0,0)">&#34;</span>,
+<span class="ansi-green-intense-fg ansi-bold">      5</span>               <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">mg24</span><span style="color: rgb(175,0,0)">&#34;</span>, <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">al27</span><span style="color: rgb(175,0,0)">&#34;</span>, <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">o16</span><span style="color: rgb(175,0,0)">&#34;</span>,
+<span class="ansi-green-intense-fg ansi-bold">      6</span>               <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">si28</span><span style="color: rgb(175,0,0)">&#34;</span>, <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">s32</span><span style="color: rgb(175,0,0)">&#34;</span>, <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">p31</span><span style="color: rgb(175,0,0)">&#34;</span>]
+<span class="ansi-green-intense-fg ansi-bold">      7</span> ecsn_library <span style="color: rgb(98,98,98)">=</span> reaclib_library<span style="color: rgb(98,98,98)">.</span>linking_nuclei(all_nuclei,with_reverse<span style="color: rgb(98,98,98)">=</span><span class="ansi-bold" style="color: rgb(0,135,0)">True</span>)
+
+<span class="ansi-red-fg">NameError</span>: name &#39;pyna&#39; is not defined
+</pre></div></div>
 </div>
 <p>Here are the rates it chose</p>
 <div class="nbinput docutils container">
@@ -525,34 +624,16 @@ document.write(`
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-O16 + He4 ⟶ Ne20 + 𝛾           [Q =   4.73 MeV] (O16 + He4 --&gt; Ne20 &lt;co10_reaclib__&gt;)
-O16 + O16 ⟶ He4 + Si28         [Q =   9.59 MeV] (O16 + O16 --&gt; He4 + Si28 &lt;cf88_reaclib__&gt;)
-O16 + O16 ⟶ p + P31            [Q =   7.68 MeV] (O16 + O16 --&gt; p + P31 &lt;cf88_reaclib__&gt;)
-O20 ⟶ F20 + e⁻ + 𝜈             [Q =   3.81 MeV] (O20 --&gt; F20 &lt;wc12_reaclib_weak_&gt;)
-F20 ⟶ Ne20 + e⁻ + 𝜈            [Q =   7.02 MeV] (F20 --&gt; Ne20 &lt;wc12_reaclib_weak_&gt;)
-Ne20 + He4 ⟶ Mg24 + 𝛾          [Q =   9.32 MeV] (Ne20 + He4 --&gt; Mg24 &lt;il10_reaclib__&gt;)
-Mg24 + He4 ⟶ Si28 + 𝛾          [Q =   9.98 MeV] (Mg24 + He4 --&gt; Si28 &lt;st08_reaclib__&gt;)
-Al27 + p ⟶ He4 + Mg24          [Q =   1.60 MeV] (Al27 + p --&gt; He4 + Mg24 &lt;il10_reaclib__&gt;)
-Al27 + p ⟶ Si28 + 𝛾            [Q =  11.59 MeV] (Al27 + p --&gt; Si28 &lt;il10_reaclib__&gt;)
-Al27 + He4 ⟶ P31 + 𝛾           [Q =   9.67 MeV] (Al27 + He4 --&gt; P31 &lt;ths8_reaclib__&gt;)
-Si28 + He4 ⟶ S32 + 𝛾           [Q =   6.95 MeV] (Si28 + He4 --&gt; S32 &lt;ths8_reaclib__&gt;)
-P31 + p ⟶ He4 + Si28           [Q =   1.92 MeV] (P31 + p --&gt; He4 + Si28 &lt;il10_reaclib__&gt;)
-P31 + p ⟶ S32 + 𝛾              [Q =   8.86 MeV] (P31 + p --&gt; S32 &lt;il10_reaclib__&gt;)
-Ne20 ⟶ He4 + O16               [Q =  -4.73 MeV] (Ne20 --&gt; He4 + O16 &lt;co10_reaclib__reverse&gt;)
-Mg24 + He4 ⟶ p + Al27          [Q =  -1.60 MeV] (Mg24 + He4 --&gt; p + Al27 &lt;il10_reaclib__reverse&gt;)
-Mg24 ⟶ He4 + Ne20              [Q =  -9.32 MeV] (Mg24 --&gt; He4 + Ne20 &lt;il10_reaclib__reverse&gt;)
-Si28 + He4 ⟶ O16 + O16         [Q =  -9.59 MeV] (Si28 + He4 --&gt; O16 + O16 &lt;cf88_reaclib__reverse&gt;)
-Si28 + He4 ⟶ p + P31           [Q =  -1.92 MeV] (Si28 + He4 --&gt; p + P31 &lt;il10_reaclib__reverse&gt;)
-Si28 ⟶ He4 + Mg24              [Q =  -9.98 MeV] (Si28 --&gt; He4 + Mg24 &lt;st08_reaclib__reverse&gt;)
-Si28 ⟶ p + Al27                [Q = -11.59 MeV] (Si28 --&gt; p + Al27 &lt;il10_reaclib__reverse&gt;)
-P31 + p ⟶ O16 + O16            [Q =  -7.68 MeV] (P31 + p --&gt; O16 + O16 &lt;cf88_reaclib__reverse&gt;)
-P31 ⟶ He4 + Al27               [Q =  -9.67 MeV] (P31 --&gt; He4 + Al27 &lt;ths8_reaclib__reverse&gt;)
-S32 ⟶ He4 + Si28               [Q =  -6.95 MeV] (S32 --&gt; He4 + Si28 &lt;ths8_reaclib__reverse&gt;)
-S32 ⟶ p + P31                  [Q =  -8.86 MeV] (S32 --&gt; p + P31 &lt;il10_reaclib__reverse&gt;)
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[3], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> <span style="color: rgb(0,135,0)">print</span>(<span class="ansi-yellow-bg">ecsn_library</span>)
+
+<span class="ansi-red-fg">NameError</span>: name &#39;ecsn_library&#39; is not defined
 </pre></div></div>
 </div>
 <p>Now let’s specify the weak rates we want from <span id="id2">Suzuki <em>et al.</em> [<a class="reference internal" href="zreferences.html#id10" title="Toshio Suzuki, Hiroshi Toki, and Ken’ichi Nomoto. Electron-capture and β-decay rates for sd-shell nuclei in stellar environments relevant to high-density o–ne–mg cores. The Astrophysical Journal, 817(2):163, January 2016. doi:10.3847/0004-637X/817/2/163.">2016</a>]</span> – these tables are included with pynucastro:</p>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
@@ -560,13 +641,39 @@ S32 ⟶ p + P31                  [Q =  -8.86 MeV] (S32 --&gt; p + P31 &lt;il10_r
 </pre></div>
 </div>
 </div>
-<div class="nbinput nblast docutils container">
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[4], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> tabular_lib <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">pyna</span><span style="color: rgb(98,98,98)">.</span>TabularLibrary()
+
+<span class="ansi-red-fg">NameError</span>: name &#39;pyna&#39; is not defined
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ecsn_tabular</span> <span class="o">=</span> <span class="n">tabular_lib</span><span class="o">.</span><span class="n">linking_nuclei</span><span class="p">([</span><span class="s2">&quot;f20&quot;</span><span class="p">,</span> <span class="s2">&quot;o20&quot;</span><span class="p">,</span> <span class="s2">&quot;ne20&quot;</span><span class="p">])</span>
 </pre></div>
 </div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[5], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> ecsn_tabular <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">tabular_lib</span><span style="color: rgb(98,98,98)">.</span>linking_nuclei([<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">f20</span><span style="color: rgb(175,0,0)">&#34;</span>, <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">o20</span><span style="color: rgb(175,0,0)">&#34;</span>, <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">ne20</span><span style="color: rgb(175,0,0)">&#34;</span>])
+
+<span class="ansi-red-fg">NameError</span>: name &#39;tabular_lib&#39; is not defined
+</pre></div></div>
 </div>
 <p>Let’s look at the rates</p>
 <div class="nbinput docutils container">
@@ -579,15 +686,17 @@ S32 ⟶ p + P31                  [Q =  -8.86 MeV] (S32 --&gt; p + P31 &lt;il10_r
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
-</pre></div>
+<div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[F20 ⟶ Ne20 + e⁻ + 𝜈,
- F20 + e⁻ ⟶ O20 + 𝜈,
- Ne20 + e⁻ ⟶ F20 + 𝜈,
- O20 ⟶ F20 + e⁻ + 𝜈]
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[6], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> tr <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">ecsn_tabular</span><span style="color: rgb(98,98,98)">.</span>get_rates()
+<span class="ansi-green-intense-fg ansi-bold">      2</span> tr
+
+<span class="ansi-red-fg">NameError</span>: name &#39;ecsn_tabular&#39; is not defined
 </pre></div></div>
 </div>
 <p>These tables are in terms of <span class="math notranslate nohighlight">\(T\)</span> and <span class="math notranslate nohighlight">\(\rho Y_e\)</span>. We can easily plot the tabulated electron capture rates just like ReacLib rates:</p>
@@ -604,11 +713,18 @@ S32 ⟶ p + P31                  [Q =  -8.86 MeV] (S32 --&gt; p + P31 &lt;il10_r
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/electron-captures_13_0.png" src="_images/electron-captures_13_0.png" />
-</div>
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[7], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> fig <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">tr</span>[<span style="color: rgb(98,98,98)">0</span>]<span style="color: rgb(98,98,98)">.</span>plot(rhoYmin<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(98,98,98)">4.e8</span>, rhoYmax<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(98,98,98)">2.e9</span>, Tmin<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(98,98,98)">1.e8</span>, Tmax<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(98,98,98)">2.e9</span>,
+<span class="ansi-green-intense-fg ansi-bold">      2</span>                  figsize<span style="color: rgb(98,98,98)">=</span>(<span style="color: rgb(98,98,98)">8</span>, <span style="color: rgb(98,98,98)">4</span>))
+
+<span class="ansi-red-fg">NameError</span>: name &#39;tr&#39; is not defined
+</pre></div></div>
 </div>
 <p>Let’s create a rate collection from just the ReacLib rates and look to see which are actually important</p>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
@@ -616,8 +732,21 @@ S32 ⟶ p + P31                  [Q =  -8.86 MeV] (S32 --&gt; p + P31 &lt;il10_r
 </pre></div>
 </div>
 </div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[8], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> rc <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">pyna</span><span style="color: rgb(98,98,98)">.</span>RateCollection(libraries<span style="color: rgb(98,98,98)">=</span>[ecsn_library])
+
+<span class="ansi-red-fg">NameError</span>: name &#39;pyna&#39; is not defined
+</pre></div></div>
+</div>
 <p>Here we’ll pick thermodynamic conditions appropriate to the oxygen burning shell in a white dwarf</p>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
@@ -637,6 +766,21 @@ S32 ⟶ p + P31                  [Q =  -8.86 MeV] (S32 --&gt; p + P31 &lt;il10_r
 </pre></div>
 </div>
 </div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[9], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> comp <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">pyna</span><span style="color: rgb(98,98,98)">.</span>Composition(rc<span style="color: rgb(98,98,98)">.</span>get_nuclei())
+<span class="ansi-green-intense-fg ansi-bold">      2</span> comp<span style="color: rgb(98,98,98)">.</span>set_nuc(<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">o16</span><span style="color: rgb(175,0,0)">&#34;</span>, <span style="color: rgb(98,98,98)">0.5</span>)
+<span class="ansi-green-intense-fg ansi-bold">      3</span> comp<span style="color: rgb(98,98,98)">.</span>set_nuc(<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">ne20</span><span style="color: rgb(175,0,0)">&#34;</span>, <span style="color: rgb(98,98,98)">0.3</span>)
+
+<span class="ansi-red-fg">NameError</span>: name &#39;pyna&#39; is not defined
+</pre></div></div>
+</div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
@@ -649,12 +793,18 @@ S32 ⟶ p + P31                  [Q =  -8.86 MeV] (S32 --&gt; p + P31 &lt;il10_r
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/electron-captures_18_0.png" src="_images/electron-captures_18_0.png" />
-</div>
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[10], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> fig <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">rc</span><span style="color: rgb(98,98,98)">.</span>plot(rho<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(98,98,98)">7.e9</span>, T<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(98,98,98)">1.e9</span>, comp<span style="color: rgb(98,98,98)">=</span>comp, ydot_cutoff_value<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(98,98,98)">1.e-20</span>)
+
+<span class="ansi-red-fg">NameError</span>: name &#39;rc&#39; is not defined
+</pre></div></div>
 </div>
 <p>Note, this rate collection already includes some weak rates from ReacLib – we want to remove those.</p>
 <p>We’ll also take the opportunity to remove any rates that are not important, by looking for a <span class="math notranslate nohighlight">\(|\dot{Y}| &gt; 10^{-20}~s^{-1}\)</span>.</p>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
 </div>
@@ -666,8 +816,24 @@ S32 ⟶ p + P31                  [Q =  -8.86 MeV] (S32 --&gt; p + P31 &lt;il10_r
 </pre></div>
 </div>
 </div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[11], line 2</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> new_rate_list <span style="color: rgb(98,98,98)">=</span> []
+<span class="ansi-green-fg">----&gt; 2</span> ydots <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">rc</span><span style="color: rgb(98,98,98)">.</span>evaluate_rates(rho<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(98,98,98)">7.e9</span>, T<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(98,98,98)">1.e9</span>, composition<span style="color: rgb(98,98,98)">=</span>comp)
+<span class="ansi-green-intense-fg ansi-bold">      3</span> <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> rate <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> rc<span style="color: rgb(98,98,98)">.</span>rates:
+<span class="ansi-green-intense-fg ansi-bold">      4</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> <span style="color: rgb(0,135,0)">abs</span>(ydots[rate]) <span style="color: rgb(98,98,98)">&gt;</span><span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(98,98,98)">1.e-20</span> <span class="ansi-bold" style="color: rgb(175,0,255)">and</span> <span class="ansi-bold" style="color: rgb(175,0,255)">not</span> rate<span style="color: rgb(98,98,98)">.</span>weak:
+
+<span class="ansi-red-fg">NameError</span>: name &#39;rc&#39; is not defined
+</pre></div></div>
+</div>
 <p>Now let’s add the tabular rates to this pruned down rate list</p>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
@@ -675,14 +841,40 @@ S32 ⟶ p + P31                  [Q =  -8.86 MeV] (S32 --&gt; p + P31 &lt;il10_r
 </pre></div>
 </div>
 </div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[12], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> new_rate_list <span style="color: rgb(98,98,98)">+</span><span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">tr</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;tr&#39; is not defined
+</pre></div></div>
+</div>
 <p>Finally, we’ll create a new rate collection by combining this new list of rates with the list of tables:</p>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rc_new</span> <span class="o">=</span> <span class="n">pyna</span><span class="o">.</span><span class="n">RateCollection</span><span class="p">(</span><span class="n">rates</span><span class="o">=</span><span class="n">new_rate_list</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[13], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> rc_new <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">pyna</span><span style="color: rgb(98,98,98)">.</span>RateCollection(rates<span style="color: rgb(98,98,98)">=</span>new_rate_list)
+
+<span class="ansi-red-fg">NameError</span>: name &#39;pyna&#39; is not defined
+</pre></div></div>
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
@@ -696,8 +888,14 @@ S32 ⟶ p + P31                  [Q =  -8.86 MeV] (S32 --&gt; p + P31 &lt;il10_r
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/electron-captures_25_0.png" src="_images/electron-captures_25_0.png" />
-</div>
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[14], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> fig <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">rc_new</span><span style="color: rgb(98,98,98)">.</span>plot(rho<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(98,98,98)">7.e9</span>, T<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(98,98,98)">1.e9</span>, comp<span style="color: rgb(98,98,98)">=</span>comp, curved_edges<span style="color: rgb(98,98,98)">=</span><span class="ansi-bold" style="color: rgb(0,135,0)">True</span>, rotated<span style="color: rgb(98,98,98)">=</span><span class="ansi-bold" style="color: rgb(0,135,0)">True</span>)
+
+<span class="ansi-red-fg">NameError</span>: name &#39;rc_new&#39; is not defined
+</pre></div></div>
 </div>
 <p>We can see the values of the rates at our thermodynamic conditions easily:</p>
 <div class="nbinput docutils container">
@@ -709,29 +907,16 @@ S32 ⟶ p + P31                  [Q =  -8.86 MeV] (S32 --&gt; p + P31 &lt;il10_r
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
-</pre></div>
+<div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-{Ne20 ⟶ He4 + O16: 4.6316695198155e-18,
- O16 + He4 ⟶ Ne20 + 𝛾: 2163.4896055892,
- Ne20 + He4 ⟶ Mg24 + 𝛾: 470.46571662959457,
- Mg24 + He4 ⟶ Si28 + 𝛾: 65.33425925449085,
- Al27 + p ⟶ Si28 + 𝛾: 3786.588954080847,
- Al27 + He4 ⟶ P31 + 𝛾: 0.05763581125914332,
- Si28 + He4 ⟶ S32 + 𝛾: 0.08322738610569612,
- P31 + p ⟶ S32 + 𝛾: 2375.1304964039123,
- O16 + O16 ⟶ p + P31: 7.15493989546395e-17,
- O16 + O16 ⟶ He4 + Si28: 2.5949312230335824e-17,
- Mg24 + He4 ⟶ p + Al27: 0.2543862399303773,
- Al27 + p ⟶ He4 + Mg24: 5920.818449985259,
- Si28 + He4 ⟶ p + P31: 0.00019528201299493384,
- P31 + p ⟶ He4 + Si28: 5491.960442675607,
- F20 ⟶ Ne20 + e⁻ + 𝜈: 1.143049854823845e-14,
- F20 + e⁻ ⟶ O20 + 𝜈: 4.212096660029042e-09,
- Ne20 + e⁻ ⟶ F20 + 𝜈: 4.3100255627801964e-11,
- O20 ⟶ F20 + e⁻ + 𝜈: 2.688308786951095e-28}
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[15], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> <span class="ansi-yellow-bg">rc_new</span><span style="color: rgb(98,98,98)">.</span>evaluate_rates(rho<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(98,98,98)">7.e9</span>, T<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(98,98,98)">1.e9</span>, composition<span style="color: rgb(98,98,98)">=</span>comp)
+
+<span class="ansi-red-fg">NameError</span>: name &#39;rc_new&#39; is not defined
 </pre></div></div>
 </div>
 <p>Additionally, we can see the specific energy generation rate for these conditions</p>
@@ -744,12 +929,16 @@ S32 ⟶ p + P31                  [Q =  -8.86 MeV] (S32 --&gt; p + P31 &lt;il10_r
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
-</pre></div>
+<div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-9.667025588667893e+22
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[16], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> <span class="ansi-yellow-bg">rc_new</span><span style="color: rgb(98,98,98)">.</span>evaluate_energy_generation(rho<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(98,98,98)">7.e9</span>, T<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(98,98,98)">1.e9</span>, composition<span style="color: rgb(98,98,98)">=</span>comp)
+
+<span class="ansi-red-fg">NameError</span>: name &#39;rc_new&#39; is not defined
 </pre></div></div>
 </div>
 </section>

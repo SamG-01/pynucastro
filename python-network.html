@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Python network &#8212; pynucastro 2.2.0.post87+g041a0f00 documentation</title>
+    <title>Python network &#8212; pynucastro 2.2.0.post92+ga2a985a0 documentation</title>
   
   
   
@@ -38,7 +38,7 @@
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="_static/documentation_options.js?v=5efbb5ae"></script>
+    <script src="_static/documentation_options.js?v=692ae812"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
@@ -523,7 +523,7 @@ access the information needed for an ODE integrator.</p>
 </li>
 <li><p>some helper functions:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">to_composition(Y)</span></code> : convert an array of molar fractions to a <a class="reference internal" href="pynucastro.networks.html#pynucastro.networks.rate_collection.Composition" title="pynucastro.networks.rate_collection.Composition"><code class="xref py py-func docutils literal notranslate"><span class="pre">Composition</span></code></a> object</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">to_composition(Y)</span></code> : convert an array of molar fractions to a <code class="xref py py-func docutils literal notranslate"><span class="pre">Composition</span></code> object</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">energy_release(dY)</span></code> : computes the energy release (in erg/g) given the change
 in molar fractions <code class="docutils literal notranslate"><span class="pre">dY</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ye(Y)</span></code> : computes the electron fraction, <span class="math notranslate nohighlight">\(Y_e\)</span>, for input molar fractions <code class="docutils literal notranslate"><span class="pre">Y</span></code>.</p></li>
@@ -540,7 +540,7 @@ take the form:</p>
 </pre></div>
 </div>
 <p>where <code class="docutils literal notranslate"><span class="pre">rate_eval</span></code> is a <code class="docutils literal notranslate"><span class="pre">RateEval</span></code> object and <code class="docutils literal notranslate"><span class="pre">tf</span></code> is a
-<a class="reference internal" href="pynucastro.rates.html#pynucastro.rates.rate.Tfactors" title="pynucastro.rates.rate.Tfactors"><code class="xref py py-func docutils literal notranslate"><span class="pre">Tfactors</span></code></a> object</p>
+<code class="xref py py-func docutils literal notranslate"><span class="pre">Tfactors</span></code> object</p>
 </li>
 <li><p>RHS and Jacobian</p>
 <p>Finally, to interface with an ODE solver, we have:</p>
