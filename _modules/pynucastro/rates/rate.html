@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>pynucastro.rates.rate &#8212; pynucastro 2.2.0.post88+g5418047e documentation</title>
+    <title>pynucastro.rates.rate &#8212; pynucastro 2.2.0.post89+gefe4cc37 documentation</title>
   
   
   
@@ -37,7 +37,7 @@
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../../../_static/documentation_options.js?v=78008a09"></script>
+    <script src="../../../_static/documentation_options.js?v=c58ed51f"></script>
     <script src="../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -482,7 +482,7 @@ document.write(`
 
 <div class="viewcode-block" id="load_rate">
 <a class="viewcode-back" href="../../../pynucastro.rates.html#pynucastro.rates.rate.load_rate">[docs]</a>
-<span class="k">def</span> <span class="nf">load_rate</span><span class="p">(</span><span class="n">rfile</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">source</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">load_rate</span><span class="p">(</span><span class="n">rfile</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Try to load a rate of any type.</span>
 
 <span class="sd">    :raises: :class:`.RateFileError`, :class:`.UnsupportedNucleus`</span>
@@ -490,9 +490,9 @@ document.write(`
 
     <span class="n">rate</span><span class="p">:</span> <span class="n">Rate</span>
     <span class="k">try</span><span class="p">:</span>
-        <span class="n">rate</span> <span class="o">=</span> <span class="n">TabularRate</span><span class="p">(</span><span class="n">rfile</span><span class="o">=</span><span class="n">rfile</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="n">source</span><span class="p">)</span>
+        <span class="n">rate</span> <span class="o">=</span> <span class="n">TabularRate</span><span class="p">(</span><span class="n">rfile</span><span class="o">=</span><span class="n">rfile</span><span class="p">)</span>
     <span class="k">except</span> <span class="p">(</span><span class="n">RateFileError</span><span class="p">,</span> <span class="n">UnsupportedNucleus</span><span class="p">):</span>
-        <span class="n">rate</span> <span class="o">=</span> <span class="n">ReacLibRate</span><span class="p">(</span><span class="n">rfile</span><span class="o">=</span><span class="n">rfile</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="n">source</span><span class="p">)</span>
+        <span class="n">rate</span> <span class="o">=</span> <span class="n">ReacLibRate</span><span class="p">(</span><span class="n">rfile</span><span class="o">=</span><span class="n">rfile</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="n">rate</span></div>
 
@@ -508,7 +508,7 @@ document.write(`
     <span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="o">*</span><span class="n">_dirs</span><span class="p">):</span>
         <span class="n">x</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">ratename</span><span class="p">)</span><span class="o">.</span><span class="n">resolve</span><span class="p">()</span>
         <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">is_file</span><span class="p">():</span>
-            <span class="k">return</span> <span class="n">x</span><span class="o">.</span><span class="n">resolve</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">x</span>
 
     <span class="c1"># notify user we can&#39;t find the file</span>
     <span class="k">raise</span> <span class="n">RateFileError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;File </span><span class="si">{</span><span class="n">ratename</span><span class="si">!r}</span><span class="s1"> not found in the working directory, </span><span class="si">{</span><span class="n">_pynucastro_rates_dir</span><span class="si">}</span><span class="s1">, or </span><span class="si">{</span><span class="n">_pynucastro_tabular_dir</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
@@ -756,8 +756,7 @@ document.write(`
                  <span class="n">products</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">|</span> <span class="nb">list</span><span class="p">[</span><span class="n">Nucleus</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                  <span class="n">Q</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">weak_type</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
                  <span class="n">label</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;generic&quot;</span><span class="p">,</span>
-                 <span class="n">use_identical_particle_factor</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-                 <span class="n">source</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+                 <span class="n">use_identical_particle_factor</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;a generic Rate class that acts as a base class for specific</span>
 <span class="sd">        sources.  Here we only specify the reactants and products and Q value&quot;&quot;&quot;</span>
 
@@ -771,8 +770,7 @@ document.write(`
 
         <span class="bp">self</span><span class="o">.</span><span class="n">label</span> <span class="o">=</span> <span class="n">label</span>
 
-        <span class="k">if</span> <span class="n">source</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">source</span> <span class="o">=</span> <span class="n">source</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">source</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="c1"># the fname is used when writing the code to evaluate the rate</span>
         <span class="n">reactants_str</span> <span class="o">=</span> <span class="s1">&#39;_&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">repr</span><span class="p">(</span><span class="n">nuc</span><span class="p">)</span> <span class="k">for</span> <span class="n">nuc</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">reactants</span><span class="p">])</span>
@@ -1254,17 +1252,19 @@ document.write(`
                  <span class="n">reactants</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">|</span> <span class="nb">list</span><span class="p">[</span><span class="n">Nucleus</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                  <span class="n">products</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">|</span> <span class="nb">list</span><span class="p">[</span><span class="n">Nucleus</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                  <span class="n">sets</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">SingleSet</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">labelprops</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-                 <span class="n">Q</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">source</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+                 <span class="n">Q</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; rfile can be either a string specifying the path to a rate file or</span>
 <span class="sd">        an io.StringIO object from which to read rate information. &quot;&quot;&quot;</span>
         <span class="c1"># pylint: disable=super-init-not-called</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">rfile_path</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">rfile</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">source</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">rfile</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Path</span><span class="p">)):</span>
             <span class="n">rfile</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">rfile</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">rfile_path</span> <span class="o">=</span> <span class="n">_find_rate_file</span><span class="p">(</span><span class="n">rfile</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">source</span> <span class="o">=</span> <span class="s2">&quot;reaclib&quot;</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">rfile</span> <span class="o">=</span> <span class="n">rfile</span><span class="o">.</span><span class="n">name</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">chapter</span> <span class="o">=</span> <span class="n">chapter</span>    <span class="c1"># the Reaclib chapter for this reaction</span>
@@ -1303,9 +1303,6 @@ document.write(`
         <span class="bp">self</span><span class="o">.</span><span class="n">removed</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">Q</span> <span class="o">=</span> <span class="n">Q</span>
-
-        <span class="k">if</span> <span class="n">source</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">source</span> <span class="o">=</span> <span class="n">source</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">tabular</span> <span class="o">=</span> <span class="kc">False</span>
 
@@ -1912,17 +1909,19 @@ document.write(`
 
 <span class="sd">    :raises: :class:`.RateFileError`, :class:`.UnsupportedNucleus`</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rfile</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">source</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rfile</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; rfile can be either a string specifying the path to a rate file or</span>
 <span class="sd">        an io.StringIO object from which to read rate information. &quot;&quot;&quot;</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">source</span><span class="o">=</span><span class="n">source</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">rfile_path</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">rfile</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">source</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">rfile</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Path</span><span class="p">)):</span>
             <span class="n">rfile</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">rfile</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">rfile_path</span> <span class="o">=</span> <span class="n">_find_rate_file</span><span class="p">(</span><span class="n">rfile</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">source</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">rfile_path</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">name</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">rfile</span> <span class="o">=</span> <span class="n">rfile</span><span class="o">.</span><span class="n">name</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">fname</span> <span class="o">=</span> <span class="kc">None</span>
@@ -2092,6 +2091,7 @@ document.write(`
 
         <span class="c1"># find .dat file and read it</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">table_path</span> <span class="o">=</span> <span class="n">_find_rate_file</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">table_file</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">source</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">rfile_path</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">name</span>
         <span class="n">t_data2d</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">table_path</span><span class="o">.</span><span class="n">open</span><span class="p">()</span> <span class="k">as</span> <span class="n">tabular_file</span><span class="p">:</span>
             <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">tabular_file</span><span class="p">):</span>
