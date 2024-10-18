@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>pynucastro.rates.library &#8212; pynucastro 2.2.0.post90+g74f1312b documentation</title>
+    <title>pynucastro.rates.library &#8212; pynucastro 2.2.0.post91+gfcbe81d1 documentation</title>
   
   
   
@@ -37,7 +37,7 @@
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../../../_static/documentation_options.js?v=5ed84448"></script>
+    <script src="../../../_static/documentation_options.js?v=07f138c0"></script>
     <script src="../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -557,10 +557,6 @@ document.write(`
         <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_rates</span><span class="o">.</span><span class="n">values</span><span class="p">())</span></div>
 
 
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">rates</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="n">Rate</span><span class="p">]:</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_rates</span><span class="p">()</span>
-
 <div class="viewcode-block" id="Library.get_rate">
 <a class="viewcode-back" href="../../../pynucastro.rates.html#pynucastro.rates.library.Library.get_rate">[docs]</a>
     <span class="k">def</span> <span class="nf">get_rate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rid</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Rate</span><span class="p">:</span>
@@ -665,15 +661,13 @@ document.write(`
         <span class="k">return</span> <span class="p">{</span><span class="n">nuc</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">rates</span> <span class="k">for</span> <span class="n">nuc</span> <span class="ow">in</span> <span class="n">r</span><span class="o">.</span><span class="n">reactants</span> <span class="o">+</span> <span class="n">r</span><span class="o">.</span><span class="n">products</span><span class="p">}</span></div>
 
 
-    <span class="n">nuclei</span> <span class="o">=</span> <span class="nb">property</span><span class="p">(</span><span class="n">get_nuclei</span><span class="p">)</span>
-
 <div class="viewcode-block" id="Library.heaviest">
 <a class="viewcode-back" href="../../../pynucastro.rates.html#pynucastro.rates.library.Library.heaviest">[docs]</a>
     <span class="k">def</span> <span class="nf">heaviest</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Nucleus</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Return the heaviest nuclide in this library. &quot;&quot;&quot;</span>
         <span class="n">nuc</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">r</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_rates</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-            <span class="n">rnuc</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">heaviest</span><span class="p">()</span>
+            <span class="n">rnuc</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">heaviest</span>
             <span class="k">if</span> <span class="n">nuc</span><span class="p">:</span>
                 <span class="k">if</span> <span class="n">rnuc</span><span class="o">.</span><span class="n">A</span> <span class="o">&gt;</span> <span class="n">nuc</span><span class="o">.</span><span class="n">A</span> <span class="ow">or</span> <span class="p">(</span><span class="n">rnuc</span><span class="o">.</span><span class="n">A</span> <span class="o">==</span> <span class="n">nuc</span><span class="o">.</span><span class="n">A</span> <span class="ow">and</span> <span class="n">rnuc</span><span class="o">.</span><span class="n">Z</span> <span class="o">&lt;</span> <span class="n">nuc</span><span class="o">.</span><span class="n">Z</span><span class="p">):</span>
                     <span class="n">nuc</span> <span class="o">=</span> <span class="n">rnuc</span>
@@ -805,7 +799,12 @@ document.write(`
         <span class="k">return</span> <span class="n">new_library</span>
 
     <span class="k">def</span> <span class="fm">__sub__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return a Library containing the rates in this library that are not</span>
+<span class="sd">        contained in other_library&quot;&quot;&quot;</span>
+
+        <span class="n">diff_rates</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_rates</span><span class="p">())</span> <span class="o">-</span> <span class="nb">set</span><span class="p">(</span><span class="n">other</span><span class="o">.</span><span class="n">get_rates</span><span class="p">())</span>
+        <span class="n">new_library</span> <span class="o">=</span> <span class="n">Library</span><span class="p">(</span><span class="n">rates</span><span class="o">=</span><span class="n">diff_rates</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">new_library</span>
 
 <div class="viewcode-block" id="Library.get_rate_by_nuclei">
 <a class="viewcode-back" href="../../../pynucastro.rates.html#pynucastro.rates.library.Library.get_rate_by_nuclei">[docs]</a>
@@ -827,7 +826,7 @@ document.write(`
 
 <div class="viewcode-block" id="Library.find_duplicate_links">
 <a class="viewcode-back" href="../../../pynucastro.rates.html#pynucastro.rates.library.Library.find_duplicate_links">[docs]</a>
-    <span class="k">def</span> <span class="nf">find_duplicate_links</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">find_duplicate_links</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="n">Rate</span><span class="p">]]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;report on an rates where another rate exists that has the</span>
 <span class="sd">        same reactants and products.  These may not be the same Rate</span>
 <span class="sd">        object (e.g., one could be tabular the other a simple decay),</span>
@@ -850,17 +849,6 @@ document.write(`
             <span class="n">duplicates</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">dupe</span><span class="p">)</span>
 
         <span class="k">return</span> <span class="n">duplicates</span></div>
-
-
-<div class="viewcode-block" id="Library.diff">
-<a class="viewcode-back" href="../../../pynucastro.rates.html#pynucastro.rates.library.Library.diff">[docs]</a>
-    <span class="k">def</span> <span class="nf">diff</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other_library</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return a Library containing the rates in this library that are not</span>
-<span class="sd">        contained in other_library&quot;&quot;&quot;</span>
-
-        <span class="n">diff_rates</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_rates</span><span class="p">())</span> <span class="o">-</span> <span class="nb">set</span><span class="p">(</span><span class="n">other_library</span><span class="o">.</span><span class="n">get_rates</span><span class="p">())</span>
-        <span class="n">new_library</span> <span class="o">=</span> <span class="n">Library</span><span class="p">(</span><span class="n">rates</span><span class="o">=</span><span class="n">diff_rates</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">new_library</span></div>
 
 
 <div class="viewcode-block" id="Library.linking_nuclei">

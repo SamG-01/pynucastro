@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>alternate_rates &#8212; pynucastro 2.2.0.post90+g74f1312b documentation</title>
+    <title>alternate_rates &#8212; pynucastro 2.2.0.post91+gfcbe81d1 documentation</title>
   
   
   
@@ -39,7 +39,7 @@
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="_static/documentation_options.js?v=5ed84448"></script>
+    <script src="_static/documentation_options.js?v=07f138c0"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
@@ -593,7 +593,7 @@ pynucastro.rates.rate.ReacLibRate
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;matplotlib.legend.Legend at 0x7fe0835fc390&gt;
+&lt;matplotlib.legend.Legend at 0x7f427fd7f9d0&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -667,22 +667,33 @@ pynucastro.rates.rate.ReacLibRate
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-C12 + He4 ⟶ O16 + 𝛾       : 2.7441793e-03
-O16 + He4 ⟶ Ne20 + 𝛾      : 1.1385847e+00
-Ne20 + He4 ⟶ Mg24 + 𝛾     : 4.1265513e-01
-Na23 + p ⟶ Mg24 + 𝛾       : 6.9202360e+05
-C12 + C12 ⟶ p + Na23      : 1.1970613e-09
-C12 + C12 ⟶ He4 + Ne20    : 1.4808559e-09
-O16 + C12 ⟶ He4 + Mg24    : 5.5470507e-15
-Na23 + p ⟶ He4 + Ne20     : 8.9374939e+06
-He4 + He4 + He4 ⟶ C12 + 𝛾 : 2.5845076e-03
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">AttributeError</span>                            Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[11], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> lib <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">rl</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">linking_nuclei</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">nuclei</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">with_reverse</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg ansi-bold" style="color: rgb(0,135,0)">False</span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> rc <span style="color: rgb(98,98,98)">=</span> pyna<span style="color: rgb(98,98,98)">.</span>RateCollection(libraries<span style="color: rgb(98,98,98)">=</span>[lib])
+<span class="ansi-green-intense-fg ansi-bold">      3</span> rates <span style="color: rgb(98,98,98)">=</span> rc<span style="color: rgb(98,98,98)">.</span>evaluate_rates(rho, T, comp)
+
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/library.py:443</span>, in <span class="ansi-cyan-fg">Library.linking_nuclei</span><span class="ansi-blue-fg">(self, nuclist, with_reverse, print_warning)</span>
+<span class="ansi-green-intense-fg ansi-bold">    441</span> <span style="color: rgb(95,135,135)"># print out a warning if one of the input nuclei is not linked</span>
+<span class="ansi-green-intense-fg ansi-bold">    442</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> print_warning:
+<span class="ansi-green-fg">--&gt; 443</span>     lib_nuclei <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">new_lib</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">get_nuclei</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    444</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> nuc <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> nucleus_set:
+<span class="ansi-green-intense-fg ansi-bold">    445</span>         <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> nuc <span class="ansi-bold" style="color: rgb(175,0,255)">not</span> <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> lib_nuclei:
+
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/library.py:231</span>, in <span class="ansi-cyan-fg">Library.get_nuclei</span><span class="ansi-blue-fg">(self)</span>
+<span class="ansi-green-intense-fg ansi-bold">    229</span> <span class="ansi-bold" style="color: rgb(0,135,0)">def</span> <span style="color: rgb(0,0,255)">get_nuclei</span>(<span style="color: rgb(0,135,0)">self</span>) <span style="color: rgb(98,98,98)">-</span><span style="color: rgb(98,98,98)">&gt;</span> <span style="color: rgb(0,135,0)">set</span>[Nucleus]:
+<span class="ansi-green-intense-fg ansi-bold">    230</span> <span style="color: rgb(188,188,188)">    </span><span style="color: rgb(175,0,0)">&#34;&#34;&#34;get the list of unique nuclei&#34;&#34;&#34;</span>
+<span class="ansi-green-fg">--&gt; 231</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> {nuc <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> r <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">rates</span> <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> nuc <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> r<span style="color: rgb(98,98,98)">.</span>reactants <span style="color: rgb(98,98,98)">+</span> r<span style="color: rgb(98,98,98)">.</span>products}
+
+<span class="ansi-red-fg">AttributeError</span>: &#39;Library&#39; object has no attribute &#39;rates&#39;
 </pre></div></div>
 </div>
 </section>
 <section id="Swapping-in-DeBoer-rate">
 <h3>Swapping in DeBoer rate<a class="headerlink" href="#Swapping-in-DeBoer-rate" title="Link to this heading">#</a></h3>
 <p>Now we’ll swap in the deBoer rate.</p>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
@@ -690,6 +701,20 @@ He4 + He4 + He4 ⟶ C12 + 𝛾 : 2.5845076e-03
 <span class="n">lib</span><span class="o">.</span><span class="n">add_rate</span><span class="p">(</span><span class="n">c12_deboer</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[12], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> <span class="ansi-yellow-bg">lib</span><span style="color: rgb(98,98,98)">.</span>remove_rate(c12_rl)
+<span class="ansi-green-intense-fg ansi-bold">      2</span> lib<span style="color: rgb(98,98,98)">.</span>add_rate(c12_deboer)
+
+<span class="ansi-red-fg">NameError</span>: name &#39;lib&#39; is not defined
+</pre></div></div>
 </div>
 <p>and recreate the new <code class="docutils literal notranslate"><span class="pre">RateCollection</span></code></p>
 <div class="nbinput docutils container">
@@ -708,15 +733,14 @@ He4 + He4 + He4 ⟶ C12 + 𝛾 : 2.5845076e-03
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-O16 + He4 ⟶ Ne20 + 𝛾      : 1.1385847e+00
-Ne20 + He4 ⟶ Mg24 + 𝛾     : 4.1265513e-01
-Na23 + p ⟶ Mg24 + 𝛾       : 6.9202360e+05
-C12 + C12 ⟶ p + Na23      : 1.1970613e-09
-C12 + C12 ⟶ He4 + Ne20    : 1.4808559e-09
-O16 + C12 ⟶ He4 + Mg24    : 5.5470507e-15
-Na23 + p ⟶ He4 + Ne20     : 8.9374939e+06
-He4 + He4 + He4 ⟶ C12 + 𝛾 : 2.5845076e-03
-C12 + He4 ⟶ O16 + 𝛾       : 2.2040004e-03
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[13], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> rc2 <span style="color: rgb(98,98,98)">=</span> pyna<span style="color: rgb(98,98,98)">.</span>RateCollection(libraries<span style="color: rgb(98,98,98)">=</span>[<span class="ansi-yellow-bg">lib</span>])
+<span class="ansi-green-intense-fg ansi-bold">      2</span> rates <span style="color: rgb(98,98,98)">=</span> rc2<span style="color: rgb(98,98,98)">.</span>evaluate_rates(rho, T, comp)
+<span class="ansi-green-intense-fg ansi-bold">      3</span> <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> rr, val <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> rates<span style="color: rgb(98,98,98)">.</span>items():
+
+<span class="ansi-red-fg">NameError</span>: name &#39;lib&#39; is not defined
 </pre></div></div>
 </div>
 <p>Comparing to the pure ReacLib version, we see the only difference in the evaluation of the rates is in <span class="math notranslate nohighlight">\({}^{12}\mathrm{C}(\alpha, \gamma){}^{16}\mathrm{O}\)</span></p>
