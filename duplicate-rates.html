@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Dealing with Duplicate Rates &#8212; pynucastro 2.2.0.post89+gefe4cc37 documentation</title>
+    <title>Dealing with Duplicate Rates &#8212; pynucastro 2.2.0.post90+g74f1312b documentation</title>
   
   
   
@@ -39,7 +39,7 @@
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="_static/documentation_options.js?v=c58ed51f"></script>
+    <script src="_static/documentation_options.js?v=5ed84448"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
@@ -551,7 +551,7 @@ warning: Mg24 was not able to be linked
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/networks/rate_collection.py:583: UserWarning: ReacLib neutron decay rate (&lt;n_to_p_weak_wc12&gt;) does not account for degeneracy at high densities. Consider using tabular rate from Langanke.
+/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/networks/rate_collection.py:589: UserWarning: ReacLib neutron decay rate (&lt;n_to_p_weak_wc12&gt;) does not account for degeneracy at high densities. Consider using tabular rate from Langanke.
   warnings.warn(msg)
 </pre></div></div>
 </div>
@@ -565,16 +565,16 @@ warning: Mg24 was not able to be linked
 Cell <span class="ansi-green-fg">In[5], line 1</span>
 <span class="ansi-green-fg">----&gt; 1</span> rc <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">pyna</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">RateCollection</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">libraries</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">[</span><span class="ansi-yellow-bg">lib</span><span class="ansi-yellow-bg">]</span><span class="ansi-yellow-bg">)</span>
 
-File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/networks/rate_collection.py:479</span>, in <span class="ansi-cyan-fg">RateCollection.__init__</span><span class="ansi-blue-fg">(self, rate_files, libraries, rates, inert_nuclei, symmetric_screening, do_screening)</span>
-<span class="ansi-green-intense-fg ansi-bold">    475</span>         combined_library <span style="color: rgb(98,98,98)">+</span><span style="color: rgb(98,98,98)">=</span> lib
-<span class="ansi-green-intense-fg ansi-bold">    477</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>rates <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>rates <span style="color: rgb(98,98,98)">+</span> combined_library<span style="color: rgb(98,98,98)">.</span>get_rates()
-<span class="ansi-green-fg">--&gt; 479</span> <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">_build_collection</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span>
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/networks/rate_collection.py:485</span>, in <span class="ansi-cyan-fg">RateCollection.__init__</span><span class="ansi-blue-fg">(self, rate_files, libraries, rates, inert_nuclei, symmetric_screening, do_screening)</span>
+<span class="ansi-green-intense-fg ansi-bold">    481</span>         combined_library <span style="color: rgb(98,98,98)">+</span><span style="color: rgb(98,98,98)">=</span> lib
+<span class="ansi-green-intense-fg ansi-bold">    483</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>rates <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>rates <span style="color: rgb(98,98,98)">+</span> combined_library<span style="color: rgb(98,98,98)">.</span>get_rates()
+<span class="ansi-green-fg">--&gt; 485</span> <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">_build_collection</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span>
 
-File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/networks/rate_collection.py:593</span>, in <span class="ansi-cyan-fg">RateCollection._build_collection</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-intense-fg ansi-bold">    590</span> <span style="color: rgb(95,135,135)"># finally check for duplicate rates -- these are not</span>
-<span class="ansi-green-intense-fg ansi-bold">    591</span> <span style="color: rgb(95,135,135)"># allowed</span>
-<span class="ansi-green-intense-fg ansi-bold">    592</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>find_duplicate_links():
-<span class="ansi-green-fg">--&gt; 593</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">raise</span> RateDuplicationError(<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">Duplicate rates found</span><span style="color: rgb(175,0,0)">&#34;</span>)
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/networks/rate_collection.py:599</span>, in <span class="ansi-cyan-fg">RateCollection._build_collection</span><span class="ansi-blue-fg">(self)</span>
+<span class="ansi-green-intense-fg ansi-bold">    596</span> <span style="color: rgb(95,135,135)"># finally check for duplicate rates -- these are not</span>
+<span class="ansi-green-intense-fg ansi-bold">    597</span> <span style="color: rgb(95,135,135)"># allowed</span>
+<span class="ansi-green-intense-fg ansi-bold">    598</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>find_duplicate_links():
+<span class="ansi-green-fg">--&gt; 599</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">raise</span> RateDuplicationError(<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">Duplicate rates found</span><span style="color: rgb(175,0,0)">&#34;</span>)
 
 <span class="ansi-red-fg">RateDuplicationError</span>: Duplicate rates found
 </pre></div></div>

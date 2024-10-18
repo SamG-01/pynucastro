@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>pynucastro.networks.rate_collection &#8212; pynucastro 2.2.0.post89+gefe4cc37 documentation</title>
+    <title>pynucastro.networks.rate_collection &#8212; pynucastro 2.2.0.post90+g74f1312b documentation</title>
   
   
   
@@ -37,7 +37,7 @@
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../../../_static/documentation_options.js?v=c58ed51f"></script>
+    <script src="../../../_static/documentation_options.js?v=5ed84448"></script>
     <script src="../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -646,7 +646,9 @@ document.write(`
         <span class="k">return</span> <span class="n">electron_frac</span></div>
 
 
-    <span class="n">ye</span> <span class="o">=</span> <span class="nb">property</span><span class="p">(</span><span class="n">eval_ye</span><span class="p">)</span>
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">ye</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">eval_ye</span><span class="p">()</span>
 
 <div class="viewcode-block" id="Composition.eval_abar">
 <a class="viewcode-back" href="../../../pynucastro.networks.html#pynucastro.networks.rate_collection.Composition.eval_abar">[docs]</a>
@@ -656,7 +658,9 @@ document.write(`
         <span class="k">return</span> <span class="mf">1.</span> <span class="o">/</span> <span class="n">abar</span></div>
 
 
-    <span class="n">abar</span> <span class="o">=</span> <span class="nb">property</span><span class="p">(</span><span class="n">eval_abar</span><span class="p">)</span>
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">abar</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">eval_abar</span><span class="p">()</span>
 
 <div class="viewcode-block" id="Composition.eval_zbar">
 <a class="viewcode-back" href="../../../pynucastro.networks.html#pynucastro.networks.rate_collection.Composition.eval_zbar">[docs]</a>
@@ -665,7 +669,9 @@ document.write(`
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">abar</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">ye</span></div>
 
 
-    <span class="n">zbar</span> <span class="o">=</span> <span class="nb">property</span><span class="p">(</span><span class="n">eval_zbar</span><span class="p">)</span>
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">zbar</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">eval_zbar</span><span class="p">()</span>
 
 <div class="viewcode-block" id="Composition.bin_as">
 <a class="viewcode-back" href="../../../pynucastro.networks.html#pynucastro.networks.rate_collection.Composition.bin_as">[docs]</a>
