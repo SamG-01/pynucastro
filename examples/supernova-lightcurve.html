@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>A Supernova Lightcurve &#8212; pynucastro 2.2.0.post91+gfcbe81d1 documentation</title>
+    <title>A Supernova Lightcurve &#8212; pynucastro 2.2.0.post92+ga150bafc documentation</title>
   
   
   
@@ -39,7 +39,7 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=07f138c0"></script>
+    <script src="../_static/documentation_options.js?v=3b14695b"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -509,7 +509,7 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="nbinput docutils container">
+<div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
@@ -517,32 +517,6 @@ document.write(`
 <span class="n">lib</span> <span class="o">=</span> <span class="n">rl</span><span class="o">.</span><span class="n">linking_nuclei</span><span class="p">(</span><span class="n">nuclei</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">AttributeError</span>                            Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[3], line 2</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> rl <span style="color: rgb(98,98,98)">=</span> pyna<span style="color: rgb(98,98,98)">.</span>ReacLibLibrary()
-<span class="ansi-green-fg">----&gt; 2</span> lib <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">rl</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">linking_nuclei</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">nuclei</span><span class="ansi-yellow-bg">)</span>
-
-File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/library.py:443</span>, in <span class="ansi-cyan-fg">Library.linking_nuclei</span><span class="ansi-blue-fg">(self, nuclist, with_reverse, print_warning)</span>
-<span class="ansi-green-intense-fg ansi-bold">    441</span> <span style="color: rgb(95,135,135)"># print out a warning if one of the input nuclei is not linked</span>
-<span class="ansi-green-intense-fg ansi-bold">    442</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> print_warning:
-<span class="ansi-green-fg">--&gt; 443</span>     lib_nuclei <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">new_lib</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">get_nuclei</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    444</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> nuc <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> nucleus_set:
-<span class="ansi-green-intense-fg ansi-bold">    445</span>         <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> nuc <span class="ansi-bold" style="color: rgb(175,0,255)">not</span> <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> lib_nuclei:
-
-File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/library.py:231</span>, in <span class="ansi-cyan-fg">Library.get_nuclei</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-intense-fg ansi-bold">    229</span> <span class="ansi-bold" style="color: rgb(0,135,0)">def</span> <span style="color: rgb(0,0,255)">get_nuclei</span>(<span style="color: rgb(0,135,0)">self</span>) <span style="color: rgb(98,98,98)">-</span><span style="color: rgb(98,98,98)">&gt;</span> <span style="color: rgb(0,135,0)">set</span>[Nucleus]:
-<span class="ansi-green-intense-fg ansi-bold">    230</span> <span style="color: rgb(188,188,188)">    </span><span style="color: rgb(175,0,0)">&#34;&#34;&#34;get the list of unique nuclei&#34;&#34;&#34;</span>
-<span class="ansi-green-fg">--&gt; 231</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> {nuc <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> r <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">rates</span> <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> nuc <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> r<span style="color: rgb(98,98,98)">.</span>reactants <span style="color: rgb(98,98,98)">+</span> r<span style="color: rgb(98,98,98)">.</span>products}
-
-<span class="ansi-red-fg">AttributeError</span>: &#39;Library&#39; object has no attribute &#39;rates&#39;
-</pre></div></div>
 </div>
 <p>We see that we pull in 2 rates, which are simple decays.</p>
 <div class="nbinput docutils container">
@@ -554,19 +528,16 @@ File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/pyt
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[4], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> <span class="ansi-yellow-bg">lib</span>
-
-<span class="ansi-red-fg">NameError</span>: name &#39;lib&#39; is not defined
+Co56 ⟶ Fe56 + e⁺ + 𝜈           [Q =   4.57 MeV] (Co56 --&gt; Fe56 &lt;wc12_reaclib_weak_&gt;)
+Ni56 ⟶ Co56 + e⁺ + 𝜈           [Q =   2.13 MeV] (Ni56 --&gt; Co56 &lt;wc12_reaclib_weak_&gt;)
 </pre></div></div>
 </div>
-<div class="nbinput docutils container">
+<div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
@@ -574,40 +545,14 @@ Cell <span class="ansi-green-fg">In[4], line 1</span>
 </pre></div>
 </div>
 </div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[5], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> net <span style="color: rgb(98,98,98)">=</span> pyna<span style="color: rgb(98,98,98)">.</span>PythonNetwork(libraries<span style="color: rgb(98,98,98)">=</span>[<span class="ansi-yellow-bg">lib</span>])
-
-<span class="ansi-red-fg">NameError</span>: name &#39;lib&#39; is not defined
-</pre></div></div>
-</div>
 <p>We can write out the network to solve.</p>
-<div class="nbinput docutils container">
+<div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">net</span><span class="o">.</span><span class="n">write_network</span><span class="p">(</span><span class="s2">&quot;decay.py&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[6], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> <span class="ansi-yellow-bg">net</span><span style="color: rgb(98,98,98)">.</span>write_network(<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">decay.py</span><span style="color: rgb(175,0,0)">&#34;</span>)
-
-<span class="ansi-red-fg">NameError</span>: name &#39;net&#39; is not defined
-</pre></div></div>
 </div>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
@@ -617,7 +562,7 @@ Cell <span class="ansi-green-fg">In[6], line 1</span>
 </pre></div>
 </div>
 </div>
-<div class="nbinput docutils container">
+<div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
@@ -625,21 +570,8 @@ Cell <span class="ansi-green-fg">In[6], line 1</span>
 </pre></div>
 </div>
 </div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">ModuleNotFoundError</span>                       Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[8], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> <span class="ansi-bold" style="color: rgb(0,0,255)">decay</span>
-
-<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named &#39;decay&#39;
-</pre></div></div>
-</div>
 <p>We’ll start out with pure <span class="math notranslate nohighlight">\({}^{56}\mathrm{Ni}\)</span> and convert to molar fractions, since that’s what we integrate.</p>
-<div class="nbinput docutils container">
+<div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
@@ -648,21 +580,6 @@ Cell <span class="ansi-green-fg">In[8], line 1</span>
 <span class="n">Y0</span> <span class="o">=</span> <span class="n">X</span> <span class="o">/</span> <span class="n">decay</span><span class="o">.</span><span class="n">A</span>
 </pre></div>
 </div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[9], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> X <span style="color: rgb(98,98,98)">=</span> np<span style="color: rgb(98,98,98)">.</span>zeros(<span style="color: rgb(0,135,0)">len</span>(<span class="ansi-yellow-bg">net</span><span style="color: rgb(98,98,98)">.</span>unique_nuclei))
-<span class="ansi-green-intense-fg ansi-bold">      2</span> X[decay<span style="color: rgb(98,98,98)">.</span>jni56] <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(98,98,98)">1.0</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span> Y0 <span style="color: rgb(98,98,98)">=</span> X <span style="color: rgb(98,98,98)">/</span> decay<span style="color: rgb(98,98,98)">.</span>A
-
-<span class="ansi-red-fg">NameError</span>: name &#39;net&#39; is not defined
-</pre></div></div>
 </div>
 <p>Even though the rates have no density or temperature dependence, we still need to pass in a <span class="math notranslate nohighlight">\((\rho, T)\)</span>, so we’ll just set them to arbitrary values.</p>
 <div class="nbinput nblast docutils container">
@@ -685,7 +602,7 @@ Cell <span class="ansi-green-fg">In[9], line 1</span>
 </div>
 </div>
 <p>We can use the default integrator in <code class="docutils literal notranslate"><span class="pre">solve_ivp()</span></code> since this system is not stiff.</p>
-<div class="nbinput docutils container">
+<div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
@@ -693,20 +610,6 @@ Cell <span class="ansi-green-fg">In[9], line 1</span>
                 <span class="n">dense_output</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">rho0</span><span class="p">,</span> <span class="n">T0</span><span class="p">),</span> <span class="n">rtol</span><span class="o">=</span><span class="mf">1.e-8</span><span class="p">,</span> <span class="n">atol</span><span class="o">=</span><span class="mf">1.e-10</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[12], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> sol <span style="color: rgb(98,98,98)">=</span> solve_ivp(<span class="ansi-yellow-bg">decay</span><span style="color: rgb(98,98,98)">.</span>rhs, [<span style="color: rgb(98,98,98)">0</span>, tmax], Y0,
-<span class="ansi-green-intense-fg ansi-bold">      2</span>                 dense_output<span style="color: rgb(98,98,98)">=</span><span class="ansi-bold" style="color: rgb(0,135,0)">True</span>, args<span style="color: rgb(98,98,98)">=</span>(rho0, T0), rtol<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(98,98,98)">1.e-8</span>, atol<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(98,98,98)">1.e-10</span>)
-
-<span class="ansi-red-fg">NameError</span>: name &#39;decay&#39; is not defined
-</pre></div></div>
 </div>
 <p>Now we can look at the evolution of the composition</p>
 <div class="nbinput docutils container">
@@ -724,19 +627,12 @@ Cell <span class="ansi-green-fg">In[12], line 1</span>
 </div>
 </div>
 <div class="nboutput docutils container">
-<div class="prompt empty docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[13], line 2</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> fig, ax <span style="color: rgb(98,98,98)">=</span> plt<span style="color: rgb(98,98,98)">.</span>subplots()
-<span class="ansi-green-fg">----&gt; 2</span> <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> n <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> <span style="color: rgb(0,135,0)">range</span>(<span style="color: rgb(0,135,0)">len</span>(<span class="ansi-yellow-bg">net</span><span style="color: rgb(98,98,98)">.</span>unique_nuclei)):
-<span class="ansi-green-intense-fg ansi-bold">      3</span>     ax<span style="color: rgb(98,98,98)">.</span>semilogy(sol<span style="color: rgb(98,98,98)">.</span>t <span style="color: rgb(98,98,98)">/</span> seconds_per_day, decay<span style="color: rgb(98,98,98)">.</span>A[n] <span style="color: rgb(98,98,98)">*</span> sol<span style="color: rgb(98,98,98)">.</span>y[n, :], label<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(175,0,0)">f</span><span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">X(</span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>decay<span style="color: rgb(98,98,98)">.</span>names[n]<span style="color: rgb(98,98,98)">.</span>capitalize()<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)">)</span><span style="color: rgb(175,0,0)">&#34;</span>)
-<span class="ansi-green-intense-fg ansi-bold">      4</span> ax<span style="color: rgb(98,98,98)">.</span>set_ylim(<span style="color: rgb(98,98,98)">1.e-6</span>, <span style="color: rgb(98,98,98)">2</span>)
-
-<span class="ansi-red-fg">NameError</span>: name &#39;net&#39; is not defined
+Text(0, 0.5, &#39;X&#39;)
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -747,7 +643,7 @@ Cell <span class="ansi-green-fg">In[13], line 2</span>
 </div>
 </div>
 <p>If we want the luminosity, we can compute that as the instantaneous energy release. Note: this assumes that all of the energy release is given to photons. For this, we need the rates, which we can get these by iterating over the solution</p>
-<div class="nbinput docutils container">
+<div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
 </pre></div>
 </div>
@@ -758,22 +654,6 @@ Cell <span class="ansi-green-fg">In[13], line 2</span>
     <span class="n">L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">decay</span><span class="o">.</span><span class="n">energy_release</span><span class="p">(</span><span class="n">dYdt</span><span class="p">))</span>
 </pre></div>
 </div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[14], line 2</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> L <span style="color: rgb(98,98,98)">=</span> []
-<span class="ansi-green-fg">----&gt; 2</span> <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> n <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> <span style="color: rgb(0,135,0)">range</span>(<span class="ansi-yellow-bg">sol</span><span style="color: rgb(98,98,98)">.</span>y<span style="color: rgb(98,98,98)">.</span>shape[<span style="color: rgb(98,98,98)">-</span><span style="color: rgb(98,98,98)">1</span>]):
-<span class="ansi-green-intense-fg ansi-bold">      3</span>     Y <span style="color: rgb(98,98,98)">=</span> sol<span style="color: rgb(98,98,98)">.</span>y[:, n]
-<span class="ansi-green-intense-fg ansi-bold">      4</span>     dYdt <span style="color: rgb(98,98,98)">=</span> decay<span style="color: rgb(98,98,98)">.</span>rhs(sol<span style="color: rgb(98,98,98)">.</span>t[n], Y, rho0, T0)
-
-<span class="ansi-red-fg">NameError</span>: name &#39;sol&#39; is not defined
-</pre></div></div>
 </div>
 <p>L is now in erg/g/s, so we should multiply by the initial <span class="math notranslate nohighlight">\({}^{56}\mathrm{Ni}\)</span> mass.</p>
 <div class="nbinput nblast docutils container">
@@ -809,19 +689,12 @@ Cell <span class="ansi-green-fg">In[14], line 2</span>
 </div>
 </div>
 <div class="nboutput docutils container">
-<div class="prompt empty docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+</pre></div>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[17], line 2</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> fig, ax <span style="color: rgb(98,98,98)">=</span> plt<span style="color: rgb(98,98,98)">.</span>subplots()
-<span class="ansi-green-fg">----&gt; 2</span> ax<span style="color: rgb(98,98,98)">.</span>semilogy(<span class="ansi-yellow-bg">sol</span><span style="color: rgb(98,98,98)">.</span>t <span style="color: rgb(98,98,98)">/</span> seconds_per_day, L <span style="color: rgb(98,98,98)">/</span> L_sun)
-<span class="ansi-green-intense-fg ansi-bold">      3</span> ax<span style="color: rgb(98,98,98)">.</span>set_xlabel(<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">time (days)</span><span style="color: rgb(175,0,0)">&#34;</span>)
-<span class="ansi-green-intense-fg ansi-bold">      4</span> ax<span style="color: rgb(98,98,98)">.</span>set_ylabel(<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">luminosity (solar)</span><span style="color: rgb(175,0,0)">&#34;</span>)
-
-<span class="ansi-red-fg">NameError</span>: name &#39;sol&#39; is not defined
+Text(0, 0.5, &#39;luminosity (solar)&#39;)
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">

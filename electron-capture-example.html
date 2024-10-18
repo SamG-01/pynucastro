@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Tabulated Weak Rate Example &#8212; pynucastro 2.2.0.post91+gfcbe81d1 documentation</title>
+    <title>Tabulated Weak Rate Example &#8212; pynucastro 2.2.0.post92+ga150bafc documentation</title>
   
   
   
@@ -39,7 +39,7 @@
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="_static/documentation_options.js?v=07f138c0"></script>
+    <script src="_static/documentation_options.js?v=3b14695b"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
@@ -515,30 +515,13 @@ document.write(`
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">AttributeError</span>                            Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[2], line 2</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> tl <span style="color: rgb(98,98,98)">=</span> pyna<span style="color: rgb(98,98,98)">.</span>TabularLibrary()
-<span class="ansi-green-fg">----&gt; 2</span> lib <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">tl</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">linking_nuclei</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">[</span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">&#34;</span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">ni56</span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">&#34;</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">&#34;</span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">co56</span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">&#34;</span><span class="ansi-yellow-bg">]</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span> lib
-
-File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/library.py:443</span>, in <span class="ansi-cyan-fg">Library.linking_nuclei</span><span class="ansi-blue-fg">(self, nuclist, with_reverse, print_warning)</span>
-<span class="ansi-green-intense-fg ansi-bold">    441</span> <span style="color: rgb(95,135,135)"># print out a warning if one of the input nuclei is not linked</span>
-<span class="ansi-green-intense-fg ansi-bold">    442</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> print_warning:
-<span class="ansi-green-fg">--&gt; 443</span>     lib_nuclei <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">new_lib</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">get_nuclei</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    444</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> nuc <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> nucleus_set:
-<span class="ansi-green-intense-fg ansi-bold">    445</span>         <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> nuc <span class="ansi-bold" style="color: rgb(175,0,255)">not</span> <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> lib_nuclei:
-
-File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/library.py:231</span>, in <span class="ansi-cyan-fg">Library.get_nuclei</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-intense-fg ansi-bold">    229</span> <span class="ansi-bold" style="color: rgb(0,135,0)">def</span> <span style="color: rgb(0,0,255)">get_nuclei</span>(<span style="color: rgb(0,135,0)">self</span>) <span style="color: rgb(98,98,98)">-</span><span style="color: rgb(98,98,98)">&gt;</span> <span style="color: rgb(0,135,0)">set</span>[Nucleus]:
-<span class="ansi-green-intense-fg ansi-bold">    230</span> <span style="color: rgb(188,188,188)">    </span><span style="color: rgb(175,0,0)">&#34;&#34;&#34;get the list of unique nuclei&#34;&#34;&#34;</span>
-<span class="ansi-green-fg">--&gt; 231</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> {nuc <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> r <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">rates</span> <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> nuc <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> r<span style="color: rgb(98,98,98)">.</span>reactants <span style="color: rgb(98,98,98)">+</span> r<span style="color: rgb(98,98,98)">.</span>products}
-
-<span class="ansi-red-fg">AttributeError</span>: &#39;Library&#39; object has no attribute &#39;rates&#39;
+Ni56 + e⁻ ⟶ Co56 + 𝜈           [Q =   2.13 MeV] (Ni56 --&gt; Co56 &lt;tabular_tabular&gt;)
+Co56 ⟶ Ni56 + e⁻ + 𝜈           [Q =  -2.13 MeV] (Co56 --&gt; Ni56 &lt;tabular_tabular&gt;)
 </pre></div></div>
 </div>
 <p>We’ll create a <code class="docutils literal notranslate"><span class="pre">RateCollection</span></code> so we can evaluate the rates easily</p>
@@ -555,18 +538,11 @@ File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/pyt
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[3], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> rc <span style="color: rgb(98,98,98)">=</span> pyna<span style="color: rgb(98,98,98)">.</span>RateCollection(libraries<span style="color: rgb(98,98,98)">=</span>[<span class="ansi-yellow-bg">lib</span>])
-<span class="ansi-green-intense-fg ansi-bold">      2</span> fig <span style="color: rgb(98,98,98)">=</span> rc<span style="color: rgb(98,98,98)">.</span>plot(curved_edges<span style="color: rgb(98,98,98)">=</span><span class="ansi-bold" style="color: rgb(0,135,0)">True</span>)
-
-<span class="ansi-red-fg">NameError</span>: name &#39;lib&#39; is not defined
-</pre></div></div>
+<img alt="_images/electron-capture-example_5_0.png" src="_images/electron-capture-example_5_0.png" />
+</div>
 </div>
 <p>Let’s create a composition – we’ll make equal amounts of Ni and Co</p>
-<div class="nbinput docutils container">
+<div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
@@ -574,20 +550,6 @@ Cell <span class="ansi-green-fg">In[3], line 1</span>
 <span class="n">comp</span><span class="o">.</span><span class="n">set_equal</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[4], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> comp <span style="color: rgb(98,98,98)">=</span> pyna<span style="color: rgb(98,98,98)">.</span>Composition(<span class="ansi-yellow-bg">rc</span><span style="color: rgb(98,98,98)">.</span>unique_nuclei)
-<span class="ansi-green-intense-fg ansi-bold">      2</span> comp<span style="color: rgb(98,98,98)">.</span>set_equal()
-
-<span class="ansi-red-fg">NameError</span>: name &#39;rc&#39; is not defined
-</pre></div></div>
 </div>
 <p>We can see from the electron fraction that we are a little neutron-rich</p>
 <div class="nbinput docutils container">
@@ -600,21 +562,16 @@ Cell <span class="ansi-green-fg">In[4], line 1</span>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[5], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> Ye <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">comp</span><span style="color: rgb(98,98,98)">.</span>ye
-<span class="ansi-green-intense-fg ansi-bold">      2</span> Ye
-
-<span class="ansi-red-fg">NameError</span>: name &#39;comp&#39; is not defined
+0.4910714285714286
 </pre></div></div>
 </div>
 <p>Now let’s compute the rates. We’ll pick a density (actually <span class="math notranslate nohighlight">\(\rho Y_e\)</span>) and temperature right on one of the points tabulated in the original source so we can directly compare to what is in the table.</p>
-<div class="nbinput docutils container">
+<div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
@@ -622,20 +579,6 @@ Cell <span class="ansi-green-fg">In[5], line 1</span>
 <span class="n">T</span> <span class="o">=</span> <span class="mf">1.e9</span>
 </pre></div>
 </div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[6], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> rho <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(98,98,98)">1.e7</span> <span style="color: rgb(98,98,98)">/</span> <span class="ansi-yellow-bg">Ye</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> T <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(98,98,98)">1.e9</span>
-
-<span class="ansi-red-fg">NameError</span>: name &#39;Ye&#39; is not defined
-</pre></div></div>
 </div>
 <p>The rates are proportional to the molar fractions, so we can get those too:</p>
 <div class="nbinput docutils container">
@@ -648,17 +591,12 @@ Cell <span class="ansi-green-fg">In[6], line 1</span>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[7], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> Y <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">comp</span><span style="color: rgb(98,98,98)">.</span>get_molar()
-<span class="ansi-green-intense-fg ansi-bold">      2</span> Y
-
-<span class="ansi-red-fg">NameError</span>: name &#39;comp&#39; is not defined
+{Co56: 0.008928571428571428, Ni56: 0.008928571428571428}
 </pre></div></div>
 </div>
 <p>Now we can evaluate the rates</p>
@@ -671,16 +609,13 @@ Cell <span class="ansi-green-fg">In[7], line 1</span>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[8], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> <span class="ansi-yellow-bg">rc</span><span style="color: rgb(98,98,98)">.</span>evaluate_rates(rho, T, comp)
-
-<span class="ansi-red-fg">NameError</span>: name &#39;rc&#39; is not defined
+{Co56 ⟶ Ni56 + e⁻ + 𝜈: 2.6914293082016787e-23,
+ Ni56 + e⁻ ⟶ Co56 + 𝜈: 7.240723730837853e-06}
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -693,17 +628,12 @@ Cell <span class="ansi-green-fg">In[8], line 1</span>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[9], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> ydots <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">rc</span><span style="color: rgb(98,98,98)">.</span>evaluate_ydots(rho, T, comp)
-<span class="ansi-green-intense-fg ansi-bold">      2</span> ydots
-
-<span class="ansi-red-fg">NameError</span>: name &#39;rc&#39; is not defined
+{Co56: 7.240723730837853e-06, Ni56: -7.240723730837853e-06}
 </pre></div></div>
 </div>
 <p>If we look at the original tables from <span id="id2">Langanke and Martínez-Pinedo [<a class="reference internal" href="zreferences.html#id9" title="K. Langanke and G. Martínez-Pinedo. Rate tables for the weak processes of pf-shell nuclei in stellar environments. Atomic Data and Nuclear Data Tables, 79(1):1-46, 2001. doi:10.1006/adnd.2001.0865.">2001</a>]</span>, they tabulate (for the conditions we selected above):</p>
@@ -729,18 +659,12 @@ Cell <span class="ansi-green-fg">In[9], line 1</span>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[10], line 2</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> lambda_ec <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(98,98,98)">10.0</span><span style="color: rgb(98,98,98)">*</span><span style="color: rgb(98,98,98)">*</span><span style="color: rgb(98,98,98)">-</span><span style="color: rgb(98,98,98)">3.091</span>
-<span class="ansi-green-fg">----&gt; 2</span> r <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">Y</span>[pyna<span style="color: rgb(98,98,98)">.</span>Nucleus(<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">ni56</span><span style="color: rgb(175,0,0)">&#34;</span>)] <span style="color: rgb(98,98,98)">*</span> lambda_ec
-<span class="ansi-green-intense-fg ansi-bold">      3</span> r
-
-<span class="ansi-red-fg">NameError</span>: name &#39;Y&#39; is not defined
+7.240723730837861e-06
 </pre></div></div>
 </div>
 <p>We get the same result as <code class="docutils literal notranslate"><span class="pre">evaluate_rates()</span></code>!</p>
@@ -757,17 +681,12 @@ Cell <span class="ansi-green-fg">In[10], line 2</span>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[11], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> dyedt <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(0,135,0)">sum</span>(q<span style="color: rgb(98,98,98)">.</span>Z <span style="color: rgb(98,98,98)">*</span> ydots[q] <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> q <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> <span class="ansi-yellow-bg">rc</span><span style="color: rgb(98,98,98)">.</span>unique_nuclei)
-<span class="ansi-green-intense-fg ansi-bold">      2</span> dyedt
-
-<span class="ansi-red-fg">NameError</span>: name &#39;rc&#39; is not defined
+-7.240723730837865e-06
 </pre></div></div>
 </div>
 </section>

@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>pynucastro.rates.library &#8212; pynucastro 2.2.0.post91+gfcbe81d1 documentation</title>
+    <title>pynucastro.rates.library &#8212; pynucastro 2.2.0.post92+ga150bafc documentation</title>
   
   
   
@@ -37,7 +37,7 @@
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../../../_static/documentation_options.js?v=07f138c0"></script>
+    <script src="../../../_static/documentation_options.js?v=3b14695b"></script>
     <script src="../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -570,14 +570,14 @@ document.write(`
         <span class="c1"># fallback to the rate fname</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="n">rid_mod</span> <span class="o">=</span> <span class="n">capitalize_rid</span><span class="p">(</span><span class="n">rid</span><span class="p">,</span> <span class="s2">&quot;_&quot;</span><span class="p">)</span>
-            <span class="k">return</span> <span class="p">[</span><span class="n">q</span> <span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">rates</span> <span class="k">if</span> <span class="n">q</span><span class="o">.</span><span class="n">fname</span> <span class="o">==</span> <span class="n">rid_mod</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+            <span class="k">return</span> <span class="p">[</span><span class="n">q</span> <span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_rates</span><span class="p">()</span> <span class="k">if</span> <span class="n">q</span><span class="o">.</span><span class="n">fname</span> <span class="o">==</span> <span class="n">rid_mod</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
         <span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">LookupError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;rate identifier </span><span class="si">{</span><span class="n">rid</span><span class="si">!r}</span><span class="s2"> does not match a rate in this library.&quot;</span><span class="p">)</span> <span class="kn">from</span> <span class="kc">None</span></div>
 
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">num_rates</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rates</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_rates</span><span class="p">())</span>
 
 <div class="viewcode-block" id="Library.add_rate">
 <a class="viewcode-back" href="../../../pynucastro.rates.html#pynucastro.rates.library.Library.add_rate">[docs]</a>
@@ -658,7 +658,7 @@ document.write(`
 <a class="viewcode-back" href="../../../pynucastro.rates.html#pynucastro.rates.library.Library.get_nuclei">[docs]</a>
     <span class="k">def</span> <span class="nf">get_nuclei</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">set</span><span class="p">[</span><span class="n">Nucleus</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;get the list of unique nuclei&quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="p">{</span><span class="n">nuc</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">rates</span> <span class="k">for</span> <span class="n">nuc</span> <span class="ow">in</span> <span class="n">r</span><span class="o">.</span><span class="n">reactants</span> <span class="o">+</span> <span class="n">r</span><span class="o">.</span><span class="n">products</span><span class="p">}</span></div>
+        <span class="k">return</span> <span class="p">{</span><span class="n">nuc</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_rates</span><span class="p">()</span> <span class="k">for</span> <span class="n">nuc</span> <span class="ow">in</span> <span class="n">r</span><span class="o">.</span><span class="n">reactants</span> <span class="o">+</span> <span class="n">r</span><span class="o">.</span><span class="n">products</span><span class="p">}</span></div>
 
 
 <div class="viewcode-block" id="Library.heaviest">
@@ -681,7 +681,7 @@ document.write(`
     <span class="k">def</span> <span class="nf">lightest</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Nucleus</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Return the lightest nuclide in this library. &quot;&quot;&quot;</span>
         <span class="n">nuc</span> <span class="o">=</span> <span class="kc">None</span>
-        <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">rates</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_rates</span><span class="p">():</span>
             <span class="n">rnuc</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">lightest</span><span class="p">()</span>
             <span class="k">if</span> <span class="n">nuc</span><span class="p">:</span>
                 <span class="k">if</span> <span class="n">rnuc</span><span class="o">.</span><span class="n">A</span> <span class="o">&lt;</span> <span class="n">nuc</span><span class="o">.</span><span class="n">A</span> <span class="ow">or</span> <span class="p">(</span><span class="n">rnuc</span><span class="o">.</span><span class="n">A</span> <span class="o">==</span> <span class="n">nuc</span><span class="o">.</span><span class="n">A</span> <span class="ow">and</span> <span class="n">rnuc</span><span class="o">.</span><span class="n">Z</span> <span class="o">&gt;</span> <span class="n">nuc</span><span class="o">.</span><span class="n">Z</span><span class="p">):</span>
