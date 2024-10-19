@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>p-p chain vs. CNO &#8212; pynucastro 2.2.0.post106+g4a347ddb documentation</title>
+    <title>p-p chain vs. CNO &#8212; pynucastro 2.2.0.post107+g6c394b7f documentation</title>
   
   
   
@@ -39,7 +39,7 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=c8b22c6f"></script>
+    <script src="../_static/documentation_options.js?v=d15db06e"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -571,12 +571,12 @@ File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/pyt
 File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/rate.py:795</span>, in <span class="ansi-cyan-fg">RateSource</span><span class="ansi-blue-fg">()</span>
 <span class="ansi-green-intense-fg ansi-bold">    793</span>         label <span style="color: rgb(98,98,98)">=</span> cells[<span style="color: rgb(98,98,98)">0</span>]
 <span class="ansi-green-intense-fg ansi-bold">    794</span>         label_data <span style="color: rgb(98,98,98)">=</span> labels[label<span style="color: rgb(98,98,98)">.</span>lower()] <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(0,135,0)">dict</span>(<span style="color: rgb(0,135,0)">zip</span>(column_titles, cells))
-<span class="ansi-green-fg">--&gt; 795</span>         <span class="ansi-yellow-bg">label_data</span><span class="ansi-yellow-bg">[</span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">&#34;</span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">URL</span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">&#34;</span><span class="ansi-yellow-bg">]</span><span style="color: rgb(98,98,98)">.</span>get(label, urls[label] <span style="color: rgb(98,98,98)">+</span> label<span style="color: rgb(98,98,98)">.</span>lower())
+<span class="ansi-green-fg">--&gt; 795</span>         label_data[<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">URL</span><span style="color: rgb(175,0,0)">&#34;</span>] <span style="color: rgb(98,98,98)">=</span> urls<span style="color: rgb(98,98,98)">.</span>get(label, <span class="ansi-yellow-bg">urls</span><span class="ansi-yellow-bg">[</span><span class="ansi-yellow-bg">label</span><span class="ansi-yellow-bg">]</span> <span style="color: rgb(98,98,98)">+</span> label<span style="color: rgb(98,98,98)">.</span>lower())
 <span class="ansi-green-intense-fg ansi-bold">    797</span> <span style="color: rgb(175,0,255)">@classmethod</span>
 <span class="ansi-green-intense-fg ansi-bold">    798</span> <span class="ansi-bold" style="color: rgb(0,135,0)">def</span> <span style="color: rgb(0,0,255)">source</span>(<span style="color: rgb(0,135,0)">cls</span>, label: <span style="color: rgb(0,135,0)">str</span>) <span style="color: rgb(98,98,98)">-</span><span style="color: rgb(98,98,98)">&gt;</span> <span style="color: rgb(0,135,0)">dict</span>[<span style="color: rgb(0,135,0)">str</span>, <span style="color: rgb(0,135,0)">str</span>] <span style="color: rgb(98,98,98)">|</span> <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>:
 <span class="ansi-green-intense-fg ansi-bold">    799</span> <span style="color: rgb(188,188,188)">    </span><span style="color: rgb(175,0,0)">&#34;&#34;&#34;Returns the source of a rate given its label, and None if not found.&#34;&#34;&#34;</span>
 
-<span class="ansi-red-fg">KeyError</span>: &#39;URL&#39;
+<span class="ansi-red-fg">KeyError</span>: &#39;6an9CYBT&#39;
 </pre></div></div>
 </div>
 <p>We start by getting the rates from the <a class="reference external" href="https://reaclib.jinaweb.org/index.php">JINA ReacLib database</a>. This has 80,000+ reaction rates in a standardized format.</p>
