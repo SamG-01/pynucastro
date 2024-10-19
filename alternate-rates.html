@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>alternate_rates &#8212; pynucastro 2.2.0.post96+g465410de documentation</title>
+    <title>alternate_rates &#8212; pynucastro 2.2.0.post98+g52860dc0 documentation</title>
   
   
   
@@ -39,7 +39,7 @@
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="_static/documentation_options.js?v=1cf8d658"></script>
+    <script src="_static/documentation_options.js?v=9bcd9444"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
@@ -526,7 +526,7 @@ document.write(`
 </div>
 </div>
 <p>Now the DeBoer version:</p>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
@@ -534,6 +534,57 @@ document.write(`
 <span class="n">c12_deboer</span> <span class="o">=</span> <span class="n">DeBoerC12agO16</span><span class="p">()</span>
 </pre></div>
 </div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">KeyError</span>                                  Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[3], line 2</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">pynucastro</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">rates</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">alternate_rates</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> DeBoerC12agO16
+<span class="ansi-green-fg">----&gt; 2</span> c12_deboer <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">DeBoerC12agO16</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span>
+
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/alternate_rates.py:23</span>, in <span class="ansi-cyan-fg">DeBoerC12agO16.__init__</span><span class="ansi-blue-fg">(self)</span>
+<span class="ansi-green-intense-fg ansi-bold">     20</span> <span style="color: rgb(95,135,135)"># we&#39;ll use the same chapter notation as ReacLib</span>
+<span class="ansi-green-intense-fg ansi-bold">     21</span> chapter <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(98,98,98)">4</span>
+<span class="ansi-green-fg">---&gt; 23</span> <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">super</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg" style="color: rgb(0,0,255)">__init__</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">reactants</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">reactants</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">products</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">products</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-intense-fg ansi-bold">     24</span> <span class="ansi-yellow-bg">                 </span><span class="ansi-yellow-bg">chapter</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">chapter</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">Q</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">Q</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-intense-fg ansi-bold">     25</span> <span class="ansi-yellow-bg">                 </span><span class="ansi-yellow-bg">labelprops</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">labelprops</span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     27</span> <span style="color: rgb(95,135,135)"># from DeBoer et al. 2017</span>
+<span class="ansi-green-intense-fg ansi-bold">     28</span> <span style="color: rgb(95,135,135)"># https://arxiv.org/pdf/1709.03144</span>
+<span class="ansi-green-intense-fg ansi-bold">     29</span> <span style="color: rgb(95,135,135)"># table XXVI</span>
+<span class="ansi-green-intense-fg ansi-bold">     30</span>
+<span class="ansi-green-intense-fg ansi-bold">     31</span> <span style="color: rgb(95,135,135)"># non-resonant</span>
+<span class="ansi-green-intense-fg ansi-bold">     32</span> a <span style="color: rgb(98,98,98)">=</span> [<span style="color: rgb(98,98,98)">24.1</span>, <span style="color: rgb(98,98,98)">0.0</span>, <span style="color: rgb(98,98,98)">-</span><span style="color: rgb(98,98,98)">32.0</span>, <span style="color: rgb(98,98,98)">-</span><span style="color: rgb(98,98,98)">5.9</span>, <span style="color: rgb(98,98,98)">1.8</span>, <span style="color: rgb(98,98,98)">-</span><span style="color: rgb(98,98,98)">0.17</span>, <span style="color: rgb(98,98,98)">-</span><span style="color: rgb(98,98,98)">2.</span><span style="color: rgb(98,98,98)">/</span><span style="color: rgb(98,98,98)">3.</span>]
+
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/rate.py:875</span>, in <span class="ansi-cyan-fg">ReacLibRate.__init__</span><span class="ansi-blue-fg">(self, rfile, chapter, original_source, reactants, products, sets, labelprops, Q)</span>
+<span class="ansi-green-intense-fg ansi-bold">    873</span>     f<span style="color: rgb(98,98,98)">.</span>close()
+<span class="ansi-green-intense-fg ansi-bold">    874</span> <span class="ansi-bold" style="color: rgb(0,135,0)">else</span>:
+<span class="ansi-green-fg">--&gt; 875</span>     <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">_set_label_properties</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    877</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_set_rhs_properties()
+<span class="ansi-green-intense-fg ansi-bold">    878</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_set_screening()
+
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/rate.py:977</span>, in <span class="ansi-cyan-fg">ReacLibRate._set_label_properties</span><span class="ansi-blue-fg">(self, labelprops)</span>
+<span class="ansi-green-intense-fg ansi-bold">    974</span> <span style="color: rgb(95,135,135)"># Update labelprops based on the Sets in this Rate</span>
+<span class="ansi-green-intense-fg ansi-bold">    975</span> <span style="color: rgb(95,135,135)"># to set the resonance_combined flag properly</span>
+<span class="ansi-green-intense-fg ansi-bold">    976</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_update_resonance_combined()
+<span class="ansi-green-fg">--&gt; 977</span> <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">_update_label_properties</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span>
+
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/rate.py:1022</span>, in <span class="ansi-cyan-fg">ReacLibRate._update_label_properties</span><span class="ansi-blue-fg">(self)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1020</span>     <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>weak_type <span style="color: rgb(98,98,98)">=</span> <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>
+<span class="ansi-green-intense-fg ansi-bold">   1021</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>reverse <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>labelprops[<span style="color: rgb(98,98,98)">5</span>] <span style="color: rgb(98,98,98)">==</span> <span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">v</span><span style="color: rgb(175,0,0)">&#39;</span>
+<span class="ansi-green-fg">-&gt; 1022</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>source <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">ReacLibRateSource</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">source</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">label</span><span class="ansi-yellow-bg">)</span>
+
+File <span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/pynucastro/rates/rate.py:796</span>, in <span class="ansi-cyan-fg">ReacLibRateSource.source</span><span class="ansi-blue-fg">(cls, label)</span>
+<span class="ansi-green-intense-fg ansi-bold">    792</span> <span style="color: rgb(175,0,255)">@classmethod</span>
+<span class="ansi-green-intense-fg ansi-bold">    793</span> <span class="ansi-bold" style="color: rgb(0,135,0)">def</span> <span style="color: rgb(0,0,255)">source</span>(<span style="color: rgb(0,135,0)">cls</span>, label: <span style="color: rgb(0,135,0)">str</span>) <span style="color: rgb(98,98,98)">-</span><span style="color: rgb(98,98,98)">&gt;</span> <span style="color: rgb(0,135,0)">dict</span>[<span style="color: rgb(0,135,0)">str</span>, <span style="color: rgb(0,135,0)">str</span>]:
+<span class="ansi-green-intense-fg ansi-bold">    794</span> <span style="color: rgb(188,188,188)">    </span><span style="color: rgb(175,0,0)">&#34;&#34;&#34;Returns the source of a ReacLibRate given its label.&#34;&#34;&#34;</span>
+<span class="ansi-green-fg">--&gt; 796</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">cls</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">labels</span><span class="ansi-yellow-bg">[</span><span class="ansi-yellow-bg">label</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">lower</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">strip</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span><span class="ansi-yellow-bg">]</span>
+
+<span class="ansi-red-fg">KeyError</span>: &#39;debo&#39;
+</pre></div></div>
 </div>
 <p>Note that since DeBoer et al. 2012 give the new rate as a parameterization in the ReacLib form, this new rate just subclasses <code class="docutils literal notranslate"><span class="pre">ReacLibRate</span></code></p>
 <div class="nbinput docutils container">
@@ -563,7 +614,7 @@ pynucastro.rates.rate.ReacLibRate
 </pre></div>
 </div>
 </div>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
@@ -573,6 +624,26 @@ pynucastro.rates.rate.ReacLibRate
 <span class="n">r_deboer</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">c12_deboer</span><span class="o">.</span><span class="n">eval</span><span class="p">(</span><span class="n">T</span><span class="p">)</span> <span class="k">for</span> <span class="n">T</span> <span class="ow">in</span> <span class="n">Ts</span><span class="p">])</span>
 </pre></div>
 </div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[6], line 4</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> Ts <span style="color: rgb(98,98,98)">=</span> np<span style="color: rgb(98,98,98)">.</span>logspace(<span style="color: rgb(98,98,98)">7.5</span>, <span style="color: rgb(98,98,98)">9.5</span>, <span style="color: rgb(98,98,98)">100</span>)
+<span class="ansi-green-intense-fg ansi-bold">      3</span> r_rl <span style="color: rgb(98,98,98)">=</span> np<span style="color: rgb(98,98,98)">.</span>array([c12_rl<span style="color: rgb(98,98,98)">.</span>eval(T) <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> T <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> Ts])
+<span class="ansi-green-fg">----&gt; 4</span> r_deboer <span style="color: rgb(98,98,98)">=</span> np<span style="color: rgb(98,98,98)">.</span>array(<span class="ansi-yellow-bg">[</span><span class="ansi-yellow-bg">c12_deboer</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">eval</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">T</span><span class="ansi-yellow-bg">)</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg ansi-bold" style="color: rgb(0,135,0)">for</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">T</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg ansi-bold" style="color: rgb(175,0,255)">in</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">Ts</span><span class="ansi-yellow-bg">]</span>)
+
+Cell <span class="ansi-green-fg">In[6], line 4</span>, in <span class="ansi-cyan-fg">&lt;listcomp&gt;</span><span class="ansi-blue-fg">(.0)</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> Ts <span style="color: rgb(98,98,98)">=</span> np<span style="color: rgb(98,98,98)">.</span>logspace(<span style="color: rgb(98,98,98)">7.5</span>, <span style="color: rgb(98,98,98)">9.5</span>, <span style="color: rgb(98,98,98)">100</span>)
+<span class="ansi-green-intense-fg ansi-bold">      3</span> r_rl <span style="color: rgb(98,98,98)">=</span> np<span style="color: rgb(98,98,98)">.</span>array([c12_rl<span style="color: rgb(98,98,98)">.</span>eval(T) <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> T <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> Ts])
+<span class="ansi-green-fg">----&gt; 4</span> r_deboer <span style="color: rgb(98,98,98)">=</span> np<span style="color: rgb(98,98,98)">.</span>array([<span class="ansi-yellow-bg">c12_deboer</span><span style="color: rgb(98,98,98)">.</span>eval(T) <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> T <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> Ts])
+
+<span class="ansi-red-fg">NameError</span>: name &#39;c12_deboer&#39; is not defined
+</pre></div></div>
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
@@ -588,12 +659,20 @@ pynucastro.rates.rate.ReacLibRate
 </div>
 </div>
 <div class="nboutput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
-</pre></div>
+<div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;matplotlib.legend.Legend at 0x7fd270a2b2d0&gt;
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[7], line 3</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> fig, ax <span style="color: rgb(98,98,98)">=</span> plt<span style="color: rgb(98,98,98)">.</span>subplots()
+<span class="ansi-green-intense-fg ansi-bold">      2</span> ax<span style="color: rgb(98,98,98)">.</span>loglog(Ts, r_rl, label<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">ReacLib</span><span style="color: rgb(175,0,0)">&#34;</span>)
+<span class="ansi-green-fg">----&gt; 3</span> ax<span style="color: rgb(98,98,98)">.</span>loglog(Ts, <span class="ansi-yellow-bg">r_deboer</span>, label<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">deBoer</span><span style="color: rgb(175,0,0)">&#34;</span>)
+<span class="ansi-green-intense-fg ansi-bold">      4</span> ax<span style="color: rgb(98,98,98)">.</span>set_xlabel(<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">T</span><span style="color: rgb(175,0,0)">&#34;</span>)
+<span class="ansi-green-intense-fg ansi-bold">      5</span> ax<span style="color: rgb(98,98,98)">.</span>set_ylabel(<span style="color: rgb(175,0,0)">r</span><span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">$N_A</span><span style="color: rgb(175,0,0)">\</span><span style="color: rgb(175,0,0)">langle </span><span style="color: rgb(175,0,0)">\</span><span style="color: rgb(175,0,0)">sigma v</span><span style="color: rgb(175,0,0)">\</span><span style="color: rgb(175,0,0)">rangle$</span><span style="color: rgb(175,0,0)">&#34;</span>)
+
+<span class="ansi-red-fg">NameError</span>: name &#39;r_deboer&#39; is not defined
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -616,11 +695,27 @@ pynucastro.rates.rate.ReacLibRate
 </pre></div>
 </div>
 </div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[8], line 2</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> fig, ax <span style="color: rgb(98,98,98)">=</span> plt<span style="color: rgb(98,98,98)">.</span>subplots()
+<span class="ansi-green-fg">----&gt; 2</span> ax<span style="color: rgb(98,98,98)">.</span>loglog(Ts, np<span style="color: rgb(98,98,98)">.</span>abs((r_rl <span style="color: rgb(98,98,98)">-</span> <span class="ansi-yellow-bg">r_deboer</span>) <span style="color: rgb(98,98,98)">/</span> r_rl))
+<span class="ansi-green-intense-fg ansi-bold">      3</span> ax<span style="color: rgb(98,98,98)">.</span>set_xlabel(<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">T</span><span style="color: rgb(175,0,0)">&#34;</span>)
+<span class="ansi-green-intense-fg ansi-bold">      4</span> ax<span style="color: rgb(98,98,98)">.</span>set_ylabel(<span style="color: rgb(175,0,0)">r</span><span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">relative difference</span><span style="color: rgb(175,0,0)">&#34;</span>)
+
+<span class="ansi-red-fg">NameError</span>: name &#39;r_deboer&#39; is not defined
+</pre></div></div>
+</div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/alternate-rates_16_0.png" src="_images/alternate-rates_16_0.png" />
+<img alt="_images/alternate-rates_16_1.png" src="_images/alternate-rates_16_1.png" />
 </div>
 </div>
 </section>
@@ -682,7 +777,7 @@ He4 + He4 + He4 ⟶ C12 + 𝛾 : 2.5845076e-03
 <section id="Swapping-in-DeBoer-rate">
 <h3>Swapping in DeBoer rate<a class="headerlink" href="#Swapping-in-DeBoer-rate" title="Link to this heading">#</a></h3>
 <p>Now we’ll swap in the deBoer rate.</p>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
@@ -690,6 +785,20 @@ He4 + He4 + He4 ⟶ C12 + 𝛾 : 2.5845076e-03
 <span class="n">lib</span><span class="o">.</span><span class="n">add_rate</span><span class="p">(</span><span class="n">c12_deboer</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[12], line 2</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> lib<span style="color: rgb(98,98,98)">.</span>remove_rate(c12_rl)
+<span class="ansi-green-fg">----&gt; 2</span> lib<span style="color: rgb(98,98,98)">.</span>add_rate(<span class="ansi-yellow-bg">c12_deboer</span>)
+
+<span class="ansi-red-fg">NameError</span>: name &#39;c12_deboer&#39; is not defined
+</pre></div></div>
 </div>
 <p>and recreate the new <code class="docutils literal notranslate"><span class="pre">RateCollection</span></code></p>
 <div class="nbinput docutils container">
@@ -716,7 +825,6 @@ C12 + C12 ⟶ He4 + Ne20    : 1.4808559e-09
 O16 + C12 ⟶ He4 + Mg24    : 5.5470507e-15
 Na23 + p ⟶ He4 + Ne20     : 8.9374939e+06
 He4 + He4 + He4 ⟶ C12 + 𝛾 : 2.5845076e-03
-C12 + He4 ⟶ O16 + 𝛾       : 2.2040004e-03
 </pre></div></div>
 </div>
 <p>Comparing to the pure ReacLib version, we see the only difference in the evaluation of the rates is in <span class="math notranslate nohighlight">\({}^{12}\mathrm{C}(\alpha, \gamma){}^{16}\mathrm{O}\)</span></p>
