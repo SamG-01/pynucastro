@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>pynucastro.rates.rate &#8212; pynucastro 2.2.0.post98+g52860dc0 documentation</title>
+    <title>pynucastro.rates.rate &#8212; pynucastro 2.2.0.post101+gb9cd20e7 documentation</title>
   
   
   
@@ -37,7 +37,7 @@
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../../../_static/documentation_options.js?v=9bcd9444"></script>
+    <script src="../../../_static/documentation_options.js?v=217ae136"></script>
     <script src="../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -1236,6 +1236,7 @@ document.write(`
     <span class="n">GAMMA</span> <span class="o">=</span> <span class="mi">7</span></div>
 
 
+
 <div class="viewcode-block" id="ReacLibRateSource">
 <a class="viewcode-back" href="../../../pynucastro.rates.html#pynucastro.rates.rate.ReacLibRateSource">[docs]</a>
 <span class="k">class</span> <span class="nc">ReacLibRateSource</span><span class="p">:</span>
@@ -1259,11 +1260,12 @@ document.write(`
 <div class="viewcode-block" id="ReacLibRateSource.source">
 <a class="viewcode-back" href="../../../pynucastro.rates.html#pynucastro.rates.rate.ReacLibRateSource.source">[docs]</a>
     <span class="nd">@classmethod</span>
-    <span class="k">def</span> <span class="nf">source</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">label</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the source of a ReacLibRate given its label.&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">source</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">label</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the source of a ReacLibRate given its label, and None if not found.&quot;&quot;&quot;</span>
 
-        <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">labels</span><span class="p">[</span><span class="n">label</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()]</span></div>
+        <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">labels</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">label</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span></div>
 </div>
+
 
 
 <div class="viewcode-block" id="ReacLibRate">
