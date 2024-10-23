@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>pynucastro.networks.numpy_network &#8212; pynucastro 2.2.0.post110+g4ded53a6 documentation</title>
+    <title>pynucastro.networks.numpy_network &#8212; pynucastro 2.2.0.post70+ga6e7a1d6 documentation</title>
   
   
   
@@ -40,7 +40,7 @@
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
-    <script src="../../../_static/documentation_options.js?v=db506753"></script>
+    <script src="../../../_static/documentation_options.js?v=c5275334"></script>
     <script src="../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -565,7 +565,7 @@
 <span class="sd">        exponents. The results are stored in the :attr:`.prefac` array.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="n">y_e</span> <span class="o">=</span> <span class="n">composition</span><span class="o">.</span><span class="n">ye</span>
+        <span class="n">y_e</span> <span class="o">=</span> <span class="n">composition</span><span class="o">.</span><span class="n">eval_ye</span><span class="p">()</span>
         <span class="n">prefac</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rates</span><span class="p">))</span>
         <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">r</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rates</span><span class="p">):</span>
             <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">label</span> <span class="o">==</span> <span class="s2">&quot;tabular&quot;</span><span class="p">:</span>
